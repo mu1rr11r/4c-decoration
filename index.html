@@ -354,8 +354,263 @@
 </section>
   <!-- ============================================================
        PRODUCTS SECTION
+  ================================================= =========== -->
+  <section id="products">
+    <div class="section-header reveal">
+      <span class="section-label">منتجاتنا</span>
+      <h2 class="section-title">مواد و<span>منتجات</span> متميزة</h2>
+      <p class="section-desc">نوفر أجود أنواع مواد البناء والتشطيب لضمان أعلى مستويات الجودة</p>
+      <div class="section-divider"></div>
+    </div>
+ 
+    <div class="products-grid container">
+ 
+      <div class="product-card reveal from-right">
+        <div class="product-img" style="background:linear-gradient(135deg,#8B4513,#D2691E,#F4A460);"><img src="./img/تيرازو2I.jpeg" alt=""></div>
+        <div class="product-info">
+          <div class="product-type">أرضيات ديكورية</div>
+          <div class="product-name">تيرازو مرمري فاخر</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal">
+        <div class="product-img" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);"><img src="./img/ريزن.jpeg" alt=""></div>
+        <div class="product-info">
+          <div class="product-type">أرضيات ريزن</div>
+          <div class="product-name">ريزن باوند متعدد الألوان</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal">
+        <div class="product-img" style="background:linear-gradient(135deg,#3d0c02,#891d00,#c24d00);"><img src="./img/ايبوكسي.jpeg" alt=""></div>
+        <div class="product-info">
+          <div class="product-type">أرضيات إيبوكسي</div>
+          <div class="product-name">إيبوكسي صناعي متين</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal from-left">
+        <div class="product-img" style="background:linear-gradient(135deg,#4a4a4a,#6b6b6b,#8d8d8d);"><img src="./img/خرسانه.jpeg" alt=""></div>
+        <div class="product-info">
+          <div class="product-type">خرسانة مطبوعة</div>
+          <div class="product-name">خرسانة طوابع متنوعة</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal from-right">
+        <div class="product-img" style="background:linear-gradient(135deg,#5c4827,#8a6d3b,#c8a96e);">🪵</div>
+        <div class="product-info">
+          <div class="product-type">حجر طبيعي</div>
+          <div class="product-name">حجر رملي طبيعي</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal">
+        <div class="product-img" style="background:linear-gradient(135deg,#00416a,#005b9e,#007fd4);">🏛️</div>
+        <div class="product-info">
+          <div class="product-type">حجر واجهات</div>
+          <div class="product-name">حجر جرانيت للواجهات</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal">
+        <div class="product-img" style="background:linear-gradient(135deg,#2d4a22,#3d6b2f,#4f8a3c);">🌿</div>
+        <div class="product-info">
+          <div class="product-type">حجر ديكوري</div>
+          <div class="product-name">حجر ديكوري أخضر</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal from-left">
+        <div class="product-img" style="background:linear-gradient(135deg,#4a004a,#7a007a,#a800a8);">✨</div>
+        <div class="product-info">
+          <div class="product-type">ريزن فني</div>
+          <div class="product-name">ريزن آرت ثلاثي الأبعاد</div>
+        </div>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- ============================================================
+       PROJECTS SECTION
   ============================================================ -->
-
+  <section id="projects">
+    <div class="section-header reveal">
+      <span class="section-label">أعمالنا</span>
+      <h2 class="section-title">مشاريعنا <span>المنفذة</span></h2>
+      <p class="section-desc">نماذج من أعمالنا المتنوعة في المملكة العربية السعودية</p>
+      <div class="section-divider"></div>
+    </div>
+ 
+    <!-- Filter -->
+    <div class="projects-filter reveal">
+      <button class="filter-btn active" onclick="filterProjects('all', this)">الكل</button>
+      <button class="filter-btn" onclick="filterProjects('terazzo', this)">تيرازو</button>
+      <button class="filter-btn" onclick="filterProjects('resin', this)">ريزن</button>
+      <button class="filter-btn" onclick="filterProjects('epoxy', this)">إيبوكسي</button>
+      <button class="filter-btn" onclick="filterProjects('concrete', this)">خرسانة مطبوعة</button>
+      <button class="filter-btn" onclick="filterProjects('stone', this)">حجر ديكوري</button>
+    </div>
+ 
+    <div class="projects-masonry container" id="projects-grid">
+ 
+      <div class="project-card" data-cat="terazzo">
+        <div class="project-bg" style="background:linear-gradient(135deg,#8B4513,#D2691E,#F4A460);"><img src="./img/تيرازو/تيرازو1Image 2026-05-07 at 7.34.49 PM.jpeg" alt=""></div>
+        <div class="project-overlay">
+          <div class="project-cat">تيرازو</div>
+          <div class="project-name">فيلا سكنية فاخرة</div>
+          <div class="project-location"><i class="fas fa-map-marker-alt"></i> الرياض</div>
+        </div>
+      </div>
+        <div class="project-card" data-cat="terazzo">
+        <div class="project-bg" style="background:linear-gradient(135deg,#8B4513,#D2691E,#F4A460);"><img src="./img/تيرازو/تيرازو2Image 2026-05-07 at 7.35.13 PM.jpeg" alt=""></div>
+        <div class="project-overlay">
+          <div class="project-cat">تيرازو</div>
+          <div class="project-name">فيلا سكنية فاخرة</div>
+          <div class="project-location"><i class="fas fa-map-marker-alt"></i> الرياض</div>
+        </div>
+      </div>  <div class="project-card" data-cat="terazzo">
+        <div class="project-bg" style="background:linear-gradient(135deg,#8B4513,#D2691E,#F4A460);"><img src="./img/تيرازو/تيرازو4Image 2026-05-07 at 7.35.17 PM.jpeg" alt=""></div>
+        <div class="project-overlay">
+          <div class="project-cat">تيرازو</div>
+          <div class="project-name">فيلا سكنية فاخرة</div>
+          <div class="project-location"><i class="fas fa-map-marker-alt"></i> الرياض</div>
+        </div>
+      </div>  <div class="project-card" data-cat="terazzo">
+        <div class="project-bg" style="background:linear-gradient(135deg,#8B4513,#D2691E,#F4A460);"><img src="./img/تيرازو/تيرازو3Image 2026-05-07 at 7.35.14 PM.jpeg" alt=""></div>
+        <div class="project-overlay">
+          <div class="project-cat">تيرازو</div>
+          <div class="project-name">فيلا سكنية فاخرة</div>
+          <div class="project-location"><i class="fas fa-map-marker-alt"></i> الرياض</div>
+        </div>
+      </div>  <div class="project-card" data-cat="terazzo">
+        <div class="project-bg" style="background:linear-gradient(135deg,#8B4513,#D2691E,#F4A460);"><img src="./img/تيرازو/تيرازو5Image 2026-05-07 at 7.35.18 PM.jpeg" alt=""></div>
+        <div class="project-overlay">
+          <div class="project-cat">تيرازو</div>
+          <div class="project-name">فيلا سكنية فاخرة</div>
+          <div class="project-location"><i class="fas fa-map-marker-alt"></i> الرياض</div>
+        </div>
+      </div>  <div class="project-card" data-cat="terazzo">
+        <div class="project-bg" style="background:linear-gradient(135deg,#8B4513,#D2691E,#F4A460);"><img src="./img//تيرازو/تيرازو6Image 2026-05-07 at 7.35.19 PM.jpeg" alt=""></div>
+        <div class="project-overlay">
+          <div class="project-cat">تيرازو</div>
+          <div class="project-name">فيلا سكنية فاخرة</div>
+          <div class="project-location"><i class="fas fa-map-marker-alt"></i> الرياض</div>
+        </div>
+      </div>
+ 
+      <div class="project-card" data-cat="resin">
+        <div class="project-bg" style="background:linear-gradient(135deg,#3d0c02,#891d00,#c24d00);"><img src="./img/أرضيات ريزن/أرضيات ريزن1Image 2026-05-07 at 7.03.01 PM.jpeg" alt=""></div>
+      
+      </div>
+   <div class="project-card" data-cat="resin">
+        <div class="project-bg" style="background:linear-gradient(135deg,#3d0c02,#891d00,#c24d00);"><img src="./img/أرضيات ريزن/أرضيات ريزن2Image 2026-05-07 at 7.03.39 PM.jpeg" alt=""></div>
+        
+      </div>  <div class="project-card" data-cat="resin">
+        <div class="project-bg" style="background:linear-gradient(135deg,#3d0c02,#891d00,#c24d00);"><img src="./img/أرضيات ريزن/أرضيات ريزن3Image 2026-05-07 at 7.03.41 PM.jpeg" alt=""></div>
+       
+      </div>  <div class="project-card" data-cat="resin">
+        <div class="project-bg" style="background:linear-gradient(135deg,#3d0c02,#891d00,#c24d00);"><img src="./img/أرضيات ريزن/أرضيات ريزن4Image 2026-05-07 at 7.03.42 PM.jpeg" alt=""></div>
+        
+      </div>  <div class="project-card" data-cat="resin">
+        <div class="project-bg" style="background:linear-gradient(135deg,#3d0c02,#891d00,#c24d00);"><img src="./img/أرضيات ريزن/أرضيات ريزن5Image 2026-05-07 at 7.03.42 PM.jpeg" alt=""></div>
+       
+      </div>
+      <div class="project-card" data-cat="resin">
+        <div class="project-bg" style="background:linear-gradient(135deg,#3d0c02,#891d00,#c24d00);"><img src="./img/أرضيات ريزن/أرضيات ريزن6Image 2026-05-07 at 7.03.42 PM.jpeg" alt=""></div>
+       
+      </div>
+      <div class="project-card" data-cat="epoxy">
+        <div class="project-bg" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);"><img src="./img/إيبوكسي/إيبوكسي1Image 2026-05-07 at 8.11.21 PM.jpeg" alt=""></div>
+        
+      </div>  <div class="project-card" data-cat="epoxy">
+        <div class="project-bg" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);"><img src="./img/إيبوكسي/إيبوكسي2Image 2026-05-07 at 8.11.21 PM.jpeg" alt=""></div>
+        
+      </div>  <div class="project-card" data-cat="epoxy">
+        <div class="project-bg" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);"><img src="./img/إيبوكسي/إيبوكسي3Image 2026-05-07 at 8.11.21 PM.jpeg" alt=""></div>
+        
+      </div>  <div class="project-card" data-cat="epoxy">
+        <div class="project-bg" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);"><img src="./img/إيبوكسي/إيبوكسي4Image 2026-05-07 at 8.11.22 PM.jpeg" alt=""></div>
+        
+      </div>  <div class="project-card" data-cat="epoxy">
+        <div class="project-bg" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);"><img src="./img/إيبوكسي/إيبوكسي5Image 2026-05-07 at 8.11.22 PM.jpeg" alt=""></div>
+        
+      </div>  <div class="project-card" data-cat="epoxy">
+        <div class="project-bg" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);"><img src="./img/إيبوكسي/إيبوكسي6Image 2026-05-07 at 8.11.23 PM.jpeg" alt=""></div>
+        
+      </div>  <div class="project-card" data-cat="epoxy">
+        <div class="project-bg" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);"><img src="./img/إيبوكسي/إيبوكسي7Image 2026-05-07 at 8.11.23 PM.jpeg" alt=""></div>
+        
+      </div>
+ 
+      <div class="project-card" data-cat="concrete">
+        <div class="project-bg" style="background:linear-gradient(135deg,#4a4a4a,#6b6b6b,#8d8d8d);"><img src="./img/خرسانة مطبوعة/خرسانة مطبوع1Image 2026-05-07 at 6.55.41 PM.jpeg" alt=""></div>
+      </div><div class="project-card" data-cat="concrete">
+        <div class="project-bg" style="background:linear-gradient(135deg,#4a4a4a,#6b6b6b,#8d8d8d);"><img src="./img/خرسانة مطبوعة/خرسانة مطبوعة2Image 2026-05-07 at 6.55.41 PM.jpeg" alt=""></div>
+        
+      </div><div class="project-card" data-cat="concrete">
+        <div class="project-bg" style="background:linear-gradient(135deg,#4a4a4a,#6b6b6b,#8d8d8d);"><img src="./img/خرسانة مطبوعة/خرسانة مطبوعة3Image 2026-05-07 at 6.55.40 PM.jpeg" alt=""></div>
+       
+      </div><div class="project-card" data-cat="concrete">
+        <div class="project-bg" style="background:linear-gradient(135deg,#4a4a4a,#6b6b6b,#8d8d8d);"><img src="./img/خرسانة مطبوعة/خرسانة مطبوع0444 at 6.55.40 PM.jpeg" alt=""></div>
+        
+      </div><div class="project-card" data-cat="concrete">
+        <div class="project-bg" style="background:linear-gradient(135deg,#4a4a4a,#6b6b6b,#8d8d8d);"><img src="./img/خرسانة مطبوعة/خرسانة مطبوعة55سImage 2026-05-07 at 7.01.33 PM.jpeg" alt=""></div>
+        
+      </div>
+      <div class="project-card" data-cat="concrete">
+        <div class="project-bg" style="background:linear-gradient(135deg,#4a4a4a,#6b6b6b,#8d8d8d);"><img src="./img/خرسانة مطبوعة/خرسانة مطبوعة6Image 2026-05-07 at 6.55.41 PM.jpeg" alt=""></div>
+      </div>
+ 
+      <div class="project-card" data-cat="stone">
+        <div class="project-bg" style="background:linear-gradient(135deg,#5c4827,#8a6d3b,#c8a96e);">🪨</div>
+        <div class="project-overlay">
+          <div class="project-cat">حجر طبيعي</div>
+          <div class="project-name">واجهة مبنى تجاري</div>
+          <div class="project-location"><i class="fas fa-map-marker-alt"></i> الرياض</div>
+        </div>
+      </div>
+ 
+      
+ 
+    </div>
+  </section>
+ 
+  <!-- ============================================================
+       CLIENTS SECTION
+  ============================================================ -->
+  <section id="clients">
+    <div class="section-header reveal">
+      <span class="section-label">عملاؤنا</span>
+      <h2 class="section-title" style="color:white;">شركاء <span style="color:var(--orange)">نجاحنا</span></h2>
+      <p class="section-desc">نفخر بثقة عملائنا من كبرى الشركات والمؤسسات في المملكة</p>
+      <div class="section-divider"></div>
+    </div>
+ 
+    <div class="clients-marquee-wrap reveal">
+      <div class="clients-marquee" id="marquee">
+        <div class="client-logo"><i class="fas fa-building"></i>شركة الراجحي</div>
+        <div class="client-logo"><i class="fas fa-hotel"></i>فنادق روتانا</div>
+        <div class="client-logo"><i class="fas fa-city"></i>إمارة الرياض</div>
+        <div class="client-logo"><i class="fas fa-hospital"></i>مستشفى الملك فهد</div>
+        <div class="client-logo"><i class="fas fa-school"></i>وزارة التعليم</div>
+        <div class="client-logo"><i class="fas fa-shopping-mall"></i>مول العرب</div>
+        <div class="client-logo"><i class="fas fa-industry"></i>أرامكو السعودية</div>
+        <div class="client-logo"><i class="fas fa-university"></i>جامعة الملك سعود</div>
+        <!-- Duplicate for infinite scroll -->
+        <div class="client-logo"><i class="fas fa-building"></i>شركة الراجحي</div>
+        <div class="client-logo"><i class="fas fa-hotel"></i>فنادق روتانا</div>
+        <div class="client-logo"><i class="fas fa-city"></i>إمارة الرياض</div>
+        <div class="client-logo"><i class="fas fa-hospital"></i>مستشفى الملك فهد</div>
+        <div class="client-logo"><i class="fas fa-school"></i>وزارة التعليم</div>
+        <div class="client-logo"><i class="fas fa-shopping-mall"></i>مول العرب</div>
+        <div class="client-logo"><i class="fas fa-industry"></i>أرامكو السعودية</div>
+        <div class="client-logo"><i class="fas fa-university"></i>جامعة الملك سعود</div>
+      </div>
+    </div>
+  </section>
+ 
   <!-- ============================================================
        CERTIFICATES SECTION
   ============================================================ -->

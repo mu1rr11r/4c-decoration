@@ -1,17 +1,14 @@
-
-    const navbar = document.getElementById('navbar');
+const navbar = document.getElementById('navbar');
     const navLinks = document.querySelectorAll('.nav-links a');
     const sections = document.querySelectorAll('section[id]');
  
     window.addEventListener('scroll', () => {
-      // Sticky color change
       if (window.scrollY > 60) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
  
-      // Active link highlight
       let current = '';
       sections.forEach(sec => {
         if (window.scrollY >= sec.offsetTop - 100) {
@@ -23,7 +20,6 @@
         if (a.getAttribute('href') === '#' + current) a.classList.add('active');
       });
  
-      // Back to top
       const btn = document.getElementById('back-to-top');
       if (window.scrollY > 400) {
         btn.classList.add('visible');
@@ -58,7 +54,7 @@
     ============================================================ */
     const reveals = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setTimeout(() => {
             entry.target.classList.add('visible');
@@ -74,25 +70,22 @@
        PROJECT FILTER
     ============================================================ */
     function filterProjects(cat, btn) {
-      // Update active button
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
- 
-      // Filter cards
+      if (btn) btn.classList.add('active');
+
       const cards = document.querySelectorAll('.project-card');
       cards.forEach(card => {
         if (cat === 'all' || card.dataset.cat === cat) {
           card.style.display = 'block';
           card.style.animation = 'none';
-          card.offsetHeight; // reflow
+          card.offsetHeight;
           card.style.animation = 'fadeInScale 0.4s ease';
         } else {
           card.style.display = 'none';
         }
       });
     }
- 
-    // Add fadeInScale keyframe dynamically
+
     const style = document.createElement('style');
     style.textContent = `
       @keyframes fadeInScale {
@@ -102,6 +95,70 @@
     `;
     document.head.appendChild(style);
  
+    /* ============================================================
+       PRODUCT CARDS → SCROLL TO PROJECTS + FILTER
+       map: product card index (0-based) → filter category
+    ============================================================ */
+    const productCatMap = [
+      'terazzo',   // 0: تيرازو مرمري فاخر
+      'resin',     // 1: ريزن باوند
+      'epoxy',     // 2: إيبوكسي صناعي
+      'concrete',  // 3: خرسانة مطبوعة
+      'stone',     // 4: حجر رملي
+      'stone',     // 5: حجر جرانيت
+      'stone',     // 6: حجر ديكوري أخضر
+      'resin',     // 7: ريزن آرت
+    ];
+
+    document.querySelectorAll('.product-card').forEach((card, i) => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', () => {
+        const cat = productCatMap[i] || 'all';
+
+        // فعّل الفلتر الصح
+        const targetBtn = document.querySelector(`.filter-btn[onclick*="'${cat}'"]`);
+        filterProjects(cat, targetBtn);
+
+        // اسكرول smooth لقسم المشاريع
+        const projectsSection = document.getElementById('projects');
+        if (projectsSection) {
+          const top = projectsSection.getBoundingClientRect().top + window.scrollY - 90;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    /* ============================================================
+       LAZY LOADING للصور
+       - كل صورة بـ data-src تتحمل لما تظهر في الشاشة
+    ============================================================ */
+    const lazyImages = document.querySelectorAll('img[data-src]');
+
+    if ('IntersectionObserver' in window) {
+      const imgObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            img.classList.add('loaded');
+            imgObserver.unobserve(img);
+          }
+        });
+      }, {
+        rootMargin: '200px 0px', // يبدأ يحمل قبل ما تظهر بـ 200px
+        threshold: 0
+      });
+
+      lazyImages.forEach(img => imgObserver.observe(img));
+    } else {
+      // Fallback للمتصفحات القديمة
+      lazyImages.forEach(img => {
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+      });
+    }
+
     /* ============================================================
        CONTACT FORM SUBMIT (demo)
     ============================================================ */
