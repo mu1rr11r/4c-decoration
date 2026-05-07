@@ -1,100 +1,148 @@
-/* ══ BURGER ══ */
-const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobileMenu');
-burger.addEventListener('click', () => {
-  burger.classList.toggle('open');
-  mobileMenu.classList.toggle('open');
-  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-});
-function closeMobile() {
-  burger.classList.remove('open');
-  mobileMenu.classList.remove('open');
-  document.body.style.overflow = '';
-}
+
+    const navbar = document.getElementById('navbar');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section[id]');
  
-/* ══ NAVBAR SCROLL ══ */
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
-  updateActiveNav();
-});
+    window.addEventListener('scroll', () => {
+      // Sticky color change
+      if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
  
-/* ══ ACTIVE NAV ══ */
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-function updateActiveNav() {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 100) current = s.id;
-  });
-  navLinks.forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-  });
-}
+      // Active link highlight
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 100) {
+          current = sec.getAttribute('id');
+        }
+      });
+      navLinks.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+      });
  
-/* ══ SCROLL REVEAL ══ */
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
+      // Back to top
+      const btn = document.getElementById('back-to-top');
+      if (window.scrollY > 400) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    });
+ 
+    /* ============================================================
+       MOBILE MENU
+    ============================================================ */
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      const ham = document.getElementById('hamburger');
+      menu.classList.toggle('open');
+      ham.classList.toggle('open');
     }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-reveals.forEach(el => observer.observe(el));
- 
-/* ══ COUNTER ANIMATION ══ */
-function animateCounter(el, target, suffix) {
-  let start = 0;
-  const duration = 1800;
-  const startTime = performance.now();
-  function update(now) {
-    const elapsed = now - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    el.textContent = (suffix === '+' ? '+' : '') + Math.floor(eased * target) + (suffix === 'K' ? 'K' : suffix === '+K' ? '' : '');
-    if (progress < 1) requestAnimationFrame(update);
-    else el.textContent = suffix;
-  }
-  requestAnimationFrame(update);
-}
- 
-const statNums = document.querySelectorAll('.stat-num');
-const counterObs = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      const txt = el.textContent;
-      if (txt.includes('K')) animateCounter(el, 1, '+1K');
-      else if (txt.includes('500')) animateCounter(el, 500, '+500');
-      else if (txt.includes('200')) animateCounter(el, 200, '+200');
-      else if (txt.includes('15')) animateCounter(el, 15, '+15');
-      counterObs.unobserve(el);
+    function closeMenu() {
+      document.getElementById('mobile-menu').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
     }
-  });
-}, { threshold: 0.5 });
-statNums.forEach(el => counterObs.observe(el));
  
-/* ══ FORM SUBMIT ══ */
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target;
-  btn.textContent = '✅ تم الإرسال بنجاح!';
-  btn.style.background = 'linear-gradient(135deg,#2ecc71,#27ae60)';
-  setTimeout(() => {
-    btn.textContent = 'إرسال الطلب ←';
-    btn.style.background = '';
-  }, 3000);
-}
- 
-/* ══ SMOOTH ANCHOR ══ */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    /* ============================================================
+       BACK TO TOP
+    ============================================================ */
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  });
-});
+ 
+    /* ============================================================
+       SCROLL REVEAL ANIMATIONS
+    ============================================================ */
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, 80);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+ 
+    reveals.forEach(el => revealObserver.observe(el));
+ 
+    /* ============================================================
+       PROJECT FILTER
+    ============================================================ */
+    function filterProjects(cat, btn) {
+      // Update active button
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+ 
+      // Filter cards
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.dataset.cat === cat) {
+          card.style.display = 'block';
+          card.style.animation = 'none';
+          card.offsetHeight; // reflow
+          card.style.animation = 'fadeInScale 0.4s ease';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+ 
+    // Add fadeInScale keyframe dynamically
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeInScale {
+        from { opacity: 0; transform: scale(0.92); }
+        to   { opacity: 1; transform: scale(1); }
+      }
+    `;
+    document.head.appendChild(style);
+ 
+    /* ============================================================
+       CONTACT FORM SUBMIT (demo)
+    ============================================================ */
+    function submitForm() {
+      const btn = document.querySelector('.form-submit');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
+      btn.style.background = 'var(--gray)';
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-check-circle"></i> تم الإرسال بنجاح!';
+        btn.style.background = '#22c55e';
+        setTimeout(() => {
+          btn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الرسالة';
+          btn.style.background = '';
+        }, 3000);
+      }, 1800);
+    }
+ 
+    /* ============================================================
+       COUNTER ANIMATION (hero stats)
+    ============================================================ */
+    function animateCounter(el, target, suffix) {
+      let count = 0;
+      const step = Math.ceil(target / 50);
+      const interval = setInterval(() => {
+        count += step;
+        if (count >= target) { count = target; clearInterval(interval); }
+        el.textContent = '+' + count + (suffix || '');
+      }, 30);
+    }
+ 
+    const statsObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const nums = entry.target.querySelectorAll('.stat-num');
+          nums[0] && animateCounter(nums[0], 50, '');
+          nums[1] && animateCounter(nums[1], 5, '');
+          nums[2] && animateCounter(nums[2], 40, '');
+          statsObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+ 
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) statsObserver.observe(heroStats);

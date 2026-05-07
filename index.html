@@ -3,508 +3,669 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4G</title>
+    <title>4C Decoration</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-     
-<!-- WhatsApp Float -->
-<a href="https://wa.me/201000000000" class="wa-float" aria-label="واتساب">💬</a>
  
-<!-- ══ NAVBAR ══ -->
-<nav id="navbar">
-  <a href="#home" class="nav-logo">
-    <div class="logo-icon">A</div>
-    <div class="logo-text">
-      <div class="t1">ARABIAN UNITED</div>
-      <div class="t2">سيراميك وأرضيات</div>
-    </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#home" class="active">الرئيسية</a></li>
-    <li><a href="#about">من نحن</a></li>
-    <li><a href="#services">خدماتنا</a></li>
-    <li><a href="#products">منتجاتنا</a></li>
-    <li><a href="#projects">مشاريعنا</a></li>
-    <li><a href="#clients">عملاؤنا</a></li>
-    <li><a href="#contact" class="nav-cta">تواصل معنا</a></li>
-  </ul>
-  <div class="burger" id="burger">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="navbar">
+    <div class="nav-container">
  
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#home"     onclick="closeMobile()">الرئيسية</a>
-  <a href="#about"    onclick="closeMobile()">من نحن</a>
-  <a href="#services" onclick="closeMobile()">خدماتنا</a>
-  <a href="#products" onclick="closeMobile()">منتجاتنا</a>
-  <a href="#projects" onclick="closeMobile()">مشاريعنا</a>
-  <a href="#clients"  onclick="closeMobile()">عملاؤنا</a>
-  <a href="#contact"  onclick="closeMobile()">تواصل معنا</a>
-</div>
- 
-<!-- ══ HERO ══ -->
-<section id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-pattern"></div>
-  <div class="hero-content">
-    <div class="hero-tag">الأفضل في مصر والشرق الأوسط</div>
-    <h1 class="hero-title">
-      أرضيات <span class="gold">فاخرة</span> تعكس<br>
-      <span class="stroke">ذوقك الراقي</span>
-    </h1>
-    <p class="hero-sub">
-      نوفر أجود أنواع السيراميك والبورسلين والرخام بتصاميم عصرية وكلاسيكية تناسب جميع المساحات السكنية والتجارية
-    </p>
-    <div class="hero-btns">
-      <a href="#products" class="btn-primary">تصفح المنتجات</a>
-      <a href="#contact"  class="btn-outline">احصل على عرض سعر</a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <span>اسكرول</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
- 
-<!-- Stats Bar -->
-<div class="stats-bar">
-  <div class="stat-item reveal from-down">
-    <div class="stat-num">+500</div>
-    <div class="stat-label">مشروع منجز</div>
-  </div>
-  <div class="stat-item reveal from-down">
-    <div class="stat-num">+200</div>
-    <div class="stat-label">نوع من المنتجات</div>
-  </div>
-  <div class="stat-item reveal from-down">
-    <div class="stat-num">+15</div>
-    <div class="stat-label">سنة خبرة</div>
-  </div>
-  <div class="stat-item reveal from-down">
-    <div class="stat-num">+1K</div>
-    <div class="stat-label">عميل راضٍ</div>
-  </div>
-</div>
- 
-<!-- ══ ABOUT ══ -->
-<section id="about">
-  <div class="about-grid">
-    <div class="about-visual reveal from-left">
-      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="معرضنا" loading="lazy">
-      <div class="about-badge">
-        <div class="num">15+</div>
-        <div class="lbl">سنة خبرة</div>
-      </div>
-    </div>
-    <div class="reveal from-right">
-      <div class="section-label">من نحن</div>
-      <h2 class="section-title">شركة رائدة في عالم<br><span class="gold">السيراميك والأرضيات</span></h2>
-      <div class="gold-divider"></div>
-      <p class="section-desc">
-        أرابيان يونايتد للسيراميك والأرضيات — وجهتك الأولى للتميز والجودة منذ أكثر من خمسة عشر عامًا. نجمع بين الخبرة العريقة وأحدث صيحات التصميم العالمي لنقدم لك منتجات تتفوق في الأناقة والمتانة.
-      </p>
-      <div class="about-features stagger">
-        <div class="feat-item reveal from-right">
-          <div class="feat-icon">🏆</div>
-          <div class="feat-text">
-            <div class="ft">جودة معتمدة دوليًا</div>
-            <div class="fd">جميع منتجاتنا معتمدة من أبرز الهيئات الدولية</div>
-          </div>
-        </div>
-        <div class="feat-item reveal from-right">
-          <div class="feat-icon">🚚</div>
-          <div class="feat-text">
-            <div class="ft">توصيل وتركيب احترافي</div>
-            <div class="fd">فريق متخصص يصلك في أسرع وقت ويضمن التركيب المثالي</div>
-          </div>
-        </div>
-        <div class="feat-item reveal from-right">
-          <div class="feat-icon">🎨</div>
-          <div class="feat-text">
-            <div class="ft">تصاميم عصرية وكلاسيكية</div>
-            <div class="fd">مئات التصاميم تناسب كل ذوق وكل مساحة</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<!-- ══ SERVICES ══ -->
-<section id="services">
-  <div class="services-header reveal from-up">
-    <div class="section-label center">خدماتنا</div>
-    <h2 class="section-title">ماذا نقدم <span class="gold">لك؟</span></h2>
-    <div class="gold-divider" style="margin:14px auto 16px;"></div>
-    <p class="section-desc" style="text-align:center;">
-      نقدم مجموعة متكاملة من الخدمات للمشاريع السكنية والتجارية والفندقية
-    </p>
-  </div>
-  <div class="services-grid stagger">
-    <div class="service-card reveal from-down">
-      <div class="svc-num">01</div>
-      <div class="svc-icon">🏠</div>
-      <h3 class="svc-title">أرضيات سكنية</h3>
-      <p class="svc-desc">حلول أرضيات متكاملة للمنازل والشقق بتصاميم تناسب كل غرفة وكل مساحة بأسعار تنافسية.</p>
-    </div>
-    <div class="service-card reveal from-down">
-      <div class="svc-num">02</div>
-      <div class="svc-icon">🏢</div>
-      <h3 class="svc-title">مشاريع تجارية</h3>
-      <p class="svc-desc">تنفيذ أرضيات المحلات التجارية والمكاتب والمراكز التسويقية بأعلى معايير الجودة والاحترافية.</p>
-    </div>
-    <div class="service-card reveal from-down">
-      <div class="svc-num">03</div>
-      <div class="svc-icon">🏨</div>
-      <h3 class="svc-title">مشاريع فندقية</h3>
-      <p class="svc-desc">تغطية فندقية شاملة بتصاميم فاخرة ومواد عالية الجودة تضفي الأناقة على كل ركن.</p>
-    </div>
-    <div class="service-card reveal from-down">
-      <div class="svc-num">04</div>
-      <div class="svc-icon">🔨</div>
-      <h3 class="svc-title">التركيب والتشطيب</h3>
-      <p class="svc-desc">فريق محترف لتركيب السيراميك والبورسلين مع ضمان الدقة في التفاصيل والتشطيبات النهائية.</p>
-    </div>
-    <div class="service-card reveal from-down">
-      <div class="svc-num">05</div>
-      <div class="svc-icon">📐</div>
-      <h3 class="svc-title">الاستشارة والتصميم</h3>
-      <p class="svc-desc">مهندسو ديكور متخصصون يساعدونك في اختيار التصاميم المناسبة لمساحتك وميزانيتك.</p>
-    </div>
-    <div class="service-card reveal from-down">
-      <div class="svc-num">06</div>
-      <div class="svc-icon">🛡️</div>
-      <h3 class="svc-title">ضمان وصيانة</h3>
-      <p class="svc-desc">ضمان شامل على جميع منتجاتنا مع خدمة صيانة دورية لضمان طول عمر أرضياتك.</p>
-    </div>
-  </div>
-</section>
- 
-<!-- ══ PRODUCTS ══ -->
-<section id="products">
-  <div class="products-header">
-    <div class="reveal from-right">
-      <div class="section-label">منتجاتنا</div>
-      <h2 class="section-title">مجموعتنا <span class="gold">المتميزة</span></h2>
-    </div>
-    <a href="#contact" class="btn-outline reveal from-left">تصفح الكتالوج كاملاً</a>
-  </div>
-  <div class="products-grid stagger" style="max-width:1200px;margin:0 auto;">
-    <div class="prod-card reveal from-left">
-      <img class="prod-img" src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=900&q=80" alt="بورسلين" loading="lazy">
-      <div class="prod-overlay">
-        <div class="prod-info">
-          <div class="prod-cat">الأكثر مبيعًا</div>
-          <div class="prod-name">بورسلين إيطالي فاخر</div>
-          <span class="prod-tag">60×60 / 80×80</span>
-        </div>
-      </div>
-    </div>
-    <div class="prod-card reveal from-right">
-      <img class="prod-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="سيراميك حمامات" loading="lazy">
-      <div class="prod-overlay">
-        <div class="prod-info">
-          <div class="prod-cat">حمامات ومطابخ</div>
-          <div class="prod-name">سيراميك مائي</div>
-        </div>
-      </div>
-    </div>
-    <div class="prod-card reveal from-right">
-      <img class="prod-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="رخام" loading="lazy">
-      <div class="prod-overlay">
-        <div class="prod-info">
-          <div class="prod-cat">فاخر</div>
-          <div class="prod-name">رخام طبيعي</div>
-        </div>
-      </div>
-    </div>
-    <div class="prod-card reveal from-down">
-      <img class="prod-img" src="https://images.unsplash.com/photo-1615971677499-5467cbab01b0?w=600&q=80" alt="باركيه" loading="lazy">
-      <div class="prod-overlay">
-        <div class="prod-info">
-          <div class="prod-cat">خشبي</div>
-          <div class="prod-name">باركيه طبيعي وصناعي</div>
-        </div>
-      </div>
-    </div>
-    <div class="prod-card reveal from-down">
-      <img class="prod-img" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt="جرانيت" loading="lazy">
-      <div class="prod-overlay">
-        <div class="prod-info">
-          <div class="prod-cat">للواجهات</div>
-          <div class="prod-name">جرانيت وحجر طبيعي</div>
-        </div>
-      </div>
-    </div>
-    <div class="prod-card reveal from-down">
-      <img class="prod-img" src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&q=80" alt="موزاييك" loading="lazy">
-      <div class="prod-overlay">
-        <div class="prod-info">
-          <div class="prod-cat">ديكور</div>
-          <div class="prod-name">موزاييك وزخارف</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<!-- ══ PROJECTS ══ -->
-<section id="projects">
-  <div class="projects-header reveal from-up">
-    <div class="section-label">مشاريعنا</div>
-    <h2 class="section-title">أعمالنا <span class="gold">المنجزة</span></h2>
-    <div class="gold-divider" style="margin:14px auto 16px;"></div>
-    <p class="section-desc" style="text-align:center;max-width:520px;margin:0 auto;">
-      نفخر بمئات المشاريع التي نفذناها في جميع أنحاء مصر والمنطقة العربية
-    </p>
-  </div>
-  <div class="projects-grid stagger">
-    <div class="project-card reveal from-down">
-      <div class="project-img"><img src="https://images.unsplash.com/photo-1613553507747-5f8d62ad5904?w=600&q=80" alt="مشروع فيلا" loading="lazy"></div>
-      <div class="project-body">
-        <div class="project-type">مشروع سكني</div>
-        <div class="project-name">فيلا القاهرة الجديدة</div>
-        <div class="project-loc">القاهرة، مصر — 2024</div>
-      </div>
-    </div>
-    <div class="project-card reveal from-down">
-      <div class="project-img"><img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=600&q=80" alt="مشروع فندق" loading="lazy"></div>
-      <div class="project-body">
-        <div class="project-type">مشروع فندقي</div>
-        <div class="project-name">فندق نايل ريزيدنس</div>
-        <div class="project-loc">القاهرة، مصر — 2023</div>
-      </div>
-    </div>
-    <div class="project-card reveal from-down">
-      <div class="project-img"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="مشروع تجاري" loading="lazy"></div>
-      <div class="project-body">
-        <div class="project-type">مشروع تجاري</div>
-        <div class="project-name">مجمع أرابيان مول</div>
-        <div class="project-loc">الإسكندرية، مصر — 2023</div>
-      </div>
-    </div>
-    <div class="project-card reveal from-down">
-      <div class="project-img"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&q=80" alt="مشروع منازل" loading="lazy"></div>
-      <div class="project-body">
-        <div class="project-type">مشروع سكني</div>
-        <div class="project-name">كمبوند الساحل الشمالي</div>
-        <div class="project-loc">مرسى مطروح، مصر — 2024</div>
-      </div>
-    </div>
-    <div class="project-card reveal from-down">
-      <div class="project-img"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80" alt="مشروع مكاتب" loading="lazy"></div>
-      <div class="project-body">
-        <div class="project-type">أبراج تجارية</div>
-        <div class="project-name">برج العاصمة الإدارية</div>
-        <div class="project-loc">العاصمة الإدارية — 2024</div>
-      </div>
-    </div>
-    <div class="project-card reveal from-down">
-      <div class="project-img"><img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80" alt="مشروع حمامات" loading="lazy"></div>
-      <div class="project-body">
-        <div class="project-type">تصميم داخلي</div>
-        <div class="project-name">مشروع لوكسور السياحي</div>
-        <div class="project-loc">الأقصر، مصر — 2022</div>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<!-- ══ CLIENTS ══ -->
-<section id="clients">
-  <div class="clients-header reveal from-up">
-    <div class="section-label">عملاؤنا</div>
-    <h2 class="section-title">يثقون <span class="gold">بنا</span></h2>
-    <div class="gold-divider" style="margin:14px auto 0;"></div>
-  </div>
- 
-  <div class="clients-track-wrap reveal from-down">
-    <div class="clients-track">
-      <div class="client-logo">مجموعة طلعت مصطفى</div>
-      <div class="client-logo">سوديك للتطوير</div>
-      <div class="client-logo">إعمار مصر</div>
-      <div class="client-logo">الإسكان والتعمير</div>
-      <div class="client-logo">بالم هيلز</div>
-      <div class="client-logo">المشروعات الكبرى</div>
-      <div class="client-logo">سيتي إيدج</div>
-      <div class="client-logo">هيلتون العالمية</div>
-      <!-- duplicate for loop -->
-      <div class="client-logo">مجموعة طلعت مصطفى</div>
-      <div class="client-logo">سوديك للتطوير</div>
-      <div class="client-logo">إعمار مصر</div>
-      <div class="client-logo">الإسكان والتعمير</div>
-      <div class="client-logo">بالم هيلز</div>
-      <div class="client-logo">المشروعات الكبرى</div>
-      <div class="client-logo">سيتي إيدج</div>
-      <div class="client-logo">هيلتون العالمية</div>
-    </div>
-  </div>
- 
-  <div class="clients-testimonials stagger">
-    <div class="testimonial reveal from-right">
-      <p class="testimonial-text">تعاملنا مع أرابيان يونايتد في مشروع فلل كبير وكانت التجربة استثنائية من حيث الجودة والالتزام بالمواعيد وحسن التعامل.</p>
-      <div class="testimonial-author">
-        <div class="t-avatar">م.أ</div>
-        <div>
-          <div class="t-name">م. أحمد السيد</div>
-          <div class="t-role">مدير مشاريع — سوديك</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial reveal from-left">
-      <p class="testimonial-text">الخامات مش بس جميلة، دي متينة جدًا. الفندق اتفتح من ٣ سنين والأرضيات لسه زي أول يوم. نصح صادق: اختاروا أرابيان يونايتد.</p>
-      <div class="testimonial-author">
-        <div class="t-avatar">ر.ح</div>
-        <div>
-          <div class="t-name">رانيا حسين</div>
-          <div class="t-role">مدير عام — نايل ريزيدنس</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial reveal from-right">
-      <p class="testimonial-text">أسعارهم تنافسية جدًا مقارنة بالجودة العالية اللي بيقدموها. الفريق محترف ومتعاون وبيهتم بأدق التفاصيل.</p>
-      <div class="testimonial-author">
-        <div class="t-avatar">خ.م</div>
-        <div>
-          <div class="t-name">خالد محمود</div>
-          <div class="t-role">مقاول عمومي — القاهرة</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<!-- ══ CONTACT ══ -->
-<section id="contact">
-  <div class="contact-grid">
-    <div class="reveal from-right">
-      <div class="section-label">تواصل معنا</div>
-      <h2 class="section-title">نحن هنا <span class="gold">لمساعدتك</span></h2>
-      <div class="gold-divider"></div>
-      <p class="section-desc" style="margin-bottom:36px;">
-        تواصل معنا الآن واحصل على استشارة مجانية من خبرائنا المتخصصين في السيراميك والأرضيات
-      </p>
-      <div class="contact-info">
-        <div class="c-info-item">
-          <div class="c-icon">📍</div>
-          <div class="c-text">
-            <div class="cl">العنوان</div>
-            <div class="cv">٢٥ شارع الجمهورية، القاهرة، مصر</div>
-          </div>
-        </div>
-        <div class="c-info-item">
-          <div class="c-icon">📞</div>
-          <div class="c-text">
-            <div class="cl">الهاتف</div>
-            <div class="cv" dir="ltr">+20 100 000 0000</div>
-          </div>
-        </div>
-        <div class="c-info-item">
-          <div class="c-icon">📧</div>
-          <div class="c-text">
-            <div class="cl">البريد الإلكتروني</div>
-            <div class="cv">info@arabian-united.com</div>
-          </div>
-        </div>
-        <div class="c-info-item">
-          <div class="c-icon">🕐</div>
-          <div class="c-text">
-            <div class="cl">ساعات العمل</div>
-            <div class="cv">السبت – الخميس: ٩ص – ٦م</div>
-          </div>
-        </div>
-      </div>
-    </div>
- 
-    <div class="reveal from-left">
-      <div class="contact-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label>الاسم الكامل</label>
-            <input type="text" placeholder="اسمك هنا">
-          </div>
-          <div class="form-group">
-            <label>رقم الهاتف</label>
-            <input type="tel" placeholder="01xxxxxxxxx" dir="ltr">
-          </div>
-        </div>
-        <div class="form-group">
-          <label>البريد الإلكتروني</label>
-          <input type="email" placeholder="email@example.com" dir="ltr">
-        </div>
-        <div class="form-group">
-          <label>نوع المشروع</label>
-          <select>
-            <option value="">اختر نوع المشروع</option>
-            <option>مشروع سكني</option>
-            <option>مشروع تجاري</option>
-            <option>مشروع فندقي</option>
-            <option>تجديد وتشطيب</option>
-            <option>أخرى</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>رسالتك</label>
-          <textarea placeholder="اكتب تفاصيل مشروعك هنا..."></textarea>
-        </div>
-        <button class="btn-primary" onclick="handleSubmit(event)" style="width:100%;padding:16px;font-size:1rem;">
-          إرسال الطلب ←
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
- 
-<!-- ══ FOOTER ══ -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand reveal from-right">
-      <a href="#home" class="nav-logo" style="margin-bottom:12px;display:inline-flex;">
-        <div class="logo-icon">A</div>
+      <!-- Logo (right) -->
+      <div class="nav-logo">
+        <div class="logo-emblem">4C</div>
         <div class="logo-text">
-          <div class="t1">ARABIAN UNITED</div>
-          <div class="t2">سيراميك وأرضيات</div>
+          <span class="brand">4C Decoration</span>
+          <span class="tagline">تشطيبات &amp; ديكورات احترافية</span>
         </div>
-      </a>
-      <p>وجهتك الأولى للسيراميك والأرضيات الفاخرة في مصر والشرق الأوسط منذ أكثر من ١٥ عامًا.</p>
-    </div>
-    <div class="footer-col reveal from-down">
-      <h4>روابط سريعة</h4>
-      <ul>
+      </div>
+ 
+      <!-- Center links -->
+      <ul class="nav-links">
         <li><a href="#home">الرئيسية</a></li>
         <li><a href="#about">من نحن</a></li>
         <li><a href="#services">خدماتنا</a></li>
         <li><a href="#products">منتجاتنا</a></li>
-      </ul>
-    </div>
-    <div class="footer-col reveal from-down">
-      <h4>مشاريعنا</h4>
-      <ul>
-        <li><a href="#projects">مشاريع سكنية</a></li>
-        <li><a href="#projects">مشاريع تجارية</a></li>
-        <li><a href="#projects">مشاريع فندقية</a></li>
+        <li><a href="#projects">مشاريعنا</a></li>
         <li><a href="#clients">عملاؤنا</a></li>
+        <li><a href="#contact">تواصل معنا</a></li>
       </ul>
-    </div>
-    <div class="footer-col reveal from-down">
-      <h4>تواصل معنا</h4>
-      <ul>
-        <li><a href="tel:+201000000000">📞 اتصل بنا</a></li>
-        <li><a href="https://wa.me/201000000000">💬 واتساب</a></li>
-        <li><a href="mailto:info@arabian-united.com">📧 ايميل</a></li>
-        <li><a href="#contact">📍 زر معرضنا</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 أرابيان يونايتد للسيراميك والأرضيات — جميع الحقوق محفوظة</p>
-    <p>صُنع بـ ❤️ في مصر</p>
-  </div>
-</footer>
  
+      <!-- CTA (left) -->
+      <div class="nav-cta">
+        <a href="#contact"><i class="fas fa-phone"></i> تواصل معنا</a>
+      </div>
+ 
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+ 
+    </div>
+  </nav>
+ 
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home" onclick="closeMenu()">الرئيسية</a>
+    <a href="#about" onclick="closeMenu()">من نحن</a>
+    <a href="#services" onclick="closeMenu()">خدماتنا</a>
+    <a href="#products" onclick="closeMenu()">منتجاتنا</a>
+    <a href="#projects" onclick="closeMenu()">مشاريعنا</a>
+    <a href="#clients" onclick="closeMenu()">عملاؤنا</a>
+    <a href="#contact" onclick="closeMenu()">تواصل معنا</a>
+  </div>
+ 
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section id="home">
+    <div class="hero-inner">
+ 
+      <div class="hero-content">
+        <div class="hero-badge reveal from-top">
+          <i class="fas fa-star"></i>
+          الشركة الرائدة في التشطيبات والديكورات
+        </div>
+        <h1 class="hero-title reveal">
+          نُحوّل <span>الفراغات</span><br>إلى تحف معمارية
+        </h1>
+        <p class="hero-subtitle reveal">
+          متخصصون في أرقى حلول الأرضيات والجدران — تيرازو، ريزن باوند، إيبوكسي، خرسانة مطبوعة — مع توريد الحجر الديكوري لمشاريع الداخلية والواجهات
+        </p>
+        <div class="hero-btns reveal">
+          <a href="#services" class="btn-primary"><i class="fas fa-eye"></i> اكتشف خدماتنا</a>
+          <a href="#contact" class="btn-outline"><i class="fas fa-comments"></i> تواصل معنا</a>
+        </div>
+        <div class="hero-stats reveal">
+          <div class="stat-item">
+            <span class="stat-num">+50</span>
+            <span class="stat-label">مشروع منفذ</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">+5</span>
+            <span class="stat-label">سنة خبرة</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">+40</span>
+            <span class="stat-label">عميل سعيد</span>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="hero-visual reveal from-left">
+        <div class="hero-img-wrap">
+          <div class="hero-img-placeholder"><div class="hero-img">
+  <img src="./img/4C Decoration.jpg" alt="4C Decoration">
+</div></div>
+          <div class="hero-float-card card-1">
+            <div class="float-icon orange"><i class="fas fa-medal"></i></div>
+            <div>
+              <div style="font-size:12px;color:var(--gray);font-weight:500">جودة مضمونة</div>
+              <div>أعلى المعايير</div>
+            </div>
+          </div>
+          <div class="hero-float-card card-2">
+            <div class="float-icon blue"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div style="font-size:12px;color:var(--gray);font-weight:500">موقعنا</div>
+              <div>الرياض، المملكة</div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- ============================================================
+       ABOUT SECTION
+  ============================================================ -->
+  <section id="about">
+    <div class="about-grid">
+ 
+      <div class="about-img-stack reveal from-right">
+<div class="about-img-main">
+  <img src="./img/361ce70d-7a1c-4f2c-8728-f09b99fe25d1.jpg" alt="About Image">
+</div>        <div class="about-img-accent">
+          <span class="big-num">5+</span>
+          <span class="small-txt">سنة من التميز</span>
+        </div>
+      </div>
+ 
+      <div class="about-content">
+        <div class="section-header reveal from-left">
+          <span class="section-label">من نحن</span>
+          <h2 class="section-title">شركة <span>4C Decoration</span><br>رواد صناعة التشطيبات</h2>
+          <div class="section-divider"></div>
+        </div>
+ 
+        <p class="about-text reveal from-left">
+          شركة 4C Decoration هي شركة سعودية رائدة في مجال التشطيبات والأعمال الديكورية، تأسست على أسس من الجودة والابتكار. نحن متخصصون في تحويل الفراغات المعمارية إلى لوحات فنية باستخدام أحدث تقنيات الأرضيات والجدران.
+        </p>
+        <p class="about-text reveal from-left">
+          نفخر بامتلاكنا فريقاً من أمهر المتخصصين ذوي الخبرة الواسعة، ونستخدم أجود المواد الخام لضمان نتائج تتجاوز توقعات عملائنا في كل مشروع.
+        </p>
+ 
+        <div class="about-features reveal from-left">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-check"></i></div>
+            <span class="feature-text">خبرة أكثر من 5 سنوات</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-check"></i></div>
+            <span class="feature-text">فريق متخصص ومحترف</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-check"></i></div>
+            <span class="feature-text">مواد عالية الجودة</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-check"></i></div>
+            <span class="feature-text">ضمان على جميع الأعمال</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-check"></i></div>
+            <span class="feature-text">تسليم في الموعد المحدد</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-check"></i></div>
+            <span class="feature-text">أسعار تنافسية</span>
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- ============================================================
+       SERVICES SECTION
+  ============================================================ -->
+  <section id="services">
+    <div class="section-header reveal">
+      <span class="section-label">ما نقدمه</span>
+      <h2 class="section-title">خدماتنا <span>المتخصصة</span></h2>
+      <p class="section-desc">نقدم مجموعة شاملة من خدمات التشطيبات والديكورات بأعلى معايير الجودة</p>
+      <div class="section-divider"></div>
+    </div>
+ 
+    <div class="services-grid container">
+ 
+      <div class="service-card reveal from-right">
+        <div class="service-icon orange"><i class="fas fa-gem"></i></div>
+        <h3 class="service-title">أرضيات التيرازو</h3>
+        <p class="service-desc">تصميم وتنفيذ أرضيات التيرازو الكلاسيكية والحديثة بأشكال وألوان متنوعة تلائم كل الأذواق والمساحات.</p>
+      </div>
+ 
+      <div class="service-card reveal">
+        <div class="service-icon blue"><i class="fas fa-palette"></i></div>
+        <h3 class="service-title">أرضيات الريزن الملون</h3>
+        <p class="service-desc">أرضيات ريزن باوند وريزن ملون بألوان متعددة وتصميمات فريدة تمنح مساحتك طابعاً فنياً مميزاً ومستداماً.</p>
+      </div>
+ 
+      <div class="service-card reveal from-left">
+        <div class="service-icon orange"><i class="fas fa-layer-group"></i></div>
+        <h3 class="service-title">أرضيات الإيبوكسي</h3>
+        <p class="service-desc">تطبيق أرضيات الإيبوكسي عالية الجودة للمرافق الصناعية والتجارية والسكنية بمقاومة عالية ومتانة استثنائية.</p>
+      </div>
+ 
+      <div class="service-card reveal from-right">
+        <div class="service-icon blue"><i class="fas fa-stamp"></i></div>
+        <h3 class="service-title">الخرسانة المطبوعة</h3>
+        <p class="service-desc">تصميم وتنفيذ الخرسانة المطبوعة للممرات والمداخل والمناطق الخارجية بأنماط متنوعة تحاكي الطبيعة والحجر.</p>
+      </div>
+ 
+      <div class="service-card reveal">
+        <div class="service-icon orange"><i class="fas fa-mountain"></i></div>
+        <h3 class="service-title">الحجر الديكوري</h3>
+        <p class="service-desc">توريد وتركيب جميع أنواع الحجر الديكوري لأعمال الداخلية والخارجية، بما يشمل الأرضيات والجدران والواجهات.</p>
+      </div>
+ 
+      <div class="service-card reveal from-left">
+        <div class="service-icon blue"><i class="fas fa-building"></i></div>
+        <h3 class="service-title">الواجهات الخارجية</h3>
+        <p class="service-desc">تصميم وتنفيذ الواجهات الخارجية باستخدام أفضل أنواع الحجر والمواد لمنح المبنى هوية معمارية مميزة وراسخة.</p>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- ============================================================
+       PRODUCTS SECTION
+  ============================================================ -->
+  <section id="products">
+    <div class="section-header reveal">
+      <span class="section-label">منتجاتنا</span>
+      <h2 class="section-title">مواد و<span>منتجات</span> متميزة</h2>
+      <p class="section-desc">نوفر أجود أنواع مواد البناء والتشطيب لضمان أعلى مستويات الجودة</p>
+      <div class="section-divider"></div>
+    </div>
+ 
+    <div class="products-grid container">
+ 
+      <div class="product-card reveal from-right">
+        <div class="product-img" style="background:linear-gradient(135deg,#8B4513,#D2691E,#F4A460);">🪨</div>
+        <div class="product-info">
+          <div class="product-type">أرضيات ديكورية</div>
+          <div class="product-name">تيرازو مرمري فاخر</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal">
+        <div class="product-img" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);">💎</div>
+        <div class="product-info">
+          <div class="product-type">أرضيات ريزن</div>
+          <div class="product-name">ريزن باوند متعدد الألوان</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal">
+        <div class="product-img" style="background:linear-gradient(135deg,#3d0c02,#891d00,#c24d00);">🔥</div>
+        <div class="product-info">
+          <div class="product-type">أرضيات إيبوكسي</div>
+          <div class="product-name">إيبوكسي صناعي متين</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal from-left">
+        <div class="product-img" style="background:linear-gradient(135deg,#4a4a4a,#6b6b6b,#8d8d8d);">🏗️</div>
+        <div class="product-info">
+          <div class="product-type">خرسانة مطبوعة</div>
+          <div class="product-name">خرسانة طوابع متنوعة</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal from-right">
+        <div class="product-img" style="background:linear-gradient(135deg,#5c4827,#8a6d3b,#c8a96e);">🪵</div>
+        <div class="product-info">
+          <div class="product-type">حجر طبيعي</div>
+          <div class="product-name">حجر رملي طبيعي</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal">
+        <div class="product-img" style="background:linear-gradient(135deg,#00416a,#005b9e,#007fd4);">🏛️</div>
+        <div class="product-info">
+          <div class="product-type">حجر واجهات</div>
+          <div class="product-name">حجر جرانيت للواجهات</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal">
+        <div class="product-img" style="background:linear-gradient(135deg,#2d4a22,#3d6b2f,#4f8a3c);">🌿</div>
+        <div class="product-info">
+          <div class="product-type">حجر ديكوري</div>
+          <div class="product-name">حجر ديكوري أخضر</div>
+        </div>
+      </div>
+ 
+      <div class="product-card reveal from-left">
+        <div class="product-img" style="background:linear-gradient(135deg,#4a004a,#7a007a,#a800a8);">✨</div>
+        <div class="product-info">
+          <div class="product-type">ريزن فني</div>
+          <div class="product-name">ريزن آرت ثلاثي الأبعاد</div>
+        </div>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- ============================================================
+       PROJECTS SECTION
+  ============================================================ -->
+  <section id="projects">
+    <div class="section-header reveal">
+      <span class="section-label">أعمالنا</span>
+      <h2 class="section-title">مشاريعنا <span>المنفذة</span></h2>
+      <p class="section-desc">نماذج من أعمالنا المتنوعة في المملكة العربية السعودية</p>
+      <div class="section-divider"></div>
+    </div>
+ 
+    <!-- Filter -->
+    <div class="projects-filter reveal">
+      <button class="filter-btn active" onclick="filterProjects('all', this)">الكل</button>
+      <button class="filter-btn" onclick="filterProjects('terazzo', this)">تيرازو</button>
+      <button class="filter-btn" onclick="filterProjects('resin', this)">ريزن</button>
+      <button class="filter-btn" onclick="filterProjects('epoxy', this)">إيبوكسي</button>
+      <button class="filter-btn" onclick="filterProjects('concrete', this)">خرسانة مطبوعة</button>
+      <button class="filter-btn" onclick="filterProjects('stone', this)">حجر ديكوري</button>
+    </div>
+ 
+    <div class="projects-masonry container" id="projects-grid">
+ 
+      <div class="project-card" data-cat="terazzo">
+        <div class="project-bg" style="background:linear-gradient(135deg,#8B4513,#D2691E,#F4A460);">🏛️</div>
+        <div class="project-overlay">
+          <div class="project-cat">تيرازو</div>
+          <div class="project-name">فيلا سكنية فاخرة</div>
+          <div class="project-location"><i class="fas fa-map-marker-alt"></i> الرياض</div>
+        </div>
+      </div>
+ 
+      <div class="project-card" data-cat="resin">
+        <div class="project-bg" style="background:linear-gradient(135deg,#3d0c02,#891d00,#c24d00);">🎨</div>
+        <div class="project-overlay">
+          <div class="project-cat">ريزن ملون</div>
+          <div class="project-name">مجمع تجاري حديث</div>
+          <div class="project-location"><i class="fas fa-map-marker-alt"></i> جدة</div>
+        </div>
+      </div>
+ 
+      <div class="project-card" data-cat="epoxy">
+        <div class="project-bg" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);">🏭</div>
+        <div class="project-overlay">
+          <div class="project-cat">إيبوكسي</div>
+          <div class="project-name">مستودع صناعي كبير</div>
+          <div class="project-location"><i class="fas fa-map-marker-alt"></i> الدمام</div>
+        </div>
+      </div>
+ 
+      <div class="project-card" data-cat="concrete">
+        <div class="project-bg" style="background:linear-gradient(135deg,#4a4a4a,#6b6b6b,#8d8d8d);">🛣️</div>
+        <div class="project-overlay">
+          <div class="project-cat">خرسانة مطبوعة</div>
+          <div class="project-name">مدخل فيلا خاصة</div>
+          <div class="project-location"><i class="fas fa-map-marker-alt"></i> الرياض</div>
+        </div>
+      </div>
+ 
+      <div class="project-card" data-cat="stone">
+        <div class="project-bg" style="background:linear-gradient(135deg,#5c4827,#8a6d3b,#c8a96e);">🪨</div>
+        <div class="project-overlay">
+          <div class="project-cat">حجر طبيعي</div>
+          <div class="project-name">واجهة مبنى تجاري</div>
+          <div class="project-location"><i class="fas fa-map-marker-alt"></i> الرياض</div>
+        </div>
+      </div>
+ 
+      <div class="project-card" data-cat="resin">
+        <div class="project-bg" style="background:linear-gradient(135deg,#4a004a,#7a007a,#a800a8);">✨</div>
+        <div class="project-overlay">
+          <div class="project-cat">ريزن آرت</div>
+          <div class="project-name">مطعم فاخر</div>
+          <div class="project-location"><i class="fas fa-map-marker-alt"></i> جدة</div>
+        </div>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- ============================================================
+       CLIENTS SECTION
+  ============================================================ -->
+  <section id="clients">
+    <div class="section-header reveal">
+      <span class="section-label">عملاؤنا</span>
+      <h2 class="section-title" style="color:white;">شركاء <span style="color:var(--orange)">نجاحنا</span></h2>
+      <p class="section-desc">نفخر بثقة عملائنا من كبرى الشركات والمؤسسات في المملكة</p>
+      <div class="section-divider"></div>
+    </div>
+ 
+    <div class="clients-marquee-wrap reveal">
+      <div class="clients-marquee" id="marquee">
+        <div class="client-logo"><i class="fas fa-building"></i>شركة الراجحي</div>
+        <div class="client-logo"><i class="fas fa-hotel"></i>فنادق روتانا</div>
+        <div class="client-logo"><i class="fas fa-city"></i>إمارة الرياض</div>
+        <div class="client-logo"><i class="fas fa-hospital"></i>مستشفى الملك فهد</div>
+        <div class="client-logo"><i class="fas fa-school"></i>وزارة التعليم</div>
+        <div class="client-logo"><i class="fas fa-shopping-mall"></i>مول العرب</div>
+        <div class="client-logo"><i class="fas fa-industry"></i>أرامكو السعودية</div>
+        <div class="client-logo"><i class="fas fa-university"></i>جامعة الملك سعود</div>
+        <!-- Duplicate for infinite scroll -->
+        <div class="client-logo"><i class="fas fa-building"></i>شركة الراجحي</div>
+        <div class="client-logo"><i class="fas fa-hotel"></i>فنادق روتانا</div>
+        <div class="client-logo"><i class="fas fa-city"></i>إمارة الرياض</div>
+        <div class="client-logo"><i class="fas fa-hospital"></i>مستشفى الملك فهد</div>
+        <div class="client-logo"><i class="fas fa-school"></i>وزارة التعليم</div>
+        <div class="client-logo"><i class="fas fa-shopping-mall"></i>مول العرب</div>
+        <div class="client-logo"><i class="fas fa-industry"></i>أرامكو السعودية</div>
+        <div class="client-logo"><i class="fas fa-university"></i>جامعة الملك سعود</div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ============================================================
+       CERTIFICATES SECTION
+  ============================================================ -->
+  <section id="certificates">
+    <div class="section-header reveal">
+      <span class="section-label">اعتمادنا</span>
+      <h2 class="section-title">شهاداتنا و<span>تراخيصنا</span></h2>
+      <p class="section-desc">نمتلك جميع التراخيص والاعتمادات الرسمية التي تؤكد جودة أعمالنا ومصداقيتنا</p>
+      <div class="section-divider"></div>
+    </div>
+ 
+    <div class="certs-grid container">
+ 
+      <div class="cert-card reveal from-right">
+        <span class="cert-icon">🏆</span>
+        <div class="cert-name">شهادة الجودة ISO 9001</div>
+        <div class="cert-body">اعتماد نظام إدارة الجودة الدولي لضمان أعلى معايير التنفيذ والخدمة</div>
+        <span class="cert-year">2022</span>
+      </div>
+ 
+      <div class="cert-card reveal">
+        <span class="cert-icon">📜</span>
+        <div class="cert-name">رخصة مقاول معتمد</div>
+        <div class="cert-body">مرخصون من وزارة الشؤون البلدية والقروية في المملكة العربية السعودية</div>
+        <span class="cert-year">2023</span>
+      </div>
+ 
+      <div class="cert-card reveal from-left">
+        <span class="cert-icon">⭐</span>
+        <div class="cert-name">عضوية الغرفة التجارية</div>
+        <div class="cert-body">عضوية رسمية في الغرفة التجارية الصناعية بالرياض رقم م / ١٢٣٤٥</div>
+        <span class="cert-year">2021</span>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- ============================================================
+       MAP SECTION
+  ============================================================ -->
+  <section id="map-section">
+    <div class="section-header reveal">
+      <span class="section-label">موقعنا</span>
+      <h2 class="section-title">نحن في <span>الرياض</span></h2>
+      <p class="section-desc">   
+الرياض - حي النهضة
+شارع عبد الرحمن الناصر
+مبنى رقم 7737</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="map-wrapper reveal container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.9437937786296!2d46.6752957!3d24.7135517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1699999999999!5m2!1sen!2s"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="خريطة موقع 4C Decoration الرياض">
+      </iframe>
+    </div>
+  </section>
+ 
+  <!-- ============================================================
+       CONTACT SECTION
+  ============================================================ -->
+  <section id="contact">
+    <div class="contact-grid container">
+ 
+      <div class="contact-info">
+        <div class="section-header">
+          <span class="section-label reveal">تواصل معنا</span>
+          <h2 class="section-title reveal">نحن هنا<br><span>لمساعدتك</span></h2>
+          <div class="section-divider reveal" style="margin-right:0;margin-top:16px;"></div>
+        </div>
+ 
+        <div class="contact-items">
+          <div class="contact-item reveal from-right">
+            <div class="contact-icon orange"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-item-text">
+              <h4>العنوان</h4>
+              <p>   المملكة العربية السعودية
+الرياض - حي النهضة
+ <br>شارع عبد الرحمن الناصر
+مبنى رقم 7737 </p>
+            </div>
+          </div>
+          <div class="contact-item reveal from-right">
+            <div class="contact-icon blue"><i class="fas fa-phone"></i></div>
+            <div class="contact-item-text">
+              <h4>الهاتف</h4>
+              <p>+966 56 358 9858</p>
+            </div>
+          </div>
+          <div class="contact-item reveal from-right">
+            <div class="contact-icon orange"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-item-text">
+              <h4>واتساب</h4>
+              <p>+966 59 061 4788</p>
+            </div>
+          </div>
+          <div class="contact-item reveal from-right">
+            <div class="contact-icon blue"><i class="fas fa-envelope"></i></div>
+            <div class="contact-item-text">
+              <h4>البريد الإلكتروني</h4>
+              <p>info@4cdecoration.com</p>
+            </div>
+          </div>
+          <div class="contact-item reveal from-right">
+            <div class="contact-icon orange"><i class="fas fa-clock"></i></div>
+            <div class="contact-item-text">
+              <h4>ساعات العمل</h4>
+              <p>الأحد – الخميس: ٨ص – ٦م</p>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="contact-form-wrap reveal from-left">
+        <h3 class="form-title">أرسل لنا رسالة</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>الاسم الكامل</label>
+            <input type="text" placeholder="اسمك الكامل" />
+          </div>
+          <div class="form-group">
+            <label>رقم الهاتف</label>
+            <input type="tel" placeholder="+966 5X XXX XXXX" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>البريد الإلكتروني</label>
+          <input type="email" placeholder="example@email.com" />
+        </div>
+        <div class="form-group">
+          <label>نوع الخدمة</label>
+          <select>
+            <option value="">اختر الخدمة المطلوبة</option>
+            <option>أرضيات تيرازو</option>
+            <option>أرضيات ريزن</option>
+            <option>أرضيات إيبوكسي</option>
+            <option>خرسانة مطبوعة</option>
+            <option>حجر ديكوري</option>
+            <option>واجهات خارجية</option>
+            <option>أخرى</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>تفاصيل الطلب</label>
+          <textarea placeholder="اكتب تفاصيل مشروعك أو استفساراتك هنا..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()">
+          <i class="fas fa-paper-plane"></i>
+          إرسال الرسالة
+        </button>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer">
+    <div class="footer-grid">
+ 
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="logo-emblem">4C</div>
+          <div class="logo-text">
+            <span class="brand">4C Decoration</span>
+            <span class="tagline">تشطيبات &amp; ديكورات احترافية</span>
+          </div>
+        </div>
+        <p>شركة سعودية رائدة في مجال التشطيبات والأعمال الديكورية. نحول الفراغات إلى تحف معمارية بأعلى معايير الجودة والحرفية.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-snapchat"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-tiktok"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+ 
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#about">من نحن</a></li>
+          <li><a href="#services">خدماتنا</a></li>
+          <li><a href="#products">منتجاتنا</a></li>
+          <li><a href="#projects">مشاريعنا</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+ 
+      <div class="footer-col">
+        <h4>خدماتنا</h4>
+        <ul>
+          <li><a href="#services">أرضيات تيرازو</a></li>
+          <li><a href="#services">أرضيات ريزن</a></li>
+          <li><a href="#services">أرضيات إيبوكسي</a></li>
+          <li><a href="#services">خرسانة مطبوعة</a></li>
+          <li><a href="#services">الحجر الديكوري</a></li>
+          <li><a href="#services">الواجهات الخارجية</a></li>
+        </ul>
+      </div>
+ 
+      <div class="footer-col">
+        <h4>تواصل معنا</h4>
+        <ul>
+          <li><a href="tel:+966500000000"><i class="fas fa-phone" style="color:var(--orange);margin-left:8px;"></i> +966 5X XXX XXXX</a></li>
+          <li><a href="mailto:info@4cdecoration.com"><i class="fas fa-envelope" style="color:var(--orange);margin-left:8px;"></i> info@4cdecoration.com</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:var(--orange);margin-left:8px;"></i> الرياض، المملكة العربية السعودية</a></li>
+        </ul>
+      </div>
+ 
+    </div>
+ 
+    <div class="footer-bottom">
+      <div>جميع الحقوق محفوظة &copy; 2024 <span>4C Decoration</span></div>
+      <div>صُمم بـ ❤️ في المملكة العربية السعودية</div>
+    </div>
+  </footer>
+ 
+  <!-- ============================================================
+       BACK TO TOP BUTTON
+  ============================================================ -->
+  <button id="back-to-top" onclick="scrollToTop()" title="العودة للأعلى">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+ 
+  <!-- ============================================================
+       WHATSAPP FLOATING BUTTON
+  ============================================================ -->
+<a 
+  id="whatsapp-btn" 
+  href="https://wa.me/966563589858?text=مرحبا%20اريد%20الاستفسار%20عن%20الخدمة"
+  target="_blank"
+>
+  <i class="fab fa-whatsapp"></i>
+</a>
      <script src="./index.js"></script>
 </body>
 </html>
