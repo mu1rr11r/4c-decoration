@@ -517,58 +517,198 @@
     /* ============================================================
        SERVICES SECTION
     ============================================================ */
-    #services {
-      background: var(--off-white);
-      padding: 100px 24px;
-    }
- 
-    .services-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-    }
- 
-    .service-card {
-      background: white;
-      border-radius: var(--radius);
-      padding: 36px 28px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      transition: transform var(--transition), box-shadow var(--transition);
-      border-bottom: 4px solid transparent;
-      position: relative;
-      overflow: hidden;
-    }
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--blue), var(--orange));
-      transition: width 0.5s ease;
-    }
-    .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
-    .service-card:hover::before { width: 100%; }
- 
-    .service-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      margin-bottom: 24px;
-    }
-    .service-icon.orange { background: rgba(243,146,0,0.1); color: var(--orange); }
-    .service-icon.blue { background: rgba(0,84,166,0.1); color: var(--blue); }
- 
-    .service-title { font-size: 18px; font-weight: 800; color: var(--dark); margin-bottom: 12px; }
-    .service-desc { font-size: 14px; color: var(--gray); line-height: 1.8; }
- 
+   #services {
+  padding: 120px 24px;
+  background:
+    linear-gradient(rgba(255,255,255,0.96), rgba(255,255,255,0.96)),
+    url('./images/pattern.png');
+  position: relative;
+  overflow: hidden;
+}
+
+.services-grid {
+  max-width: 1250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+
+.service-card {
+  position: relative;
+  background: #fff;
+  padding: 35px;
+  border-radius: 26px;
+  overflow: hidden;
+  transition: 0.5s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.04);
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,84,166,0.04),
+      rgba(243,146,0,0.04)
+    );
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.12);
+}
+
+.service-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+/* ICON */
+
+.service-icon {
+  width: 78px;
+  height: 78px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-icon::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: rgba(255,255,255,0.15);
+  transform: rotate(45deg);
+  left: -120%;
+  transition: 0.6s;
+}
+
+.service-card:hover .service-icon::after {
+  left: 120%;
+}
+
+.service-icon i {
+  position: relative;
+  z-index: 2;
+}
+
+/* ICON COLORS */
+
+.terrazzo {
+  background: linear-gradient(135deg, #ff9a00, #ffcc00);
+  color: white;
+}
+
+.resin {
+  background: linear-gradient(135deg, #0054a6, #2b8fff);
+  color: white;
+}
+
+.epoxy {
+  background: linear-gradient(135deg, #7b61ff, #9b8cff);
+  color: white;
+}
+
+.concrete {
+  background: linear-gradient(135deg, #3c3c3c, #6f6f6f);
+  color: white;
+}
+
+.stone {
+  background: linear-gradient(135deg, #8d6e63, #bcaaa4);
+  color: white;
+}
+
+.facade {
+  background: linear-gradient(135deg, #00a896, #02c39a);
+  color: white;
+}
+
+/* NUMBER */
+
+.service-number {
+  font-size: 42px;
+  font-weight: 900;
+  color: rgba(0,0,0,0.05);
+}
+
+/* TEXT */
+
+.service-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 15px;
+}
+
+.service-desc {
+  font-size: 15px;
+  line-height: 2;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* LINE */
+
+.service-line {
+  width: 60px;
+  height: 4px;
+  border-radius: 50px;
+  background: linear-gradient(to right, var(--blue), var(--orange));
+  transition: 0.4s;
+}
+
+.service-card:hover .service-line {
+  width: 100%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  #services {
+    padding: 90px 18px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 28px;
+  }
+
+  .service-title {
+    font-size: 21px;
+  }
+}
     /* ============================================================
        PRODUCTS SECTION
     ============================================================ */
