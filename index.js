@@ -3,28 +3,22 @@
 ============================================================ */
 
 /* ============================================================
-   NAVBAR — SCROLL HANDLER
+   NAVBAR SCROLL
 ============================================================ */
 const navbar   = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-links a');
 const sections = document.querySelectorAll('section[id]');
 
 window.addEventListener('scroll', () => {
-  // Active link highlight
   let current = '';
   sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - 100) {
-      current = sec.getAttribute('id');
-    }
+    if (window.scrollY >= sec.offsetTop - 100) current = sec.getAttribute('id');
   });
   navLinks.forEach(a => {
     a.classList.remove('active');
     if (a.getAttribute('href') === '#' + current) a.classList.add('active');
   });
-
-  // Back-to-top button
-  const btn = document.getElementById('back-to-top');
-  btn.classList.toggle('visible', window.scrollY > 400);
+  document.getElementById('back-to-top').classList.toggle('visible', window.scrollY > 400);
 });
 
 /* ============================================================
@@ -47,7 +41,7 @@ function scrollToTop() {
 }
 
 /* ============================================================
-   SCROLL REVEAL ANIMATIONS
+   SCROLL REVEAL
 ============================================================ */
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -57,14 +51,11 @@ const revealObserver = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.12 });
-
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 /* ============================================================
    PROJECT FILTER
 ============================================================ */
-
-// Inject fadeInScale animation once
 const animStyle = document.createElement('style');
 animStyle.textContent = `
   @keyframes fadeInScale {
@@ -79,74 +70,124 @@ function filterProjects(cat, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
 
-  // Show / hide cards
+  let visible = 0;
   document.querySelectorAll('.project-card').forEach(card => {
     if (cat === 'all' || card.dataset.cat === cat) {
       card.style.display = 'block';
-      // Re-trigger animation
       card.style.animation = 'none';
-      void card.offsetHeight; // reflow
+      void card.offsetHeight;
       card.style.animation = 'fadeInScale 0.4s ease';
+      visible++;
     } else {
       card.style.display = 'none';
     }
   });
+
+  const empty = document.getElementById('empty-state');
+  if (empty) empty.style.display = visible === 0 ? 'block' : 'none';
 }
 
 /* ============================================================
-   PRODUCT CARDS → SCROLL TO PROJECTS + FILTER
+   GO TO PROJECTS FROM SERVICES (click service card)
 ============================================================ */
-const productCatMap = [
-  'terazzo',  // 0: تيرازو مرمري فاخر
-  'resin',    // 1: ريزن باوند
-  'epoxy',    // 2: إيبوكسي صناعي
-  'concrete', // 3: خرسانة مطبوعة
-  'stone',    // 4: حجر رملي
-  'stone',    // 5: حجر جرانيت
-  'stone',    // 6: حجر ديكوري أخضر
-  'resin',    // 7: ريزن آرت
-];
+function goToProjects(cat) {
+  // Find matching filter button
+  const filterBtn = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
+  filterProjects(cat, filterBtn);
 
-document.querySelectorAll('.product-card').forEach((card, i) => {
-  card.addEventListener('click', () => {
-    const cat = productCatMap[i] || 'all';
-    const targetBtn = document.querySelector(`.filter-btn[onclick*="'${cat}'"]`);
-    filterProjects(cat, targetBtn);
-
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
+  // Smooth scroll to projects section
+  const projectsSection = document.getElementById('projects');
+  if (projectsSection) {
+    setTimeout(() => {
       const top = projectsSection.getBoundingClientRect().top + window.scrollY - 90;
       window.scrollTo({ top, behavior: 'smooth' });
-    }
-  });
-});
+    }, 50);
+  }
+}
 
 /* ============================================================
-   LAZY LOADING للصور
+   LIGHTBOX
 ============================================================ */
-const lazyImages = document.querySelectorAll('img[data-src]');
+let lightboxImages = [];
+let lightboxIndex  = 0;
 
-if ('IntersectionObserver' in window) {
-  const imgObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src;
-        img.removeAttribute('data-src');
-        img.classList.add('loaded');
-        imgObserver.unobserve(img);
-      }
-    });
-  }, { rootMargin: '200px 0px', threshold: 0 });
+function buildImageList(activeCategory) {
+  // Collect all visible project cards
+  const cards = [...document.querySelectorAll('.project-card')]
+    .filter(c => c.style.display !== 'none');
 
-  lazyImages.forEach(img => imgObserver.observe(img));
-} else {
-  // Fallback للمتصفحات القديمة
-  lazyImages.forEach(img => {
-    img.src = img.dataset.src;
-    img.removeAttribute('data-src');
-  });
+  lightboxImages = cards.map(card => {
+    const img     = card.querySelector('.project-bg img');
+    const caption = card.querySelector('.project-name')?.textContent || '';
+    return { src: img ? img.src : '', caption };
+  }).filter(i => i.src);
+
+  return cards;
 }
+
+function openLightbox(card) {
+  const visibleCards = buildImageList();
+  const img  = card.querySelector('.project-bg img');
+  if (!img) return;
+
+  // Find index of clicked card
+  const clickedSrc = img.src;
+  lightboxIndex = lightboxImages.findIndex(i => i.src === clickedSrc);
+  if (lightboxIndex === -1) lightboxIndex = 0;
+
+  renderLightboxImage();
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function renderLightboxImage() {
+  const item = lightboxImages[lightboxIndex];
+  if (!item) return;
+
+  const lbImg = document.getElementById('lightbox-img');
+  lbImg.style.opacity = '0';
+  setTimeout(() => {
+    lbImg.src = item.src;
+    lbImg.onload = () => { lbImg.style.opacity = '1'; };
+    // In case already cached
+    if (lbImg.complete) lbImg.style.opacity = '1';
+  }, 120);
+
+  document.getElementById('lightbox-caption').textContent = item.caption;
+  document.getElementById('lightbox-counter').textContent =
+    `${lightboxIndex + 1} / ${lightboxImages.length}`;
+}
+
+function closeLightbox(e) {
+  if (e && e.target !== e.currentTarget) return;
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function lightboxNav(dir, e) {
+  if (e) e.stopPropagation();
+  lightboxIndex = (lightboxIndex + dir + lightboxImages.length) % lightboxImages.length;
+  renderLightboxImage();
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', e => {
+  const lb = document.getElementById('lightbox');
+  if (!lb.classList.contains('active')) return;
+  if (e.key === 'Escape') { closeLightbox(); }
+  if (e.key === 'ArrowRight' || e.key === 'ArrowUp')   lightboxNav(-1, null);
+  if (e.key === 'ArrowLeft'  || e.key === 'ArrowDown')  lightboxNav(1, null);
+});
+
+// Touch / swipe support for lightbox
+let touchStartX = 0;
+document.getElementById('lightbox')?.addEventListener('touchstart', e => {
+  touchStartX = e.touches[0].clientX;
+});
+document.getElementById('lightbox')?.addEventListener('touchend', e => {
+  const diff = touchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 50) lightboxNav(diff > 0 ? 1 : -1, null);
+});
 
 /* ============================================================
    CONTACT FORM SUBMIT (demo)
@@ -155,11 +196,9 @@ function submitForm() {
   const btn = document.querySelector('.form-submit');
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
   btn.style.background = 'var(--gray)';
-
   setTimeout(() => {
     btn.innerHTML = '<i class="fas fa-check-circle"></i> تم الإرسال بنجاح!';
     btn.style.background = '#22c55e';
-
     setTimeout(() => {
       btn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الرسالة';
       btn.style.background = '';
@@ -168,7 +207,7 @@ function submitForm() {
 }
 
 /* ============================================================
-   COUNTER ANIMATION (hero stats)
+   COUNTER ANIMATION
 ============================================================ */
 function animateCounter(el, target) {
   let count = 0;
