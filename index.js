@@ -1,39 +1,61 @@
-  /* Navbar active */
-  const sections = document.querySelectorAll('section[id]');
-  const navAs = document.querySelectorAll('.nav-main > li > a');
-  window.addEventListener('scroll', () => {
-    let cur = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 110) cur = s.id; });
-    navAs.forEach(a => { a.closest('li').classList.remove('active'); if (a.getAttribute('href') === '#' + cur) a.closest('li').classList.add('active'); });
-    document.getElementById('back-to-top').classList.toggle('visible', window.scrollY > 400);
-  });
- 
-  /* Mobile menu */
-  function toggleMenu() {
-    document.getElementById('mobile-menu').classList.toggle('open');
-    document.getElementById('hamburger').classList.toggle('open');
+  /* ============================================================
+     SIDEBAR TOGGLE (Desktop)
+  ============================================================ */
+  function toggleSidebar() {
+    document.body.classList.toggle('sidebar-collapsed');
+    document.getElementById('sidebar').classList.toggle('collapsed');
   }
-  function closeMenu() {
-    document.getElementById('mobile-menu').classList.remove('open');
+ 
+  /* ============================================================
+     MOBILE SIDEBAR
+  ============================================================ */
+  function toggleMobileSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('mobile-overlay');
+    const ham = document.getElementById('hamburger');
+    sidebar.classList.toggle('mobile-open');
+    overlay.classList.toggle('open');
+    ham.classList.toggle('open');
+  }
+  function closeMobileSidebar() {
+    document.getElementById('sidebar').classList.remove('mobile-open');
+    document.getElementById('mobile-overlay').classList.remove('open');
     document.getElementById('hamburger').classList.remove('open');
   }
  
-  /* Accordion */
-  function toggleAccordion(id) {
-    const el = document.getElementById(id);
-    el.classList.toggle('open');
-  }
+  /* ============================================================
+     ACTIVE NAV LINK
+  ============================================================ */
+  const sections = document.querySelectorAll('section[id]');
+  const navItems = document.querySelectorAll('.nav-item');
+  const prodTabs = document.querySelectorAll('.prod-tab');
  
-  /* Back to top */
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+    navItems.forEach(a => {
+      a.classList.remove('active');
+      if (a.getAttribute('href') === '#' + cur) a.classList.add('active');
+    });
+ 
+    const visible = window.scrollY > 400;
+    document.getElementById('back-to-top').classList.toggle('visible', visible);
+    document.getElementById('whatsapp-btn').classList.toggle('visible', visible);
+  });
+ 
   function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
  
-  /* Reveal */
+  /* ============================================================
+     REVEAL ANIMATION
+  ============================================================ */
   const ro = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), 80); ro.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
  
-  /* Filter */
+  /* ============================================================
+     FILTER PROJECTS
+  ============================================================ */
   function filterProjects(cat, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     if (btn) btn.classList.add('active');
@@ -50,13 +72,19 @@
   }
  
   function goToProjects(cat) {
-    const btn = document.querySelector(`.filter-btn[onclick*="'${cat}'"]`);
-    filterProjects(cat, btn);
+    /* Update active tab in BOTH bars */
+    document.querySelectorAll('#products-bar .prod-tab, .mobile-products-bar .prod-tab').forEach(t => t.classList.remove('active'));
+ 
+    const filterBtn = document.querySelector(`.filter-btn[onclick*="'${cat}'"]`);
+    filterProjects(cat, filterBtn);
+ 
     const sec = document.getElementById('projects');
-    if (sec) setTimeout(() => window.scrollTo({ top: sec.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' }), 50);
+    if (sec) setTimeout(() => window.scrollTo({ top: sec.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' }), 50);
   }
  
-  /* Lightbox */
+  /* ============================================================
+     LIGHTBOX
+  ============================================================ */
   let lbImages = [], lbIdx = 0;
   function openLightbox(card) {
     const visible = [...document.querySelectorAll('.project-card')].filter(c => c.style.display !== 'none');
@@ -85,7 +113,9 @@
     if (e.key === 'ArrowLeft')  lightboxNav(1, null);
   });
  
-  /* Form submit */
+  /* ============================================================
+     FORM SUBMIT
+  ============================================================ */
   function submitForm() {
     const btn = document.querySelector('.form-submit');
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
