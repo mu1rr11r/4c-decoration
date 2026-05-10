@@ -343,7 +343,8 @@
     /* ============================================================
        SERVICES — Updated with all products from image
     ============================================================ */
-    #services { padding: 100px 24px 80px; background: var(--off-white); }
+    #services { padding: 90px 24px 90px; background: var(--off-white); }
+    #services .container + .container { margin-top: 46px; }
     .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
     .service-card {
       background: white; border-radius: 20px; overflow: hidden;
