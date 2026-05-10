@@ -18,12 +18,9 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<!-- ============================================================
-     NAVBAR
-============================================================ -->
+<!-- NAVBAR -->
 <nav id="navbar">
   <div class="nav-wrap">
-    <!-- Logo -->
     <a href="#home" class="nav-logo">
       <div class="logo-emblem">4C</div>
       <div class="logo-text">
@@ -32,95 +29,151 @@
       </div>
     </a>
  
-    <!-- Desktop Nav — directly beside logo -->
     <ul class="nav-main">
       <li><a href="#home">الرئيسية</a></li>
       <li><a href="#about">من نحن</a></li>
- 
-      <!-- Services Mega Menu -->
       <li>
-        <button class="nav-btn">
-          خدماتنا <i class="fas fa-chevron-down arrow"></i>
-        </button>
+        <button class="nav-btn">خدماتنا <i class="fas fa-chevron-down arrow"></i></button>
         <div class="mega-dropdown">
           <div class="mega-cat">
-            <div class="mega-cat-title">أرضيات</div>
-            <a href="#services"><i class="fas fa-circle-dot"></i> أرضيات التيرازو</a>
-            <a href="#services"><i class="fas fa-circle-dot"></i> ريزن باوند</a>
-            <a href="#services"><i class="fas fa-circle-dot"></i> ريزن ملون</a>
-            <a href="#services"><i class="fas fa-circle-dot"></i> أرضيات إيبوكسي</a>
-            <a href="#services"><i class="fas fa-circle-dot"></i> خرسانة مطبوعة</a>
-            <a href="#services"><i class="fas fa-circle-dot"></i> حجر طبيعي</a>
+            <div class="mega-cat-title">أرضيات راتنج</div>
+            <a href="#services"><i class="fas fa-circle-dot"></i> تيرازو إيبوكسي وأسمنتي</a>
+            <a href="#services"><i class="fas fa-circle-dot"></i> ميكروسمنت وميكروتويينج</a>
+            <a href="#services"><i class="fas fa-circle-dot"></i> أرضيات ريزن باوند</a>
+            <a href="#services"><i class="fas fa-circle-dot"></i> أرضيات ريزن فلور</a>
+            <a href="#services"><i class="fas fa-circle-dot"></i> إيبوكسي الجراجات والمستودعات</a>
           </div>
           <div class="mega-cat">
-            <div class="mega-cat-title">جدران وواجهات</div>
-            <a href="#services"><i class="fas fa-circle-dot"></i> حجر ديكوري</a>
-            <a href="#services"><i class="fas fa-circle-dot"></i> واجهات خارجية</a>
-            <a href="#services"><i class="fas fa-circle-dot"></i> إيبوكسي جدران</a>
+            <div class="mega-cat-title">خرسانة وملاعب</div>
+            <a href="#services"><i class="fas fa-circle-dot"></i> أرضيات مطاطية للملاعب</a>
+            <a href="#services"><i class="fas fa-circle-dot"></i> الخرسانة المطبوعة والحصى</a>
+            <a href="#services"><i class="fas fa-circle-dot"></i> والخرسانة المروحة</a>
           </div>
           <div class="mega-cat">
-            <div class="mega-cat-title">متخصصة</div>
-            <a href="#services"><i class="fas fa-circle-dot"></i> تيرازو مطابخ</a>
-            <a href="#services"><i class="fas fa-circle-dot"></i> ريزن آرت 3D</a>
-            <a href="#services"><i class="fas fa-circle-dot"></i> خرسانة حدائق</a>
-            <a href="#services"><i class="fas fa-circle-dot"></i> توريد كميات</a>
+            <div class="mega-cat-title">مسابح وحدائق</div>
+            <a href="#services"><i class="fas fa-circle-dot"></i> تشطيبات مسابح ساندي بول</a>
+            <a href="#services"><i class="fas fa-circle-dot"></i> تنسيق الحدائق والديكورات الخارجية</a>
+          </div>
+          <div class="mega-cat">
+            <div class="mega-cat-title">ديكور وتوريد</div>
+            <a href="#services"><i class="fas fa-circle-dot"></i> التشطيبات والديكورات الداخلية والواجهات</a>
+            <a href="#services"><i class="fas fa-circle-dot"></i> توريد الحجر الطبيعي والخشب</a>
+            <a href="#services"><i class="fas fa-circle-dot"></i> طاولات ريزن مع الخشب الطبيعي</a>
           </div>
         </div>
       </li>
- 
       <li><a href="#projects">مشاريعنا</a></li>
       <li><a href="#clients">عملاؤنا</a></li>
       <li><a href="#contact">تواصل معنا</a></li>
     </ul>
  
-    <!-- Right side -->
     <div class="nav-right">
       <a href="tel:+966563589858" class="nav-cta-btn">
         <i class="fas fa-phone"></i> اتصل بنا
       </a>
     </div>
  
-    <!-- Hamburger -->
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </div>
   </div>
 </nav>
  
-<!-- Mobile Menu -->
+<!-- MOBILE MENU — Improved -->
 <div class="mobile-menu" id="mobile-menu">
-  <a href="#home"     onclick="closeMenu()">الرئيسية</a>
-  <a href="#about"    onclick="closeMenu()">من نحن</a>
-  <div class="m-cat-title">خدماتنا — أرضيات</div>
-  <div class="m-sub">
-    <a href="#services" onclick="closeMenu()">أرضيات التيرازو</a>
-    <a href="#services" onclick="closeMenu()">ريزن باوند</a>
-    <a href="#services" onclick="closeMenu()">ريزن ملون</a>
-    <a href="#services" onclick="closeMenu()">أرضيات إيبوكسي</a>
-    <a href="#services" onclick="closeMenu()">خرسانة مطبوعة</a>
-    <a href="#services" onclick="closeMenu()">حجر طبيعي</a>
+  <a href="#home" class="m-main-link" onclick="closeMenu()">
+    <i class="fas fa-home m-icon"></i> الرئيسية
+  </a>
+  <a href="#about" class="m-main-link" onclick="closeMenu()">
+    <i class="fas fa-info-circle m-icon"></i> من نحن
+  </a>
+ 
+  <!-- Services Accordion -->
+  <div class="m-accordion" id="m-acc-services">
+    <div class="m-accordion-header" onclick="toggleAccordion('m-acc-services')">
+      <div class="m-acc-left">
+        <i class="fas fa-th-large"></i>
+        <span>خدماتنا</span>
+      </div>
+      <i class="fas fa-chevron-down m-arr"></i>
+    </div>
+    <div class="m-accordion-body">
+      <!-- أرضيات راتنج -->
+      <div class="m-service-cat">
+        <div class="m-service-cat-title">أرضيات راتنج وإيبوكسي</div>
+        <a href="#services" class="m-service-item" onclick="closeMenu()">
+          <i class="fas fa-layer-group"></i> تيرازو إيبوكسي وأسمنتي
+        </a>
+        <a href="#services" class="m-service-item" onclick="closeMenu()">
+          <i class="fas fa-paint-roller"></i> ميكروسمنت وميكروتويينج
+        </a>
+        <a href="#services" class="m-service-item" onclick="closeMenu()">
+          <i class="fas fa-circle"></i> أرضيات ريزن باوند
+        </a>
+        <a href="#services" class="m-service-item" onclick="closeMenu()">
+          <i class="fas fa-water"></i> أرضيات ريزن فلور
+        </a>
+        <a href="#services" class="m-service-item" onclick="closeMenu()">
+          <i class="fas fa-warehouse"></i> إيبوكسي الجراجات والمستودعات
+        </a>
+      </div>
+      <!-- خرسانة وملاعب -->
+      <div class="m-service-cat">
+        <div class="m-service-cat-title">خرسانة وملاعب</div>
+        <a href="#services" class="m-service-item" onclick="closeMenu()">
+          <i class="fas fa-basketball-ball"></i> أرضيات مطاطية للملاعب
+        </a>
+        <a href="#services" class="m-service-item" onclick="closeMenu()">
+          <i class="fas fa-stamp"></i> الخرسانة المطبوعة ومكشوفة الحصى
+        </a>
+        <a href="#services" class="m-service-item" onclick="closeMenu()">
+          <i class="fas fa-fan"></i> الخرسانة المروحة
+        </a>
+      </div>
+      <!-- مسابح وحدائق -->
+      <div class="m-service-cat">
+        <div class="m-service-cat-title">مسابح وحدائق</div>
+        <a href="#services" class="m-service-item" onclick="closeMenu()">
+          <i class="fas fa-swimming-pool"></i> تشطيبات مسابح ساندي بول
+        </a>
+        <a href="#services" class="m-service-item" onclick="closeMenu()">
+          <i class="fas fa-leaf"></i> تنسيق الحدائق والديكورات الخارجية
+        </a>
+      </div>
+      <!-- ديكور وتوريد -->
+      <div class="m-service-cat">
+        <div class="m-service-cat-title">ديكور وتوريد</div>
+        <a href="#services" class="m-service-item" onclick="closeMenu()">
+          <i class="fas fa-building"></i> التشطيبات والديكورات الداخلية والواجهات
+        </a>
+        <a href="#services" class="m-service-item" onclick="closeMenu()">
+          <i class="fas fa-mountain"></i> توريد الحجر الطبيعي والخشب الطبيعي
+        </a>
+        <a href="#services" class="m-service-item" onclick="closeMenu()">
+          <i class="fas fa-table"></i> طاولات ريزن مع الخشب الطبيعي
+        </a>
+      </div>
+    </div>
   </div>
-  <div class="m-cat-title">خدماتنا — جدران وواجهات</div>
-  <div class="m-sub">
-    <a href="#services" onclick="closeMenu()">حجر ديكوري</a>
-    <a href="#services" onclick="closeMenu()">واجهات خارجية</a>
-    <a href="#services" onclick="closeMenu()">إيبوكسي جدران</a>
+ 
+  <a href="#projects" class="m-main-link" onclick="closeMenu()">
+    <i class="fas fa-images m-icon"></i> مشاريعنا
+  </a>
+  <a href="#clients" class="m-main-link" onclick="closeMenu()">
+    <i class="fas fa-handshake m-icon"></i> عملاؤنا
+  </a>
+  <a href="#contact" class="m-main-link" onclick="closeMenu()">
+    <i class="fas fa-envelope m-icon"></i> تواصل معنا
+  </a>
+ 
+  <div class="m-cta-wrap">
+    <a href="tel:+966563589858" class="m-cta-btn" onclick="closeMenu()">
+      <i class="fas fa-phone"></i> اتصل بنا الآن
+    </a>
   </div>
-  <div class="m-cat-title">خدماتنا — متخصصة</div>
-  <div class="m-sub">
-    <a href="#services" onclick="closeMenu()">تيرازو مطابخ</a>
-    <a href="#services" onclick="closeMenu()">ريزن آرت 3D</a>
-    <a href="#services" onclick="closeMenu()">خرسانة حدائق</a>
-    <a href="#services" onclick="closeMenu()">توريد كميات</a>
-  </div>
-  <a href="#projects" onclick="closeMenu()">مشاريعنا</a>
-  <a href="#clients"  onclick="closeMenu()">عملاؤنا</a>
-  <a href="#contact"  onclick="closeMenu()">تواصل معنا</a>
 </div>
  
-<!-- ============================================================
-     HERO
-============================================================ -->
+<!-- HERO -->
 <section id="home">
   <div class="hero-inner">
     <div class="hero-content">
@@ -132,25 +185,16 @@
         نُحوّل <span>الفراغات</span><br>إلى تحف معمارية
       </h1>
       <p class="hero-subtitle reveal">
-        متخصصون في أرقى حلول الأرضيات والجدران — تيرازو، ريزن باوند، إيبوكسي، خرسانة مطبوعة — مع توريد الحجر الديكوري للمشاريع والواجهات
+        متخصصون في أرقى حلول الأرضيات والجدران — تيرازو، ريزن، إيبوكسي، خرسانة مطبوعة، ملاعب، مسابح — مع توريد الحجر والخشب الطبيعي
       </p>
       <div class="hero-btns reveal">
         <a href="#services" class="btn-primary"><i class="fas fa-eye"></i> اكتشف خدماتنا</a>
         <a href="#contact"  class="btn-outline"><i class="fas fa-comments"></i> تواصل معنا</a>
       </div>
       <div class="hero-stats reveal">
-        <div class="stat-item">
-          <span class="stat-num" data-target="50">+50</span>
-          <span class="stat-label">مشروع منفذ</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num" data-target="5">+5</span>
-          <span class="stat-label">سنة خبرة</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num" data-target="40">+40</span>
-          <span class="stat-label">عميل سعيد</span>
-        </div>
+        <div class="stat-item"><span class="stat-num">+50</span><span class="stat-label">مشروع منفذ</span></div>
+        <div class="stat-item"><span class="stat-num">+5</span><span class="stat-label">سنة خبرة</span></div>
+        <div class="stat-item"><span class="stat-num">+40</span><span class="stat-label">عميل سعيد</span></div>
       </div>
     </div>
     <div class="hero-visual reveal">
@@ -158,31 +202,23 @@
         <img src="./img/4c.jpeg" alt="4C Decoration" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80'">
         <div class="hero-float-card card-1">
           <div class="float-icon orange"><i class="fas fa-medal"></i></div>
-          <div>
-            <div style="font-size:11px;color:var(--gray);font-weight:500">جودة مضمونة</div>
-            <div>أعلى المعايير</div>
-          </div>
+          <div><div style="font-size:11px;color:var(--gray);font-weight:500">جودة مضمونة</div><div>أعلى المعايير</div></div>
         </div>
         <div class="hero-float-card card-2">
           <div class="float-icon blue"><i class="fas fa-map-marker-alt"></i></div>
-          <div>
-            <div style="font-size:11px;color:var(--gray);font-weight:500">موقعنا</div>
-            <div>الرياض، المملكة</div>
-          </div>
+          <div><div style="font-size:11px;color:var(--gray);font-weight:500">موقعنا</div><div>الرياض، المملكة</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
  
-<!-- ============================================================
-     ABOUT
-============================================================ -->
+<!-- ABOUT -->
 <section id="about">
   <div class="about-grid container">
     <div class="about-img-stack reveal from-right">
       <div class="about-img-main">
-        <img src="./img/All.jpeg" alt="About">
+        <img src="./img/All.jpeg" alt="About" onerror="this.src='https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=800&q=80'">
       </div>
       <div class="about-img-accent">
         <span class="big-num">5+</span>
@@ -198,9 +234,6 @@
       <p class="about-text reveal from-left">
         شركة 4C Decoration هي شركة سعودية رائدة في مجال التشطيبات والأعمال الديكورية، تأسست على أسس من الجودة والابتكار. نحن متخصصون في تحويل الفراغات المعمارية إلى لوحات فنية باستخدام أحدث تقنيات الأرضيات والجدران.
       </p>
-      <p class="about-text reveal from-left">
-        نفخر بامتلاكنا فريقاً من أمهر المتخصصين ذوي الخبرة الواسعة، ونستخدم أجود المواد الخام لضمان نتائج تتجاوز توقعات عملائنا في كل مشروع.
-      </p>
       <div class="about-features reveal from-left">
         <div class="feature-item"><div class="feature-icon"><i class="fas fa-check"></i></div><span class="feature-text">خبرة أكثر من 5 سنوات</span></div>
         <div class="feature-item"><div class="feature-icon"><i class="fas fa-check"></i></div><span class="feature-text">فريق متخصص ومحترف</span></div>
@@ -213,9 +246,7 @@
   </div>
 </section>
  
-<!-- ============================================================
-     SERVICES
-============================================================ -->
+<!-- SERVICES -->
 <section id="services">
   <div class="section-header reveal container">
     <span class="section-label">خدماتنا</span>
@@ -224,153 +255,152 @@
     <div class="section-divider"></div>
   </div>
  
-  <!-- أرضيات -->
-  <div class="services-category container reveal">
+  <!-- أرضيات راتنج وإيبوكسي -->
+  <div class="container reveal">
+    <div class="cat-separator">
+      <div class="cat-sep-line"></div>
+      <div class="cat-sep-badge"><i class="fas fa-layer-group"></i> أرضيات راتنج وإيبوكسي</div>
+      <div class="cat-sep-line rev"></div>
+    </div>
     <div class="services-grid">
       <div class="service-card" onclick="goToProjects('terazzo')">
         <div class="service-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="تيرازو" loading="lazy"></div>
         <div class="service-body">
           <div class="service-number">01</div>
-          <h3 class="service-title">أرضيات التيرازو</h3>
-          <p class="service-desc">تنفيذ وتصميم أرضيات تيرازو فاخرة بتشطيبات حديثة وكلاسيكية تمنح المكان مظهراً راقياً وعمر افتراضي طويل.</p>
-          <div class="service-footer">
-            <div class="service-line"></div>
-            <span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span>
-          </div>
+          <h3 class="service-title">تيرازو إيبوكسي وأسمنتي<small>أرضيات - درج - مغاسل - كاونترات</small></h3>
+          <p class="service-desc">تنفيذ وتصميم أرضيات تيرازو فاخرة بتشطيبات إيبوكسي وأسمنتي حديثة تمنح المكان مظهراً راقياً لأرضيات المنازل والدرج والمغاسل وأسطح الكاونترات.</p>
+          <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
         </div>
       </div>
       <div class="service-card" onclick="goToProjects('resin')">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6d349947?w=600&q=80" alt="ريزن" loading="lazy"></div>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=600&q=80" alt="ميكروسمنت" loading="lazy"></div>
         <div class="service-body">
           <div class="service-number">02</div>
-          <h3 class="service-title">أرضيات الريزن باوند</h3>
-          <p class="service-desc">ريزن باوند بألوان وتأثيرات عصرية تضيف لمسة فنية فريدة للمساحات الداخلية والخارجية بمتانة عالية.</p>
-          <div class="service-footer">
-            <div class="service-line"></div>
-            <span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span>
-          </div>
+          <h3 class="service-title">ميكروسمنت وميكروتويينج</h3>
+          <p class="service-desc">تشطيبات ميكروسمنت وميكروتويينج عصرية للأرضيات والجدران بسطوح ناعمة ومتصلة تمنح المساحات مظهراً فاخراً وعصرياً بلا درزات.</p>
+          <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
         </div>
       </div>
       <div class="service-card" onclick="goToProjects('resin')">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80" alt="ريزن ملون" loading="lazy"></div>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80" alt="ريزن باوند" loading="lazy"></div>
         <div class="service-body">
           <div class="service-number">03</div>
-          <h3 class="service-title">أرضيات الريزن الملون</h3>
-          <p class="service-desc">ريزن ملون بتدرجات وتأثيرات ثلاثية الأبعاد يحول الأرضية إلى لوحة فنية خالدة تبهر كل من يراها.</p>
-          <div class="service-footer">
-            <div class="service-line"></div>
-            <span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span>
-          </div>
-        </div>
-      </div>
-      <div class="service-card" onclick="goToProjects('epoxy')">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="إيبوكسي" loading="lazy"></div>
-        <div class="service-body">
-          <div class="service-number">04</div>
-          <h3 class="service-title">أرضيات الإيبوكسي</h3>
-          <p class="service-desc">حلول إيبوكسي عالية التحمل للمنازل والمعارض والمصانع بمظهر فاخر ومقاومة ممتازة للرطوبة والخدوش.</p>
-          <div class="service-footer">
-            <div class="service-line"></div>
-            <span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span>
-          </div>
-        </div>
-      </div>
-      <div class="service-card" onclick="goToProjects('concrete')">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80" alt="خرسانة" loading="lazy"></div>
-        <div class="service-body">
-          <div class="service-number">05</div>
-          <h3 class="service-title">الخرسانة المطبوعة</h3>
-          <p class="service-desc">تصميمات خرسانة مطبوعة تحاكي الحجر والخشب بأشكال فاخرة تناسب الحدائق والمداخل والممرات الخارجية.</p>
-          <div class="service-footer">
-            <div class="service-line"></div>
-            <span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span>
-          </div>
-        </div>
-      </div>
-      <div class="service-card" onclick="goToProjects('stone')">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?w=600&q=80" alt="حجر" loading="lazy"></div>
-        <div class="service-body">
-          <div class="service-number">06</div>
-          <h3 class="service-title">أرضيات الحجر الطبيعي</h3>
-          <p class="service-desc">تركيب وتشطيب أرضيات الحجر الطبيعي بأعلى دقة وإتقان لتمنح مشروعك طابعاً فريداً من نوعه.</p>
-          <div class="service-footer">
-            <div class="service-line"></div>
-            <span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-  <!-- جدران وواجهات -->
-  <div class="services-category container reveal" style="margin-top:56px;">
-    <div class="services-grid">
-      <div class="service-card" onclick="goToProjects('stone')">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80" alt="حجر ديكوري" loading="lazy"></div>
-        <div class="service-body">
-          <div class="service-number">07</div>
-          <h3 class="service-title">الحجر الديكوري للجدران</h3>
-          <p class="service-desc">توريد وتركيب كافة أنواع الحجر الديكوري للحوائط الداخلية بأفضل الخامات وأرقى التشطيبات.</p>
-          <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
-        </div>
-      </div>
-      <div class="service-card" onclick="goToProjects('stone')">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="واجهات" loading="lazy"></div>
-        <div class="service-body">
-          <div class="service-number">08</div>
-          <h3 class="service-title">الواجهات الخارجية بالحجر</h3>
-          <p class="service-desc">تنفيذ واجهات حجرية خارجية عصرية تجمع بين الفخامة والمتانة لإبراز الهوية المعمارية للمبنى.</p>
-          <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
-        </div>
-      </div>
-      <div class="service-card" onclick="goToProjects('epoxy')">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80" alt="إيبوكسي جدران" loading="lazy"></div>
-        <div class="service-body">
-          <div class="service-number">09</div>
-          <h3 class="service-title">دهانات الإيبوكسي للجدران</h3>
-          <p class="service-desc">تشطيبات إيبوكسي للجدران تمنح مقاومة فائقة للرطوبة والبكتيريا مناسبة للمطابخ والحمامات والمستشفيات.</p>
-          <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
-        </div>
-      </div>
-    </div>
-  </div>
- 
-  <!-- تشطيبات متخصصة -->
-  <div class="services-category container reveal" style="margin-top:56px;">
-    <div class="services-grid">
-      <div class="service-card" onclick="goToProjects('terazzo')">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="تيرازو مطابخ" loading="lazy"></div>
-        <div class="service-body">
-          <div class="service-number">10</div>
-          <h3 class="service-title">تيرازو مخصص للمطابخ</h3>
-          <p class="service-desc">تشطيبات تيرازو مخصصة للمطابخ وأسطح العمل بخامات مضادة للبقع تجمع بين الجمال والعملية.</p>
+          <h3 class="service-title">أرضيات ريزن باوند</h3>
+          <p class="service-desc">ريزن باوند بألوان وتأثيرات عصرية تضيف لمسة فنية فريدة للمساحات الداخلية والخارجية بمتانة عالية ومقاومة رائعة للاهتراء.</p>
           <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
         </div>
       </div>
       <div class="service-card" onclick="goToProjects('resin')">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?w=600&q=80" alt="ريزن آرت" loading="lazy"></div>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?w=600&q=80" alt="ريزن فلور" loading="lazy"></div>
         <div class="service-body">
-          <div class="service-number">11</div>
-          <h3 class="service-title">ريزن آرت ثلاثي الأبعاد</h3>
-          <p class="service-desc">تحفة فنية حية تحت قدميك — ريزن آرت بتصاميم بحرية وطبيعية ثلاثية الأبعاد تخلق تجربة بصرية استثنائية.</p>
+          <div class="service-number">04</div>
+          <h3 class="service-title">أرضيات ريزن فلور</h3>
+          <p class="service-desc">أرضيات ريزن فلور بتدرجات وتأثيرات ثلاثية الأبعاد تحوّل الأرضية إلى لوحة فنية خالدة تبهر كل من يراها وتضيف بعداً جمالياً فريداً.</p>
+          <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+        </div>
+      </div>
+      <div class="service-card" onclick="goToProjects('epoxy')">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="إيبوكسي جراجات" loading="lazy"></div>
+        <div class="service-body">
+          <div class="service-number">05</div>
+          <h3 class="service-title">إيبوكسي الجراجات والمستودعات</h3>
+          <p class="service-desc">حلول إيبوكسي عالية التحمل للجراجات والمستودعات والمصانع بمظهر فاخر ومقاومة ممتازة للرطوبة والزيوت والأحمال الثقيلة.</p>
+          <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- خرسانة وملاعب -->
+  <div class="container reveal">
+    <div class="cat-separator">
+      <div class="cat-sep-line"></div>
+      <div class="cat-sep-badge"><i class="fas fa-basketball-ball"></i> خرسانة وملاعب</div>
+      <div class="cat-sep-line rev"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" onclick="goToProjects('concrete')">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80" alt="ملاعب مطاطية" loading="lazy"></div>
+        <div class="service-body">
+          <div class="service-number">06</div>
+          <h3 class="service-title">أرضيات مطاطية للملاعب</h3>
+          <p class="service-desc">تنفيذ أرضيات مطاطية ملونة ومتينة لملاعب كرة القدم والسلة والتنس وكافة الرياضات بمواصفات دولية وألوان متعددة.</p>
           <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
         </div>
       </div>
       <div class="service-card" onclick="goToProjects('concrete')">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80" alt="خرسانة حدائق" loading="lazy"></div>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80" alt="خرسانة مطبوعة" loading="lazy"></div>
         <div class="service-body">
-          <div class="service-number">12</div>
-          <h3 class="service-title">خرسانة مطبوعة للحدائق</h3>
-          <p class="service-desc">تحويل حديقتك ومسبحك ومداخلك إلى مساحات راقية بخرسانة مطبوعة مقاومة للعوامل الجوية.</p>
+          <div class="service-number">07</div>
+          <h3 class="service-title">الخرسانة المطبوعة ومكشوفة الحصى والمروحة</h3>
+          <p class="service-desc">تصميمات خرسانة مطبوعة تحاكي الحجر والخشب، وخرسانة مكشوفة الحصى، وخرسانة مروحة بأشكال فاخرة للحدائق والمداخل والممرات.</p>
+          <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- مسابح وحدائق -->
+  <div class="container reveal">
+    <div class="cat-separator">
+      <div class="cat-sep-line"></div>
+      <div class="cat-sep-badge"><i class="fas fa-swimming-pool"></i> مسابح وحدائق</div>
+      <div class="cat-sep-line rev"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" onclick="goToProjects('concrete')">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80" alt="مسابح" loading="lazy"></div>
+        <div class="service-body">
+          <div class="service-number">08</div>
+          <h3 class="service-title">تشطيبات مسابح ساندي بول</h3>
+          <p class="service-desc">تشطيب وتبطين المسابح بتقنية ساندي بول (البلاستر الرملي) التي تمنح المسبح مظهراً ناعماً وطويل الأمد مع مقاومة كيميائية ممتازة.</p>
           <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
         </div>
       </div>
       <div class="service-card" onclick="goToProjects('stone')">
-        <div class="service-img"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="توريد" loading="lazy"></div>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80" alt="حدائق" loading="lazy"></div>
         <div class="service-body">
-          <div class="service-number">13</div>
-          <h3 class="service-title">توريد الحجر للمشاريع الكبرى</h3>
-          <p class="service-desc">توريد كميات كبيرة من الحجر الطبيعي والديكوري لمشاريع الفنادق والمجمعات التجارية والمستشفيات.</p>
+          <div class="service-number">09</div>
+          <h3 class="service-title">تنسيق الحدائق والديكورات الخارجية</h3>
+          <p class="service-desc">تصميم وتنفيذ حدائق خارجية راقية وديكورات للمساحات الخارجية بأسلوب احترافي يحوّل المحيط الخارجي لبيتك إلى واحة جمال.</p>
+          <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- ديكورات وتوريد -->
+  <div class="container reveal">
+    <div class="cat-separator">
+      <div class="cat-sep-line"></div>
+      <div class="cat-sep-badge"><i class="fas fa-building"></i> ديكورات داخلية وتوريد</div>
+      <div class="cat-sep-line rev"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" onclick="goToProjects('stone')">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80" alt="ديكورات" loading="lazy"></div>
+        <div class="service-body">
+          <div class="service-number">10</div>
+          <h3 class="service-title">التشطيبات والديكورات الداخلية والخارجية والواجهات</h3>
+          <p class="service-desc">تنفيذ تشطيبات ديكورية داخلية وخارجية متكاملة من المفتاح للمفتاح، شاملة الواجهات الخارجية بأرقى المواد والخامات.</p>
+          <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+        </div>
+      </div>
+      <div class="service-card" onclick="goToProjects('stone')">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?w=600&q=80" alt="حجر طبيعي" loading="lazy"></div>
+        <div class="service-body">
+          <div class="service-number">11</div>
+          <h3 class="service-title">توريد الحجر الطبيعي والخشب الطبيعي</h3>
+          <p class="service-desc">توريد كميات كبيرة وصغيرة من الحجر الطبيعي والخشب الطبيعي بأجود الأنواع لمشاريع الفنادق والفلل والمجمعات التجارية.</p>
+          <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+        </div>
+      </div>
+      <div class="service-card" onclick="goToProjects('resin')">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="طاولات ريزن" loading="lazy"></div>
+        <div class="service-body">
+          <div class="service-number">12</div>
+          <h3 class="service-title">طاولات ريزن مع الخشب الطبيعي</h3>
+          <p class="service-desc">تصنيع طاولات فنية فريدة من مزيج الريزن الشفاف مع الخشب الطبيعي بتصاميم حصرية تمنح المكان طابعاً فنياً راقياً لا مثيل له.</p>
           <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
         </div>
       </div>
@@ -378,9 +408,7 @@
   </div>
 </section>
  
-<!-- ============================================================
-     PROJECTS
-============================================================ -->
+<!-- PROJECTS -->
 <section id="projects">
   <div class="section-header reveal container">
     <span class="section-label">أعمالنا</span>
@@ -397,7 +425,6 @@
     <button class="filter-btn" onclick="filterProjects('stone',this)">حجر ديكوري</button>
   </div>
   <div class="projects-masonry container" id="projects-grid">
-    <!-- تيرازو -->
     <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)">
       <div class="project-bg"><img src="./img/تيرازو/تيرازو1Image 2026-05-07 at 7.34.49 PM.jpeg" alt="تيرازو 1" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'" loading="lazy"></div>
       <div class="project-overlay"><div class="project-cat">تيرازو</div><div class="project-name">أرضية تيرازو مرمرية</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
@@ -406,85 +433,33 @@
       <div class="project-bg"><img src="./img/تيرازو/تيرازو2Image 2026-05-07 at 7.35.13 PM.jpeg" alt="تيرازو 2" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'" loading="lazy"></div>
       <div class="project-overlay"><div class="project-cat">تيرازو</div><div class="project-name">تيرازو كلاسيك فاخر</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
     </div>
-    <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/تيرازو/تيرازو3Image 2026-05-07 at 7.35.14 PM.jpeg" alt="تيرازو 3" onerror="this.src='https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">تيرازو</div><div class="project-name">تيرازو بتصميم هندسي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/تيرازو/تيرازو4Image 2026-05-07 at 7.35.17 PM.jpeg" alt="تيرازو 4" onerror="this.src='https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">تيرازو</div><div class="project-name">تيرازو فيلا سكنية</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/تيرازو/تيرازو5Image 2026-05-07 at 7.35.18 PM.jpeg" alt="تيرازو 5" onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6d349947?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">تيرازو</div><div class="project-name">تيرازو صالة استقبال</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/تيرازو/تيرازو6Image 2026-05-07 at 7.35.19 PM.jpeg" alt="تيرازو 6" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">تيرازو</div><div class="project-name">تيرازو مجمع تجاري</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <!-- ريزن -->
     <div class="project-card" data-cat="resin" onclick="openLightbox(this)">
       <div class="project-bg"><img src="./img/أرضيات ريزن/أرضيات ريزن1Image 2026-05-07 at 7.03.01 PM.jpeg" alt="ريزن 1" onerror="this.src='https://images.unsplash.com/photo-1508615070457-7baeba4003ab?w=600&q=80'" loading="lazy"></div>
       <div class="project-overlay"><div class="project-cat">ريزن</div><div class="project-name">ريزن باوند متعدد الألوان</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+    </div>
+    <div class="project-card" data-cat="epoxy" onclick="openLightbox(this)">
+      <div class="project-bg"><img src="./img/إيبوكسي/إيبوكسي1Image 2026-05-07 at 8.11.21 PM.jpeg" alt="إيبوكسي 1" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'" loading="lazy"></div>
+      <div class="project-overlay"><div class="project-cat">إيبوكسي</div><div class="project-name">إيبوكسي صناعي متين</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+    </div>
+    <div class="project-card" data-cat="concrete" onclick="openLightbox(this)">
+      <div class="project-bg"><img src="./img/خرسانة مطبوعة/خرسانة مطبوع1Image 2026-05-07 at 6.55.41 PM.jpeg" alt="خرسانة 1" onerror="this.src='https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80'" loading="lazy"></div>
+      <div class="project-overlay"><div class="project-cat">خرسانة مطبوعة</div><div class="project-name">خرسانة حديقة فيلا</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+    </div>
+    <div class="project-card" data-cat="stone" onclick="openLightbox(this)">
+      <div class="project-bg"><img src="./img/WhatsApp Image 2026-05-09 at 12.02.39 AM.jpeg" alt="حجر 1" onerror="this.src='https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80'" loading="lazy"></div>
+      <div class="project-overlay"><div class="project-cat">حجر ديكوري</div><div class="project-name">واجهة مبنى تجاري</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+    </div>
+    <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)">
+      <div class="project-bg"><img src="./img/تيرازو/تيرازو3Image 2026-05-07 at 7.35.14 PM.jpeg" alt="تيرازو 3" onerror="this.src='https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80'" loading="lazy"></div>
+      <div class="project-overlay"><div class="project-cat">تيرازو</div><div class="project-name">تيرازو بتصميم هندسي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
     </div>
     <div class="project-card" data-cat="resin" onclick="openLightbox(this)">
       <div class="project-bg"><img src="./img/أرضيات ريزن/أرضيات ريزن2Image 2026-05-07 at 7.03.39 PM.jpeg" alt="ريزن 2" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80'" loading="lazy"></div>
       <div class="project-overlay"><div class="project-cat">ريزن</div><div class="project-name">ريزن باوند ذهبي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
     </div>
-    <div class="project-card" data-cat="resin" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/أرضيات ريزن/أرضيات ريزن3Image 2026-05-07 at 7.03.41 PM.jpeg" alt="ريزن 3" onerror="this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">ريزن</div><div class="project-name">ريزن ملون مجمع سكني</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <div class="project-card" data-cat="resin" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/أرضيات ريزن/أرضيات ريزن4Image 2026-05-07 at 7.03.42 PM.jpeg" alt="ريزن 4" onerror="this.src='https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">ريزن</div><div class="project-name">ريزن آرت ثلاثي الأبعاد</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <div class="project-card" data-cat="resin" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/أرضيات ريزن/أرضيات ريزن5Image 2026-05-07 at 7.03.42 PM.jpeg" alt="ريزن 5" onerror="this.src='https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">ريزن</div><div class="project-name">ريزن فيلا فاخرة</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <div class="project-card" data-cat="resin" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/أرضيات ريزن/أرضيات ريزن6Image 2026-05-07 at 7.03.42 PM.jpeg" alt="ريزن 6" onerror="this.src='https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">ريزن</div><div class="project-name">ريزن معرض تجاري</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <!-- إيبوكسي -->
     <div class="project-card" data-cat="epoxy" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/إيبوكسي/إيبوكسي1Image 2026-05-07 at 8.11.21 PM.jpeg" alt="إيبوكسي 1" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">إيبوكسي</div><div class="project-name">إيبوكسي صناعي متين</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <div class="project-card" data-cat="epoxy" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/إيبوكسي/إيبوكسي2Image 2026-05-07 at 8.11.21 PM.jpeg" alt="إيبوكسي 2" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'" loading="lazy"></div>
+      <div class="project-bg"><img src="./img/إيبوكسي/إيبوكسي2Image 2026-05-07 at 8.11.21 PM.jpeg" alt="إيبوكسي 2" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80'" loading="lazy"></div>
       <div class="project-overlay"><div class="project-cat">إيبوكسي</div><div class="project-name">إيبوكسي لامع 3D</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <div class="project-card" data-cat="epoxy" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/إيبوكسي/إيبوكسي3Image 2026-05-07 at 8.11.21 PM.jpeg" alt="إيبوكسي 3" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">إيبوكسي</div><div class="project-name">إيبوكسي معرض سيارات</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <div class="project-card" data-cat="epoxy" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/إيبوكسي/إيبوكسي4Image 2026-05-07 at 8.11.22 PM.jpeg" alt="إيبوكسي 4" onerror="this.src='https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">إيبوكسي</div><div class="project-name">إيبوكسي مستودع</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <div class="project-card" data-cat="epoxy" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/إيبوكسي/إيبوكسي5Image 2026-05-07 at 8.11.22 PM.jpeg" alt="إيبوكسي 5" onerror="this.src='https://images.unsplash.com/photo-1600607687939-ce8a6d349947?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">إيبوكسي</div><div class="project-name">إيبوكسي مستشفى</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <!-- خرسانة -->
-    <div class="project-card" data-cat="concrete" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/خرسانة مطبوعة/خرسانة مطبوع1Image 2026-05-07 at 6.55.41 PM.jpeg" alt="خرسانة 1" onerror="this.src='https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">خرسانة مطبوعة</div><div class="project-name">خرسانة حديقة فيلا</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <div class="project-card" data-cat="concrete" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/خرسانة مطبوعة/خرسانة مطبوعة2Image 2026-05-07 at 6.55.41 PM.jpeg" alt="خرسانة 2" onerror="this.src='https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">خرسانة مطبوعة</div><div class="project-name">ممشى خرساني مطبوع</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <div class="project-card" data-cat="concrete" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/خرسانة مطبوعة/خرسانة مطبوعة3Image 2026-05-07 at 6.55.40 PM.jpeg" alt="خرسانة 3" onerror="this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">خرسانة مطبوعة</div><div class="project-name">مدخل فيلا مطبوع</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
-    </div>
-    <!-- حجر -->
-    <div class="project-card" data-cat="stone" onclick="openLightbox(this)">
-      <div class="project-bg"><img src="./img/WhatsApp Image 2026-05-09 at 12.02.39 AM.jpeg" alt="حجر 1" onerror="this.src='https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80'" loading="lazy"></div>
-      <div class="project-overlay"><div class="project-cat">حجر ديكوري</div><div class="project-name">واجهة مبنى تجاري</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
     </div>
   </div>
   <div id="empty-state" style="display:none;text-align:center;padding:56px 24px;">
@@ -505,9 +480,7 @@
   </div>
 </div>
  
-<!-- ============================================================
-     CLIENTS
-============================================================ -->
+<!-- CLIENTS -->
 <section id="clients">
   <div class="section-header reveal">
     <span class="section-label">عملاؤنا</span>
@@ -537,8 +510,6 @@
   </div>
 </section>
  
-
- 
 <!-- MAP -->
 <section id="map-section">
   <div class="section-header reveal">
@@ -552,9 +523,7 @@
   </div>
 </section>
  
-<!-- ============================================================
-     CONTACT
-============================================================ -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="contact-grid container">
     <div class="contact-info">
@@ -592,47 +561,36 @@
     <div class="contact-form-wrap reveal from-left">
       <h3 class="form-title">أرسل لنا رسالة</h3>
       <div class="form-row">
-        <div class="form-group">
-          <label>الاسم الكامل</label>
-          <input type="text" placeholder="اسمك الكامل">
-        </div>
-        <div class="form-group">
-          <label>رقم الهاتف</label>
-          <input type="tel" placeholder="+966 5X XXX XXXX">
-        </div>
+        <div class="form-group"><label>الاسم الكامل</label><input type="text" placeholder="اسمك الكامل"></div>
+        <div class="form-group"><label>رقم الهاتف</label><input type="tel" placeholder="+966 5X XXX XXXX"></div>
       </div>
-      <div class="form-group">
-        <label>البريد الإلكتروني</label>
-        <input type="email" placeholder="example@email.com">
-      </div>
+      <div class="form-group"><label>البريد الإلكتروني</label><input type="email" placeholder="example@email.com"></div>
       <div class="form-group">
         <label>نوع الخدمة</label>
         <select>
           <option value="">اختر الخدمة المطلوبة</option>
-          <option>أرضيات تيرازو</option>
+          <option>تيرازو إيبوكسي وأسمنتي</option>
+          <option>ميكروسمنت وميكروتويينج</option>
           <option>أرضيات ريزن باوند</option>
-          <option>أرضيات ريزن ملون</option>
-          <option>أرضيات إيبوكسي</option>
-          <option>خرسانة مطبوعة</option>
-          <option>حجر ديكوري</option>
-          <option>واجهات خارجية</option>
+          <option>أرضيات ريزن فلور</option>
+          <option>إيبوكسي الجراجات والمستودعات</option>
+          <option>أرضيات مطاطية للملاعب</option>
+          <option>الخرسانة المطبوعة ومكشوفة الحصى</option>
+          <option>تشطيبات مسابح ساندي بول</option>
+          <option>تنسيق الحدائق والديكورات الخارجية</option>
+          <option>التشطيبات والديكورات الداخلية والواجهات</option>
+          <option>توريد الحجر الطبيعي والخشب</option>
+          <option>طاولات ريزن مع الخشب الطبيعي</option>
           <option>أخرى</option>
         </select>
       </div>
-      <div class="form-group">
-        <label>تفاصيل الطلب</label>
-        <textarea placeholder="اكتب تفاصيل مشروعك أو استفساراتك هنا..."></textarea>
-      </div>
-      <button class="form-submit" onclick="submitForm()">
-        <i class="fas fa-paper-plane"></i> إرسال الرسالة
-      </button>
+      <div class="form-group"><label>تفاصيل الطلب</label><textarea placeholder="اكتب تفاصيل مشروعك أو استفساراتك هنا..."></textarea></div>
+      <button class="form-submit" onclick="submitForm()"><i class="fas fa-paper-plane"></i> إرسال الرسالة</button>
     </div>
   </div>
 </section>
  
-<!-- ============================================================
-     FOOTER
-============================================================ -->
+<!-- FOOTER -->
 <footer id="footer">
   <div class="footer-grid">
     <div class="footer-brand">
@@ -648,11 +606,9 @@
         <a href="https://www.instagram.com/4cdecoration" class="social-btn" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
         <a href="https://www.facebook.com/share/16iZQPdhg2/" class="social-btn" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="social-btn"><i class="fab fa-snapchat"></i></a>
         <a href="https://www.tiktok.com/@4c.decoration" class="social-btn" target="_blank"><i class="fab fa-tiktok"></i></a>
         <a href="https://youtube.com/@4cdecoration-e7k" class="social-btn" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.linkedin.com/in/4c-decoration-27a09b40a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-btn" target="_blank"><i class="fab fa-linkedin"></i></a>
-
+        <a href="https://www.linkedin.com/in/4c-decoration-27a09b40a" class="social-btn" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     <div class="footer-col">
@@ -668,12 +624,14 @@
     <div class="footer-col">
       <h4>خدماتنا</h4>
       <ul>
-        <li><a href="#services">أرضيات تيرازو</a></li>
-        <li><a href="#services">أرضيات ريزن</a></li>
-        <li><a href="#services">أرضيات إيبوكسي</a></li>
-        <li><a href="#services">خرسانة مطبوعة</a></li>
-        <li><a href="#services">الحجر الديكوري</a></li>
-        <li><a href="#services">الواجهات الخارجية</a></li>
+        <li><a href="#services">تيرازو إيبوكسي وأسمنتي</a></li>
+        <li><a href="#services">ميكروسمنت وميكروتويينج</a></li>
+        <li><a href="#services">أرضيات ريزن باوند وفلور</a></li>
+        <li><a href="#services">إيبوكسي الجراجات</a></li>
+        <li><a href="#services">أرضيات مطاطية للملاعب</a></li>
+        <li><a href="#services">خرسانة مطبوعة وملاعب</a></li>
+        <li><a href="#services">مسابح ساندي بول</a></li>
+        <li><a href="#services">طاولات ريزن</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -698,7 +656,6 @@
 <a id="whatsapp-btn" href="https://wa.me/966563589858?text=مرحبا%20اريد%20الاستفسار%20عن%20الخدمة" target="_blank" rel="noopener noreferrer">
   <i class="fab fa-whatsapp"></i>
 </a>
- 
 <script src="./index.js"></script>
 </body>
 </html>

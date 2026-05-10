@@ -1,4 +1,4 @@
- /* ---- Navbar active link ---- */
+  /* Navbar active */
   const sections = document.querySelectorAll('section[id]');
   const navAs = document.querySelectorAll('.nav-main > li > a');
   window.addEventListener('scroll', () => {
@@ -8,7 +8,7 @@
     document.getElementById('back-to-top').classList.toggle('visible', window.scrollY > 400);
   });
  
-  /* ---- Mobile menu ---- */
+  /* Mobile menu */
   function toggleMenu() {
     document.getElementById('mobile-menu').classList.toggle('open');
     document.getElementById('hamburger').classList.toggle('open');
@@ -18,16 +18,22 @@
     document.getElementById('hamburger').classList.remove('open');
   }
  
-  /* ---- Back to top ---- */
+  /* Accordion */
+  function toggleAccordion(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('open');
+  }
+ 
+  /* Back to top */
   function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
  
-  /* ---- Reveal ---- */
+  /* Reveal */
   const ro = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), 80); ro.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
  
-  /* ---- Filter ---- */
+  /* Filter */
   function filterProjects(cat, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     if (btn) btn.classList.add('active');
@@ -50,7 +56,7 @@
     if (sec) setTimeout(() => window.scrollTo({ top: sec.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' }), 50);
   }
  
-  /* ---- Lightbox ---- */
+  /* Lightbox */
   let lbImages = [], lbIdx = 0;
   function openLightbox(card) {
     const visible = [...document.querySelectorAll('.project-card')].filter(c => c.style.display !== 'none');
@@ -78,11 +84,8 @@
     if (e.key === 'ArrowRight') lightboxNav(-1, null);
     if (e.key === 'ArrowLeft')  lightboxNav(1, null);
   });
-  let tx = 0;
-  document.getElementById('lightbox')?.addEventListener('touchstart', e => tx = e.touches[0].clientX);
-  document.getElementById('lightbox')?.addEventListener('touchend', e => { const d = tx - e.changedTouches[0].clientX; if (Math.abs(d) > 50) lightboxNav(d > 0 ? 1 : -1, null); });
  
-  /* ---- Form submit ---- */
+  /* Form submit */
   function submitForm() {
     const btn = document.querySelector('.form-submit');
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري الإرسال...';
