@@ -28,18 +28,33 @@
   ============================================================ */
   const sections = document.querySelectorAll('section[id]');
   const navItems = document.querySelectorAll('.nav-item');
+  let lastScrollY = window.scrollY;
  
   window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    const atTop = currentScrollY <= 150;
+    const scrollingDown = currentScrollY > lastScrollY;
+    const sidebar = document.getElementById('sidebar');
+
+    if (atTop) {
+      document.body.classList.remove('sidebar-hidden');
+      sidebar.classList.remove('hidden');
+    } else if (scrollingDown) {
+      document.body.classList.add('sidebar-hidden');
+      sidebar.classList.add('hidden');
+    }
+
     let cur = '';
-    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+    sections.forEach(s => { if (currentScrollY >= s.offsetTop - 120) cur = s.id; });
     navItems.forEach(a => {
       a.classList.remove('active');
       if (a.getAttribute('href') === '#' + cur) a.classList.add('active');
     });
  
-    const visible = window.scrollY > 400;
+    const visible = currentScrollY > 400;
     document.getElementById('back-to-top').classList.toggle('visible', visible);
     document.getElementById('whatsapp-btn').classList.toggle('visible', visible);
+    lastScrollY = currentScrollY;
   });
  
   function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
