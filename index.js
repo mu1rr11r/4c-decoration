@@ -1,4 +1,4 @@
-  /* ============================================================
+/* ============================================================
      SIDEBAR TOGGLE (Desktop)
   ============================================================ */
   function toggleSidebar() {
@@ -28,7 +28,6 @@
   ============================================================ */
   const sections = document.querySelectorAll('section[id]');
   const navItems = document.querySelectorAll('.nav-item');
-  const prodTabs = document.querySelectorAll('.prod-tab');
  
   window.addEventListener('scroll', () => {
     let cur = '';
@@ -71,15 +70,32 @@
     document.getElementById('empty-state').style.display = visible === 0 ? 'block' : 'none';
   }
  
-  function goToProjects(cat) {
-    /* Update active tab in BOTH bars */
+  function goToProjects(cat, clickedTab) {
+    /* تحديث الـ active tab في البارين */
     document.querySelectorAll('#products-bar .prod-tab, .mobile-products-bar .prod-tab').forEach(t => t.classList.remove('active'));
- 
+    
+    /* تفعيل الـ tab اللي اتضغط */
+    if (clickedTab) {
+      clickedTab.classList.add('active');
+    } else {
+      /* لو اتضغط من كارد الخدمة (بدون tab) — نفعّل الـ tab المناسب */
+      document.querySelectorAll(`[data-cat="${cat}"]`).forEach(t => {
+        if (t.closest('#products-bar') || t.closest('.mobile-products-bar')) {
+          t.classList.add('active');
+        }
+      });
+    }
+
+    /* تحديث زرار الفلتر في قسم المشاريع */
     const filterBtn = document.querySelector(`.filter-btn[onclick*="'${cat}'"]`);
     filterProjects(cat, filterBtn);
  
     const sec = document.getElementById('projects');
-    if (sec) setTimeout(() => window.scrollTo({ top: sec.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' }), 50);
+    if (sec) {
+      setTimeout(() => {
+        window.scrollTo({ top: sec.getBoundingClientRect().top + window.scrollY - 120, behavior: 'smooth' });
+      }, 50);
+    }
   }
  
   /* ============================================================

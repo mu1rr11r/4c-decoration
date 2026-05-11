@@ -1,4 +1,4 @@
-   :root {
+:root {
       --orange: #F39200;
       --orange-dark: #d97d00;
       --orange-light: #fdb544;
@@ -362,12 +362,19 @@
     .mobile-products-bar .prod-tab:hover i,
     .mobile-products-bar .prod-tab.active i { color: var(--orange); }
  
-    /* Mobile overlay */
+    /* ============================================================
+       MOBILE OVERLAY — فقط خلف السايدبار مش على الشاشة كلها
+    ============================================================ */
     #mobile-overlay {
       display: none;
-      position: fixed; inset: 0;
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      /* يغطي فقط الجزء اللي مش السايدبار */
+      right: 0;
       background: rgba(0,0,0,0.5);
-      z-index: 1002;
+      z-index: 999; /* أقل من السايدبار */
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
     }
     #mobile-overlay.open { display: block; }
  
@@ -655,6 +662,7 @@
         transform: translateX(100%);
         transition: transform var(--transition), width var(--transition);
         top: 0;
+        z-index: 1003; /* فوق الـ overlay */
       }
       #sidebar.collapsed { width: 280px; transform: translateX(100%); }
  
@@ -669,6 +677,11 @@
  
       /* Show mobile top bar */
       #mobile-top-bar { display: flex; }
+
+      /* الـ overlay في الموبايل — يغطي الصفحة بس مش السايدبار */
+      #mobile-overlay {
+        z-index: 1002; /* بين المحتوى والسايدبار */
+      }
  
       .sidebar-toggle { display: none; }
  
