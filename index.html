@@ -19,68 +19,68 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
- 
+
 <!-- MOBILE TOP BAR -->
-<div id="mobile-top-bar">
+<div id="mobile-top-bar" role="banner">
   <div class="mobile-top-row">
     <div class="mobile-logo">
-      <div class="logo-emblem">4C</div>
+      <div class="logo-emblem" aria-hidden="true">4C</div>
       <span class="brand">4C Decoration</span>
     </div>
-    <div class="hamburger" id="hamburger" onclick="toggleMobileSidebar()">
+    <button class="hamburger" id="hamburger" onclick="toggleMobileSidebar()" aria-label="فتح القائمة الجانبية" aria-expanded="false" aria-controls="sidebar">
       <span></span><span></span><span></span>
-    </div>
+    </button>
   </div>
-  <div class="mobile-products-bar">
-    <div class="prod-tab" data-cat="terazzo" onclick="goToProjects('terazzo',this);closeMobileSidebar()">
-      <i class="fas fa-layer-group"></i><span>تيرازو إيبوكسي <br> وأسمنتي</span>
+  <nav class="mobile-products-bar" aria-label="تصفح المنتجات">
+    <div class="prod-tab" data-cat="terazzo" onclick="goToProjects('terazzo',this);closeMobileSidebar()" role="button" tabindex="0" aria-label="تيرازو إيبوكسي وأسمنتي">
+      <i class="fas fa-layer-group" aria-hidden="true"></i><span>تيرازو إيبوكسي <br> وأسمنتي</span>
     </div>
-    <div class="prod-tab" data-cat="microcement" onclick="goToProjects('microcement',this);closeMobileSidebar()">
-      <i class="fas fa-paint-roller"></i><span>ميكروسمنت  <br> وميكروتوبينج</span>
+    <div class="prod-tab" data-cat="microcement" onclick="goToProjects('microcement',this);closeMobileSidebar()" role="button" tabindex="0" aria-label="ميكروسمنت وميكروتوبينج">
+      <i class="fas fa-paint-roller" aria-hidden="true"></i><span>ميكروسمنت  <br> وميكروتوبينج</span>
     </div>
-    <div class="prod-tab" data-cat="resinbound" onclick="goToProjects('resinbound',this);closeMobileSidebar()">
-      <i class="fas fa-circle"></i><span>أرضيات  <br>ريزن بوند</span>
+    <div class="prod-tab" data-cat="resinbound" onclick="goToProjects('resinbound',this);closeMobileSidebar()" role="button" tabindex="0" aria-label="أرضيات ريزن بوند">
+      <i class="fas fa-circle" aria-hidden="true"></i><span>أرضيات  <br>ريزن بوند</span>
     </div>
-    <div class="prod-tab" data-cat="resinfloor" onclick="goToProjects('resinfloor',this);closeMobileSidebar()">
-      <i class="fas fa-water"></i><span>فلور</span>
+    <div class="prod-tab" data-cat="resinfloor" onclick="goToProjects('resinfloor',this);closeMobileSidebar()" role="button" tabindex="0" aria-label="أرضيات فلور">
+      <i class="fas fa-water" aria-hidden="true"></i><span>فلور</span>
     </div>
-    <div class="prod-tab" data-cat="epoxy" onclick="goToProjects('epoxy',this);closeMobileSidebar()">
-      <i class="fas fa-warehouse"></i><span>إيبوكسي</span>
+    <div class="prod-tab" data-cat="epoxy" onclick="goToProjects('epoxy',this);closeMobileSidebar()" role="button" tabindex="0" aria-label="إيبوكسي">
+      <i class="fas fa-warehouse" aria-hidden="true"></i><span>إيبوكسي</span>
     </div>
-    <div class="prod-tab" data-cat="courts" onclick="goToProjects('courts',this);closeMobileSidebar()">
-      <i class="fas fa-basketball-ball"></i><span>ملاعب</span>
+    <div class="prod-tab" data-cat="courts" onclick="goToProjects('courts',this);closeMobileSidebar()" role="button" tabindex="0" aria-label="ملاعب">
+      <i class="fas fa-basketball-ball" aria-hidden="true"></i><span>ملاعب</span>
     </div>
-    <div class="prod-tab" data-cat="concrete" onclick="goToProjects('concrete',this);closeMobileSidebar()">
-      <i class="fas fa-stamp"></i><span>خرسانة مطبوعة</span>
+    <div class="prod-tab" data-cat="concrete" onclick="goToProjects('concrete',this);closeMobileSidebar()" role="button" tabindex="0" aria-label="خرسانة مطبوعة">
+      <i class="fas fa-stamp" aria-hidden="true"></i><span>خرسانة مطبوعة</span>
     </div>
-    <div class="prod-tab" data-cat="pools" onclick="goToProjects('pools',this);closeMobileSidebar()">
-      <i class="fas fa-swimming-pool"></i><span>مسابح</span>
+    <div class="prod-tab" data-cat="pools" onclick="goToProjects('pools',this);closeMobileSidebar()" role="button" tabindex="0" aria-label="مسابح">
+      <i class="fas fa-swimming-pool" aria-hidden="true"></i><span>مسابح</span>
     </div>
-    <div class="prod-tab" data-cat="gardens" onclick="goToProjects('gardens',this);closeMobileSidebar()">
-      <i class="fas fa-leaf"></i><span>حدائق</span>
+    <div class="prod-tab" data-cat="gardens" onclick="goToProjects('gardens',this);closeMobileSidebar()" role="button" tabindex="0" aria-label="حدائق">
+      <i class="fas fa-leaf" aria-hidden="true"></i><span>حدائق</span>
     </div>
-    <div class="prod-tab" data-cat="decor" onclick="goToProjects('decor',this);closeMobileSidebar()">
-      <i class="fas fa-building"></i><span>ديكورات</span>
+    <div class="prod-tab" data-cat="decor" onclick="goToProjects('decor',this);closeMobileSidebar()" role="button" tabindex="0" aria-label="ديكورات">
+      <i class="fas fa-building" aria-hidden="true"></i><span>ديكورات</span>
     </div>
-    <div class="prod-tab" data-cat="stone" onclick="goToProjects('stone',this);closeMobileSidebar()">
-      <i class="fas fa-mountain"></i><span>حجر وخشب</span>
+    <div class="prod-tab" data-cat="stone" onclick="goToProjects('stone',this);closeMobileSidebar()" role="button" tabindex="0" aria-label="حجر وخشب">
+      <i class="fas fa-mountain" aria-hidden="true"></i><span>حجر وخشب</span>
     </div>
-    <div class="prod-tab" data-cat="resintables" onclick="goToProjects('resintables',this);closeMobileSidebar()">
-      <i class="fas fa-table"></i><span>طاولات ريزن</span>
+    <div class="prod-tab" data-cat="resintables" onclick="goToProjects('resintables',this);closeMobileSidebar()" role="button" tabindex="0" aria-label="طاولات ريزن">
+      <i class="fas fa-table" aria-hidden="true"></i><span>طاولات ريزن</span>
     </div>
-  </div>
+  </nav>
 </div>
- 
+
 <!-- MOBILE OVERLAY -->
-<div id="mobile-overlay" onclick="closeMobileSidebar()"></div>
- 
+<div id="mobile-overlay" onclick="closeMobileSidebar()" aria-hidden="true"></div>
+
 <!-- SIDEBAR -->
-<nav id="sidebar">
-  <div class="sidebar-toggle" onclick="toggleSidebar()">
-    <i class="fas fa-chevron-right"></i>
-  </div>
-  <a href="#home" class="sidebar-logo" onclick="closeMobileSidebar()">
-    <div class="logo-emblem">4C</div>
+<nav id="sidebar" aria-label="القائمة الرئيسية">
+  <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="تصغير القائمة الجانبية">
+    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+  </button>
+  <a href="#home" class="sidebar-logo" onclick="closeMobileSidebar()" aria-label="الصفحة الرئيسية - 4C Decoration">
+    <div class="logo-emblem" aria-hidden="true">4C</div>
     <div class="logo-text-wrap">
       <span class="brand">4C Decoration</span>
       <span class="tagline">تشطيبات &amp; ديكورات احترافية</span>
@@ -88,98 +88,98 @@
   </a>
   <div class="sidebar-nav">
     <div class="nav-section-label">التنقل</div>
-    <a href="#home" class="nav-item active" data-tip="الرئيسية" onclick="closeMobileSidebar()">
-      <i class="fas fa-home"></i><span class="nav-label">الرئيسية</span>
+    <a href="#home" class="nav-item active" data-tip="الرئيسية" onclick="closeMobileSidebar()" aria-label="الرئيسية">
+      <i class="fas fa-home" aria-hidden="true"></i><span class="nav-label">الرئيسية</span>
     </a>
-    <a href="#about" class="nav-item" data-tip="من نحن" onclick="closeMobileSidebar()">
-      <i class="fas fa-info-circle"></i><span class="nav-label">من نحن</span>
+    <a href="#about" class="nav-item" data-tip="من نحن" onclick="closeMobileSidebar()" aria-label="من نحن">
+      <i class="fas fa-info-circle" aria-hidden="true"></i><span class="nav-label">من نحن</span>
     </a>
-    <a href="#services" class="nav-item" data-tip="خدماتنا" onclick="closeMobileSidebar()">
-      <i class="fas fa-tools"></i><span class="nav-label">خدماتنا</span>
+    <a href="#services" class="nav-item" data-tip="خدماتنا" onclick="closeMobileSidebar()" aria-label="خدماتنا">
+      <i class="fas fa-tools" aria-hidden="true"></i><span class="nav-label">خدماتنا</span>
     </a>
-    <a href="#projects" class="nav-item" data-tip="مشاريعنا" onclick="closeMobileSidebar()">
-      <i class="fas fa-images"></i><span class="nav-label">أعمالنا</span>
+    <a href="#projects" class="nav-item" data-tip="مشاريعنا" onclick="closeMobileSidebar()" aria-label="أعمالنا">
+      <i class="fas fa-images" aria-hidden="true"></i><span class="nav-label">أعمالنا</span>
     </a>
-    <a href="#clients" class="nav-item" data-tip="شركاء" onclick="closeMobileSidebar()">
-      <i class="fas fa-handshake"></i><span class="nav-label">شركاء النجاح</span>
+    <a href="#clients" class="nav-item" data-tip="شركاء" onclick="closeMobileSidebar()" aria-label="شركاء النجاح">
+      <i class="fas fa-handshake" aria-hidden="true"></i><span class="nav-label">شركاء النجاح</span>
     </a>
-    <a href="#contact" class="nav-item" data-tip="تواصل" onclick="closeMobileSidebar()">
-      <i class="fas fa-envelope"></i><span class="nav-label">تواصل معنا</span>
+    <a href="#contact" class="nav-item" data-tip="تواصل" onclick="closeMobileSidebar()" aria-label="تواصل معنا">
+      <i class="fas fa-envelope" aria-hidden="true"></i><span class="nav-label">تواصل معنا</span>
     </a>
   </div>
   <div class="sidebar-social">
-    <div class="social-label">تابعنا</div>
+    <div class="social-label" aria-hidden="true">تابعنا</div>
     <div class="social-icons-row">
-      <a href="https://www.instagram.com/4cdecoration" class="social-icon-btn" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/share/16iZQPdhg2/" class="social-icon-btn" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.tiktok.com/@4c.decoration" class="social-icon-btn" target="_blank"><i class="fab fa-tiktok"></i></a>
-      <a href="https://youtube.com/@4cdecoration-e7k" class="social-icon-btn" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.linkedin.com/in/4c-decoration-27a09b40a" class="social-icon-btn" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/4cdecoration" class="social-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="تابعنا على إنستغرام"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/share/16iZQPdhg2/" class="social-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="تابعنا على فيسبوك"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+      <a href="https://www.tiktok.com/@4c.decoration" class="social-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="تابعنا على تيك توك"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+      <a href="https://youtube.com/@4cdecoration-e7k" class="social-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="تابعنا على يوتيوب"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/4c-decoration-27a09b40a" class="social-icon-btn" target="_blank" rel="noopener noreferrer" aria-label="تابعنا على لينكد إن"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
     </div>
   </div>
   <div class="sidebar-cta">
-    <a href="tel:+966563589858" class="cta-btn-full">
-      <i class="fas fa-phone"></i><span class="btn-label">اتصل بنا الآن</span>
+    <a href="tel:+966563589858" class="cta-btn-full" aria-label="اتصل بنا على الرقم 966563589858+">
+      <i class="fas fa-phone" aria-hidden="true"></i><span class="btn-label">اتصل بنا الآن</span>
     </a>
   </div>
 </nav>
- 
+
 <!-- MAIN CONTENT -->
 <div id="main-wrap">
- 
+
   <!-- PRODUCTS BAR (Desktop) -->
-  <div id="products-bar">
+  <nav id="products-bar" aria-label="تصفح المنتجات">
     <div class="products-bar-inner">
-      <div class="prod-tab" data-cat="terazzo" onclick="goToProjects('terazzo',this)">
-        <i class="fas fa-layer-group"></i><span>تيرازو إيبوكسي  <br> و أسمنتي</span>
+      <div class="prod-tab" data-cat="terazzo" onclick="goToProjects('terazzo',this)" role="button" tabindex="0" aria-label="تيرازو إيبوكسي وأسمنتي">
+        <i class="fas fa-layer-group" aria-hidden="true"></i><span>تيرازو إيبوكسي  <br> و أسمنتي</span>
       </div>
-      <div class="prod-tab" data-cat="microcement" onclick="goToProjects('microcement',this)">
-        <i class="fas fa-paint-roller"></i><span>ميكروسمنت  <br> وميكروتوبينج</span>
+      <div class="prod-tab" data-cat="microcement" onclick="goToProjects('microcement',this)" role="button" tabindex="0" aria-label="ميكروسمنت وميكروتوبينج">
+        <i class="fas fa-paint-roller" aria-hidden="true"></i><span>ميكروسمنت  <br> وميكروتوبينج</span>
       </div>
-      <div class="prod-tab" data-cat="resinbound" onclick="goToProjects('resinbound',this)">
-        <i class="fas fa-circle"></i><span>أرضيات  <br>ريزن بوند</span>
+      <div class="prod-tab" data-cat="resinbound" onclick="goToProjects('resinbound',this)" role="button" tabindex="0" aria-label="أرضيات ريزن بوند">
+        <i class="fas fa-circle" aria-hidden="true"></i><span>أرضيات  <br>ريزن بوند</span>
       </div>
-      <div class="prod-tab" data-cat="resinfloor" onclick="goToProjects('resinfloor',this)">
-        <i class="fas fa-water"></i><span>فلور</span>
+      <div class="prod-tab" data-cat="resinfloor" onclick="goToProjects('resinfloor',this)" role="button" tabindex="0" aria-label="أرضيات فلور">
+        <i class="fas fa-water" aria-hidden="true"></i><span>فلور</span>
       </div>
-      <div class="prod-tab" data-cat="epoxy" onclick="goToProjects('epoxy',this)">
-        <i class="fas fa-warehouse"></i><span>إيبوكسي</span>
+      <div class="prod-tab" data-cat="epoxy" onclick="goToProjects('epoxy',this)" role="button" tabindex="0" aria-label="إيبوكسي">
+        <i class="fas fa-warehouse" aria-hidden="true"></i><span>إيبوكسي</span>
       </div>
-      <div class="prod-tab" data-cat="courts" onclick="goToProjects('courts',this)">
-        <i class="fas fa-basketball-ball"></i><span>ملاعب</span>
+      <div class="prod-tab" data-cat="courts" onclick="goToProjects('courts',this)" role="button" tabindex="0" aria-label="ملاعب">
+        <i class="fas fa-basketball-ball" aria-hidden="true"></i><span>ملاعب</span>
       </div>
-      <div class="prod-tab" data-cat="concrete" onclick="goToProjects('concrete',this)">
-        <i class="fas fa-stamp"></i><span>خرسانة مطبوعة</span>
+      <div class="prod-tab" data-cat="concrete" onclick="goToProjects('concrete',this)" role="button" tabindex="0" aria-label="خرسانة مطبوعة">
+        <i class="fas fa-stamp" aria-hidden="true"></i><span>خرسانة مطبوعة</span>
       </div>
-      <div class="prod-tab" data-cat="pools" onclick="goToProjects('pools',this)">
-        <i class="fas fa-swimming-pool"></i><span>مسابح</span>
+      <div class="prod-tab" data-cat="pools" onclick="goToProjects('pools',this)" role="button" tabindex="0" aria-label="مسابح">
+        <i class="fas fa-swimming-pool" aria-hidden="true"></i><span>مسابح</span>
       </div>
-      <div class="prod-tab" data-cat="gardens" onclick="goToProjects('gardens',this)">
-        <i class="fas fa-leaf"></i><span>حدائق</span>
+      <div class="prod-tab" data-cat="gardens" onclick="goToProjects('gardens',this)" role="button" tabindex="0" aria-label="حدائق">
+        <i class="fas fa-leaf" aria-hidden="true"></i><span>حدائق</span>
       </div>
-      <div class="prod-tab" data-cat="decor" onclick="goToProjects('decor',this)">
-        <i class="fas fa-building"></i><span>ديكورات</span>
+      <div class="prod-tab" data-cat="decor" onclick="goToProjects('decor',this)" role="button" tabindex="0" aria-label="ديكورات">
+        <i class="fas fa-building" aria-hidden="true"></i><span>ديكورات</span>
       </div>
-      <div class="prod-tab" data-cat="stone" onclick="goToProjects('stone',this)">
-        <i class="fas fa-mountain"></i><span>حجر وخشب</span>
+      <div class="prod-tab" data-cat="stone" onclick="goToProjects('stone',this)" role="button" tabindex="0" aria-label="حجر وخشب">
+        <i class="fas fa-mountain" aria-hidden="true"></i><span>حجر وخشب</span>
       </div>
-      <div class="prod-tab" data-cat="resintables" onclick="goToProjects('resintables',this)">
-        <i class="fas fa-table"></i><span>طاولات ريزن</span>
+      <div class="prod-tab" data-cat="resintables" onclick="goToProjects('resintables',this)" role="button" tabindex="0" aria-label="طاولات ريزن">
+        <i class="fas fa-table" aria-hidden="true"></i><span>طاولات ريزن</span>
       </div>
     </div>
-  </div>
- 
+  </nav>
+
   <!-- HERO -->
-  <section id="home">
+  <section id="home" aria-label="الصفحة الرئيسية">
     <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-badge reveal"><i class="fas fa-star"></i> الشركة الرائدة في التشطيبات والديكورات</div>
+        <div class="hero-badge reveal"><i class="fas fa-star" aria-hidden="true"></i> الشركة الرائدة في التشطيبات والديكورات</div>
         <h1 class="hero-title reveal">نُحوّل <span>الفراغات</span><br>إلى تحف معمارية</h1>
         <div class="hero-btns reveal">
-          <a href="#services" class="btn-primary"><i class="fas fa-eye"></i> اكتشف خدماتنا</a>
-          <a href="#contact" class="btn-outline"><i class="fas fa-comments"></i> تواصل معنا</a>
+          <a href="#services" class="btn-primary"><i class="fas fa-eye" aria-hidden="true"></i> اكتشف خدماتنا</a>
+          <a href="#contact" class="btn-outline"><i class="fas fa-comments" aria-hidden="true"></i> تواصل معنا</a>
         </div>
-        <div class="hero-stats reveal">
+        <div class="hero-stats reveal" aria-label="إحصائيات الشركة">
           <div class="stat-item"><span class="stat-num">+50</span><span class="stat-label">مشروع منفذ</span></div>
           <div class="stat-item"><span class="stat-num">+5</span><span class="stat-label">سنة خبرة</span></div>
           <div class="stat-item"><span class="stat-num">+40</span><span class="stat-label">عميل سعيد</span></div>
@@ -187,30 +187,30 @@
       </div>
       <div class="hero-visual reveal">
         <div class="hero-img-wrap">
-          <video autoplay muted loop playsinline class="hero-video">
-  <source src="./img/WhatsApp Video 2026-05-10 at 9.27.19 PM.mp4" type="video/mp4">
-</video>
-          <div class="hero-float-card card-1">
-            <div class="float-icon orange"><i class="fas fa-medal"></i></div>
+          <video autoplay muted loop playsinline class="hero-video" aria-label="فيديو أعمال 4C Decoration">
+            <source src="./img/WhatsApp Video 2026-05-10 at 9.27.19 PM.mp4" type="video/mp4">
+          </video>
+          <div class="hero-float-card card-1" aria-hidden="true">
+            <div class="float-icon orange"><i class="fas fa-medal" aria-hidden="true"></i></div>
             <div><div style="font-size:11px;color:var(--gray);font-weight:500">جودة مضمونة</div><div>أعلى المعايير</div></div>
           </div>
-          <div class="hero-float-card card-2">
-            <div class="float-icon blue"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="hero-float-card card-2" aria-hidden="true">
+            <div class="float-icon blue"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
             <div><div style="font-size:11px;color:var(--gray);font-weight:500">موقعنا</div><div>الرياض، المملكة</div></div>
           </div>
         </div>
       </div>
     </div>
   </section>
- 
+
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" aria-label="من نحن">
     <div class="about-grid container">
       <div class="about-img-stack reveal from-right">
         <div class="about-img-main">
-          <img src="./img/All.jpeg" alt="About" onerror="this.src='https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=800&q=80'">
+          <img src="./img/All.jpeg" alt="صورة تعريفية عن شركة 4C Decoration وأعمالها" onerror="this.src='https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=800&q=80'">
         </div>
-        <div class="about-img-accent">
+        <div class="about-img-accent" aria-label="أكثر من 5 سنوات من التميز">
           <span class="big-num">5+</span><span class="small-txt">سنة من التميز</span>
         </div>
       </div>
@@ -222,19 +222,19 @@
         </div>
         <p class="about-text reveal from-left">شركة 4C Decoration هي شركة سعودية رائدة في مجال التشطيبات والأعمال الديكورية، تأسست على أسس من الجودة والابتكار. نحن متخصصون في تحويل الفراغات المعمارية إلى لوحات فنية باستخدام أحدث تقنيات الأرضيات والجدران.</p>
         <div class="about-features reveal from-left">
-          <div class="feature-item"><div class="feature-icon"><i class="fas fa-check"></i></div><span class="feature-text">خبرة أكثر من 5 سنوات</span></div>
-          <div class="feature-item"><div class="feature-icon"><i class="fas fa-check"></i></div><span class="feature-text">فريق متخصص ومحترف</span></div>
-          <div class="feature-item"><div class="feature-icon"><i class="fas fa-check"></i></div><span class="feature-text">مواد عالية الجودة</span></div>
-          <div class="feature-item"><div class="feature-icon"><i class="fas fa-check"></i></div><span class="feature-text">ضمان على جميع الأعمال</span></div>
-          <div class="feature-item"><div class="feature-icon"><i class="fas fa-check"></i></div><span class="feature-text">تسليم في الموعد المحدد</span></div>
-          <div class="feature-item"><div class="feature-icon"><i class="fas fa-check"></i></div><span class="feature-text">أسعار تنافسية</span></div>
+          <div class="feature-item"><div class="feature-icon"><i class="fas fa-check" aria-hidden="true"></i></div><span class="feature-text">خبرة أكثر من 5 سنوات</span></div>
+          <div class="feature-item"><div class="feature-icon"><i class="fas fa-check" aria-hidden="true"></i></div><span class="feature-text">فريق متخصص ومحترف</span></div>
+          <div class="feature-item"><div class="feature-icon"><i class="fas fa-check" aria-hidden="true"></i></div><span class="feature-text">مواد عالية الجودة</span></div>
+          <div class="feature-item"><div class="feature-icon"><i class="fas fa-check" aria-hidden="true"></i></div><span class="feature-text">ضمان على جميع الأعمال</span></div>
+          <div class="feature-item"><div class="feature-icon"><i class="fas fa-check" aria-hidden="true"></i></div><span class="feature-text">تسليم في الموعد المحدد</span></div>
+          <div class="feature-item"><div class="feature-icon"><i class="fas fa-check" aria-hidden="true"></i></div><span class="feature-text">أسعار تنافسية</span></div>
         </div>
       </div>
     </div>
   </section>
- 
+
   <!-- SERVICES -->
-  <section id="services">
+  <section id="services" aria-label="خدماتنا">
     <div class="section-header reveal container">
       <h2 class="section-title">حلول ديكورية وتشطيبات <span>بمعايير احترافية</span></h2>
       <p class="section-desc">اضغط على أي خدمة لاستعراض مشاريعنا المنفذة فيها</p>
@@ -242,317 +242,317 @@
     </div>
     <div class="container reveal">
       <div class="services-grid">
-        <div class="service-card" onclick="goToProjects('terazzo')">
-          <div class="service-img"><img src="./img/تيرازو/تيرازو1Image 2026-05-07 at 7.34.49 PM.jpeg" alt="تيرازو" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'" loading="lazy"></div>
+        <div class="service-card" onclick="goToProjects('terazzo')" role="button" tabindex="0" aria-label="عرض مشاريع تيرازو إيبوكسي وأسمنتي">
+          <div class="service-img"><img src="./img/تيرازو/تيرازو1Image 2026-05-07 at 7.34.49 PM.jpeg" alt="أرضيات تيرازو إيبوكسي وأسمنتي" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'" loading="lazy"></div>
           <div class="service-body">
-            <div class="service-number">01</div>
+            <div class="service-number" aria-hidden="true">01</div>
             <h3 class="service-title">تيرازو إيبوكسي وأسمنتي<small>أرضيات - درج - مغاسل - كاونترات</small></h3>
             <p class="service-desc">تنفيذ وتصميم أرضيات تيرازو فاخرة بتشطيبات إيبوكسي وأسمنتي حديثة تمنح المكان مظهراً راقياً.</p>
-            <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+            <div class="service-footer"><div class="service-line"></div><span class="service-cta" aria-hidden="true">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
           </div>
         </div>
-        <div class="service-card" onclick="goToProjects('microcement')">
-          <div class="service-img"><img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=600&q=80" alt="ميكروسمنت" loading="lazy"></div>
+        <div class="service-card" onclick="goToProjects('microcement')" role="button" tabindex="0" aria-label="عرض مشاريع ميكروسمنت وميكروتويينج">
+          <div class="service-img"><img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=600&q=80" alt="تشطيبات ميكروسمنت وميكروتويينج" loading="lazy"></div>
           <div class="service-body">
-            <div class="service-number">02</div>
+            <div class="service-number" aria-hidden="true">02</div>
             <h3 class="service-title">ميكروسمنت وميكروتويينج</h3>
             <p class="service-desc">تشطيبات ميكروسمنت وميكروتويينج عصرية للأرضيات والجدران بسطوح ناعمة ومتصلة.</p>
-            <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+            <div class="service-footer"><div class="service-line"></div><span class="service-cta" aria-hidden="true">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
           </div>
         </div>
-        <div class="service-card" onclick="goToProjects('resinbound')">
-          <div class="service-img"><img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80" alt="ريزن باوند" loading="lazy"></div>
+        <div class="service-card" onclick="goToProjects('resinbound')" role="button" tabindex="0" aria-label="عرض مشاريع أرضيات ريزن باوند">
+          <div class="service-img"><img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80" alt="أرضيات ريزن باوند" loading="lazy"></div>
           <div class="service-body">
-            <div class="service-number">03</div>
+            <div class="service-number" aria-hidden="true">03</div>
             <h3 class="service-title">أرضيات ريزن باوند</h3>
             <p class="service-desc">ريزن باوند بألوان وتأثيرات عصرية تضيف لمسة فنية فريدة للمساحات الداخلية والخارجية.</p>
-            <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+            <div class="service-footer"><div class="service-line"></div><span class="service-cta" aria-hidden="true">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
           </div>
         </div>
-        <div class="service-card" onclick="goToProjects('resinfloor')">
-          <div class="service-img"><img src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?w=600&q=80" alt="ريزن فلور" loading="lazy"></div>
+        <div class="service-card" onclick="goToProjects('resinfloor')" role="button" tabindex="0" aria-label="عرض مشاريع أرضيات ريزن فلور">
+          <div class="service-img"><img src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?w=600&q=80" alt="أرضيات ريزن فلور" loading="lazy"></div>
           <div class="service-body">
-            <div class="service-number">04</div>
+            <div class="service-number" aria-hidden="true">04</div>
             <h3 class="service-title">أرضيات ريزن فلور</h3>
             <p class="service-desc">أرضيات ريزن فلور بتدرجات وتأثيرات ثلاثية الأبعاد تحوّل الأرضية إلى لوحة فنية خالدة.</p>
-            <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+            <div class="service-footer"><div class="service-line"></div><span class="service-cta" aria-hidden="true">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
           </div>
         </div>
-        <div class="service-card" onclick="goToProjects('epoxy')">
-          <div class="service-img"><img src="./img/إيبوكسي/إيبوكسي1Image 2026-05-07 at 8.11.21 PM.jpeg" alt="إيبوكسي" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'" loading="lazy"></div>
+        <div class="service-card" onclick="goToProjects('epoxy')" role="button" tabindex="0" aria-label="عرض مشاريع إيبوكسي الجراجات والمستودعات">
+          <div class="service-img"><img src="./img/إيبوكسي/إيبوكسي1Image 2026-05-07 at 8.11.21 PM.jpeg" alt="إيبوكسي الجراجات والمستودعات" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'" loading="lazy"></div>
           <div class="service-body">
-            <div class="service-number">05</div>
+            <div class="service-number" aria-hidden="true">05</div>
             <h3 class="service-title">إيبوكسي الجراجات والمستودعات</h3>
             <p class="service-desc">حلول إيبوكسي عالية التحمل للجراجات والمستودعات بمظهر فاخر ومقاومة ممتازة.</p>
-            <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+            <div class="service-footer"><div class="service-line"></div><span class="service-cta" aria-hidden="true">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
           </div>
         </div>
-        <div class="service-card" onclick="goToProjects('courts')">
-          <div class="service-img"><img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80" alt="ملاعب" loading="lazy"></div>
+        <div class="service-card" onclick="goToProjects('courts')" role="button" tabindex="0" aria-label="عرض مشاريع أرضيات مطاطية للملاعب">
+          <div class="service-img"><img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80" alt="أرضيات مطاطية للملاعب" loading="lazy"></div>
           <div class="service-body">
-            <div class="service-number">06</div>
+            <div class="service-number" aria-hidden="true">06</div>
             <h3 class="service-title">أرضيات مطاطية للملاعب</h3>
             <p class="service-desc">تنفيذ أرضيات مطاطية ملونة ومتينة لملاعب كرة القدم والسلة والتنس بمواصفات دولية.</p>
-            <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+            <div class="service-footer"><div class="service-line"></div><span class="service-cta" aria-hidden="true">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
           </div>
         </div>
-        <div class="service-card" onclick="goToProjects('concrete')">
-          <div class="service-img"><img src="./img/خرسانة مطبوعة/خرسانة مطبوع1Image 2026-05-07 at 6.55.41 PM.jpeg" alt="خرسانة مطبوعة" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80'" loading="lazy"></div>
+        <div class="service-card" onclick="goToProjects('concrete')" role="button" tabindex="0" aria-label="عرض مشاريع الخرسانة المطبوعة">
+          <div class="service-img"><img src="./img/خرسانة مطبوعة/خرسانة مطبوع1Image 2026-05-07 at 6.55.41 PM.jpeg" alt="الخرسانة المطبوعة ومكشوفة الحصى والمروحة" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80'" loading="lazy"></div>
           <div class="service-body">
-            <div class="service-number">07</div>
+            <div class="service-number" aria-hidden="true">07</div>
             <h3 class="service-title">الخرسانة المطبوعة ومكشوفة الحصى والمروحة</h3>
             <p class="service-desc">تصميمات خرسانة مطبوعة تحاكي الحجر والخشب للحدائق والمداخل والممرات.</p>
-            <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+            <div class="service-footer"><div class="service-line"></div><span class="service-cta" aria-hidden="true">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
           </div>
         </div>
-        <div class="service-card" onclick="goToProjects('pools')">
-          <div class="service-img"><img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80" alt="مسابح" loading="lazy"></div>
+        <div class="service-card" onclick="goToProjects('pools')" role="button" tabindex="0" aria-label="عرض مشاريع تشطيبات مسابح ساندي بول">
+          <div class="service-img"><img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80" alt="تشطيبات مسابح ساندي بول" loading="lazy"></div>
           <div class="service-body">
-            <div class="service-number">08</div>
+            <div class="service-number" aria-hidden="true">08</div>
             <h3 class="service-title">تشطيبات مسابح ساندي بول</h3>
             <p class="service-desc">تشطيب وتبطين المسابح بتقنية ساندي بول التي تمنح المسبح مظهراً ناعماً وطويل الأمد.</p>
-            <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+            <div class="service-footer"><div class="service-line"></div><span class="service-cta" aria-hidden="true">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
           </div>
         </div>
-        <div class="service-card" onclick="goToProjects('gardens')">
-          <div class="service-img"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80" alt="حدائق" loading="lazy"></div>
+        <div class="service-card" onclick="goToProjects('gardens')" role="button" tabindex="0" aria-label="عرض مشاريع تنسيق الحدائق والديكورات الخارجية">
+          <div class="service-img"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80" alt="تنسيق الحدائق والديكورات الخارجية" loading="lazy"></div>
           <div class="service-body">
-            <div class="service-number">09</div>
+            <div class="service-number" aria-hidden="true">09</div>
             <h3 class="service-title">تنسيق الحدائق والديكورات الخارجية</h3>
             <p class="service-desc">تصميم وتنفيذ حدائق خارجية راقية وديكورات للمساحات الخارجية باحترافية.</p>
-            <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+            <div class="service-footer"><div class="service-line"></div><span class="service-cta" aria-hidden="true">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
           </div>
         </div>
-        <div class="service-card" onclick="goToProjects('decor')">
-          <div class="service-img"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80" alt="ديكورات" loading="lazy"></div>
+        <div class="service-card" onclick="goToProjects('decor')" role="button" tabindex="0" aria-label="عرض مشاريع التشطيبات والديكورات الداخلية والواجهات">
+          <div class="service-img"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80" alt="التشطيبات والديكورات الداخلية والواجهات" loading="lazy"></div>
           <div class="service-body">
-            <div class="service-number">10</div>
+            <div class="service-number" aria-hidden="true">10</div>
             <h3 class="service-title">التشطيبات والديكورات الداخلية والواجهات</h3>
             <p class="service-desc">تنفيذ تشطيبات ديكورية داخلية وخارجية متكاملة من المفتاح للمفتاح شاملة الواجهات.</p>
-            <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+            <div class="service-footer"><div class="service-line"></div><span class="service-cta" aria-hidden="true">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
           </div>
         </div>
-        <div class="service-card" onclick="goToProjects('stone')">
-          <div class="service-img"><img src="https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?w=600&q=80" alt="حجر طبيعي" loading="lazy"></div>
+        <div class="service-card" onclick="goToProjects('stone')" role="button" tabindex="0" aria-label="عرض مشاريع توريد الحجر الطبيعي والخشب الطبيعي">
+          <div class="service-img"><img src="https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?w=600&q=80" alt="توريد الحجر الطبيعي والخشب الطبيعي" loading="lazy"></div>
           <div class="service-body">
-            <div class="service-number">11</div>
+            <div class="service-number" aria-hidden="true">11</div>
             <h3 class="service-title">توريد الحجر الطبيعي والخشب الطبيعي</h3>
             <p class="service-desc">توريد كميات من الحجر الطبيعي والخشب بأجود الأنواع لمشاريع الفنادق والفلل.</p>
-            <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+            <div class="service-footer"><div class="service-line"></div><span class="service-cta" aria-hidden="true">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
           </div>
         </div>
-        <div class="service-card" onclick="goToProjects('resintables')">
-          <div class="service-img"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="طاولات ريزن" loading="lazy"></div>
+        <div class="service-card" onclick="goToProjects('resintables')" role="button" tabindex="0" aria-label="عرض مشاريع طاولات ريزن مع الخشب الطبيعي">
+          <div class="service-img"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="طاولات ريزن مع الخشب الطبيعي" loading="lazy"></div>
           <div class="service-body">
-            <div class="service-number">12</div>
+            <div class="service-number" aria-hidden="true">12</div>
             <h3 class="service-title">طاولات ريزن مع الخشب الطبيعي</h3>
             <p class="service-desc">تصنيع طاولات فنية فريدة من مزيج الريزن الشفاف مع الخشب الطبيعي بتصاميم حصرية.</p>
-            <div class="service-footer"><div class="service-line"></div><span class="service-cta">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
+            <div class="service-footer"><div class="service-line"></div><span class="service-cta" aria-hidden="true">عرض المشاريع <i class="fas fa-arrow-left"></i></span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
- 
+
   <!-- PROJECTS -->
-  <section id="projects">
+  <section id="projects" aria-label="أعمالنا">
     <div class="section-header reveal container">
       <h2 class="section-title">أعمالنا </h2>
       <p class="section-desc">نماذج من أعمالنا المتنوعة في المملكة العربية السعودية</p>
       <div class="section-divider"></div>
     </div>
-    <div class="projects-filter reveal">
-      <button class="filter-btn active" onclick="filterProjects('all',this)">الكل</button>
-      <button class="filter-btn" onclick="filterProjects('terazzo',this)">تيرازو</button>
-      <button class="filter-btn" onclick="filterProjects('microcement',this)">ميكروسمنت</button>
-      <button class="filter-btn" onclick="filterProjects('resinbound',this)">ريزن بوند</button>
-      <button class="filter-btn" onclick="filterProjects('resinfloor',this)">ريزن فلور</button>
-      <button class="filter-btn" onclick="filterProjects('epoxy',this)">إيبوكسي</button>
-      <button class="filter-btn" onclick="filterProjects('courts',this)">ملاعب</button>
-      <button class="filter-btn" onclick="filterProjects('concrete',this)">خرسانة مطبوعة</button>
-      <button class="filter-btn" onclick="filterProjects('pools',this)">مسابح</button>
-      <button class="filter-btn" onclick="filterProjects('gardens',this)">حدائق</button>
-      <button class="filter-btn" onclick="filterProjects('decor',this)">ديكورات</button>
-      <button class="filter-btn" onclick="filterProjects('stone',this)">حجر وخشب</button>
-      <button class="filter-btn" onclick="filterProjects('resintables',this)">طاولات ريزن</button>
+    <div class="projects-filter reveal" role="group" aria-label="تصفية المشاريع">
+      <button class="filter-btn active" onclick="filterProjects('all',this)" aria-pressed="true">الكل</button>
+      <button class="filter-btn" onclick="filterProjects('terazzo',this)" aria-pressed="false">تيرازو</button>
+      <button class="filter-btn" onclick="filterProjects('microcement',this)" aria-pressed="false">ميكروسمنت</button>
+      <button class="filter-btn" onclick="filterProjects('resinbound',this)" aria-pressed="false">ريزن بوند</button>
+      <button class="filter-btn" onclick="filterProjects('resinfloor',this)" aria-pressed="false">ريزن فلور</button>
+      <button class="filter-btn" onclick="filterProjects('epoxy',this)" aria-pressed="false">إيبوكسي</button>
+      <button class="filter-btn" onclick="filterProjects('courts',this)" aria-pressed="false">ملاعب</button>
+      <button class="filter-btn" onclick="filterProjects('concrete',this)" aria-pressed="false">خرسانة مطبوعة</button>
+      <button class="filter-btn" onclick="filterProjects('pools',this)" aria-pressed="false">مسابح</button>
+      <button class="filter-btn" onclick="filterProjects('gardens',this)" aria-pressed="false">حدائق</button>
+      <button class="filter-btn" onclick="filterProjects('decor',this)" aria-pressed="false">ديكورات</button>
+      <button class="filter-btn" onclick="filterProjects('stone',this)" aria-pressed="false">حجر وخشب</button>
+      <button class="filter-btn" onclick="filterProjects('resintables',this)" aria-pressed="false">طاولات ريزن</button>
     </div>
-    <div class="projects-masonry container" id="projects-grid">
- 
+    <div class="projects-masonry container" id="projects-grid" role="list">
+
       <!-- تيرازو -->
-      <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="./img/تيرازو/تيرازو1Image 2026-05-07 at 7.34.49 PM.jpeg" alt="تيرازو 1" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">تيرازو</div><div class="project-name">أرضية تيرازو مرمرية</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: أرضية تيرازو مرمرية">
+        <div class="project-bg"><img src="./img/تيرازو/تيرازو1Image 2026-05-07 at 7.34.49 PM.jpeg" alt="أرضية تيرازو مرمرية" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">تيرازو</div><div class="project-name">أرضية تيرازو مرمرية</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
-      <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="./img/تيرازو/تيرازو2Image 2026-05-07 at 7.35.13 PM.jpeg" alt="تيرازو 2" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">تيرازو</div><div class="project-name">تيرازو كلاسيك فاخر</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: تيرازو كلاسيك فاخر">
+        <div class="project-bg"><img src="./img/تيرازو/تيرازو2Image 2026-05-07 at 7.35.13 PM.jpeg" alt="تيرازو كلاسيك فاخر" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">تيرازو</div><div class="project-name">تيرازو كلاسيك فاخر</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
-      <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="./img/تيرازو/تيرازو3Image 2026-05-07 at 7.35.14 PM.jpeg" alt="تيرازو 3" onerror="this.src='https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80'" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">تيرازو</div><div class="project-name">تيرازو بتصميم هندسي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: تيرازو بتصميم هندسي">
+        <div class="project-bg"><img src="./img/تيرازو/تيرازو3Image 2026-05-07 at 7.35.14 PM.jpeg" alt="تيرازو بتصميم هندسي" onerror="this.src='https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80'" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">تيرازو</div><div class="project-name">تيرازو بتصميم هندسي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
- 
+
       <!-- ميكروسمنت -->
-      <div class="project-card" data-cat="microcement" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=600&q=80" alt="ميكروسمنت 1" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">ميكروسمنت</div><div class="project-name">جدار ميكروسمنت رمادي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="microcement" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: جدار ميكروسمنت رمادي">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=600&q=80" alt="جدار ميكروسمنت رمادي" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">ميكروسمنت</div><div class="project-name">جدار ميكروسمنت رمادي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
-      <div class="project-card" data-cat="microcement" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="ميكروسمنت 2" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">ميكروسمنت</div><div class="project-name">أرضية ميكروسمنت بيج</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="microcement" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: أرضية ميكروسمنت بيج">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="أرضية ميكروسمنت بيج" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">ميكروسمنت</div><div class="project-name">أرضية ميكروسمنت بيج</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
- 
+
       <!-- ريزن بوند -->
-      <div class="project-card" data-cat="resinbound" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="./img/أرضيات ريزن/أرضيات ريزن1Image 2026-05-07 at 7.03.01 PM.jpeg" alt="ريزن بوند 1" onerror="this.src='https://images.unsplash.com/photo-1508615070457-7baeba4003ab?w=600&q=80'" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">ريزن بوند</div><div class="project-name">ريزن باوند متعدد الألوان</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="resinbound" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: ريزن باوند متعدد الألوان">
+        <div class="project-bg"><img src="./img/أرضيات ريزن/أرضيات ريزن1Image 2026-05-07 at 7.03.01 PM.jpeg" alt="ريزن باوند متعدد الألوان" onerror="this.src='https://images.unsplash.com/photo-1508615070457-7baeba4003ab?w=600&q=80'" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">ريزن بوند</div><div class="project-name">ريزن باوند متعدد الألوان</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
-      <div class="project-card" data-cat="resinbound" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="./img/أرضيات ريزن/أرضيات ريزن2Image 2026-05-07 at 7.03.39 PM.jpeg" alt="ريزن بوند 2" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80'" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">ريزن بوند</div><div class="project-name">ريزن باوند ذهبي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="resinbound" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: ريزن باوند ذهبي">
+        <div class="project-bg"><img src="./img/أرضيات ريزن/أرضيات ريزن2Image 2026-05-07 at 7.03.39 PM.jpeg" alt="ريزن باوند ذهبي" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80'" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">ريزن بوند</div><div class="project-name">ريزن باوند ذهبي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
- 
+
       <!-- ريزن فلور -->
-      <div class="project-card" data-cat="resinfloor" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?w=600&q=80" alt="ريزن فلور 1" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">ريزن فلور</div><div class="project-name">ريزن فلور ثلاثي الأبعاد</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="resinfloor" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: ريزن فلور ثلاثي الأبعاد">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?w=600&q=80" alt="ريزن فلور ثلاثي الأبعاد" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">ريزن فلور</div><div class="project-name">ريزن فلور ثلاثي الأبعاد</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
-      <div class="project-card" data-cat="resinfloor" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80" alt="ريزن فلور 2" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">ريزن فلور</div><div class="project-name">ريزن فلور بتأثير رخام</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="resinfloor" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: ريزن فلور بتأثير رخام">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80" alt="ريزن فلور بتأثير رخام" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">ريزن فلور</div><div class="project-name">ريزن فلور بتأثير رخام</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
- 
+
       <!-- إيبوكسي -->
-      <div class="project-card" data-cat="epoxy" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="./img/إيبوكسي/إيبوكسي1Image 2026-05-07 at 8.11.21 PM.jpeg" alt="إيبوكسي 1" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">إيبوكسي</div><div class="project-name">إيبوكسي صناعي متين</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="epoxy" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: إيبوكسي صناعي متين">
+        <div class="project-bg"><img src="./img/إيبوكسي/إيبوكسي1Image 2026-05-07 at 8.11.21 PM.jpeg" alt="إيبوكسي صناعي متين" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">إيبوكسي</div><div class="project-name">إيبوكسي صناعي متين</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
-      <div class="project-card" data-cat="epoxy" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="./img/إيبوكسي/إيبوكسي2Image 2026-05-07 at 8.11.21 PM.jpeg" alt="إيبوكسي 2" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80'" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">إيبوكسي</div><div class="project-name">إيبوكسي لامع 3D</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="epoxy" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: إيبوكسي لامع 3D">
+        <div class="project-bg"><img src="./img/إيبوكسي/إيبوكسي2Image 2026-05-07 at 8.11.21 PM.jpeg" alt="إيبوكسي لامع 3D" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80'" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">إيبوكسي</div><div class="project-name">إيبوكسي لامع 3D</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
- 
+
       <!-- ملاعب -->
-      <div class="project-card" data-cat="courts" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80" alt="ملعب 1" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">ملاعب</div><div class="project-name">ملعب كرة قدم مطاطي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="courts" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: ملعب كرة قدم مطاطي">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80" alt="ملعب كرة قدم مطاطي" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">ملاعب</div><div class="project-name">ملعب كرة قدم مطاطي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
-      <div class="project-card" data-cat="courts" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&q=80" alt="ملعب 2" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">ملاعب</div><div class="project-name">ملعب تنس متعدد الألوان</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="courts" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: ملعب تنس متعدد الألوان">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=600&q=80" alt="ملعب تنس متعدد الألوان" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">ملاعب</div><div class="project-name">ملعب تنس متعدد الألوان</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
- 
+
       <!-- خرسانة مطبوعة -->
-      <div class="project-card" data-cat="concrete" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="./img/خرسانة مطبوعة/خرسانة مطبوع1Image 2026-05-07 at 6.55.41 PM.jpeg" alt="خرسانة 1" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80'" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">خرسانة مطبوعة</div><div class="project-name">خرسانة حديقة فيلا</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="concrete" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: خرسانة حديقة فيلا">
+        <div class="project-bg"><img src="./img/خرسانة مطبوعة/خرسانة مطبوع1Image 2026-05-07 at 6.55.41 PM.jpeg" alt="خرسانة حديقة فيلا" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80'" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">خرسانة مطبوعة</div><div class="project-name">خرسانة حديقة فيلا</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
-      <div class="project-card" data-cat="concrete" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80" alt="خرسانة 2" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">خرسانة مطبوعة</div><div class="project-name">ممشى خرسانة مكشوفة الحصى</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="concrete" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: ممشى خرسانة مكشوفة الحصى">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80" alt="ممشى خرسانة مكشوفة الحصى" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">خرسانة مطبوعة</div><div class="project-name">ممشى خرسانة مكشوفة الحصى</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
- 
+
       <!-- مسابح -->
-      <div class="project-card" data-cat="pools" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80" alt="مسبح 1" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">مسابح</div><div class="project-name">مسبح فيلا ساندي بول</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="pools" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: مسبح فيلا ساندي بول">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80" alt="مسبح فيلا ساندي بول" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">مسابح</div><div class="project-name">مسبح فيلا ساندي بول</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
-      <div class="project-card" data-cat="pools" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&q=80" alt="مسبح 2" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">مسابح</div><div class="project-name">مسبح لانهائي فاخر</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="pools" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: مسبح لانهائي فاخر">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&q=80" alt="مسبح لانهائي فاخر" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">مسابح</div><div class="project-name">مسبح لانهائي فاخر</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
- 
+
       <!-- حدائق -->
-      <div class="project-card" data-cat="gardens" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80" alt="حديقة 1" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">حدائق</div><div class="project-name">حديقة فيلا خاصة</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="gardens" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: حديقة فيلا خاصة">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?w=600&q=80" alt="حديقة فيلا خاصة" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">حدائق</div><div class="project-name">حديقة فيلا خاصة</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
-      <div class="project-card" data-cat="gardens" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80" alt="حديقة 2" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">حدائق</div><div class="project-name">تنسيق حديقة استراحة</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="gardens" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: تنسيق حديقة استراحة">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80" alt="تنسيق حديقة استراحة" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">حدائق</div><div class="project-name">تنسيق حديقة استراحة</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
- 
+
       <!-- ديكورات -->
-      <div class="project-card" data-cat="decor" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="./img/WhatsApp Image 2026-05-09 at 12.02.39 AM.jpeg" alt="ديكور 1" onerror="this.src='https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80'" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">ديكورات</div><div class="project-name">واجهة مبنى تجاري</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="decor" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: واجهة مبنى تجاري">
+        <div class="project-bg"><img src="./img/WhatsApp Image 2026-05-09 at 12.02.39 AM.jpeg" alt="واجهة مبنى تجاري" onerror="this.src='https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80'" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">ديكورات</div><div class="project-name">واجهة مبنى تجاري</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
-      <div class="project-card" data-cat="decor" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80" alt="ديكور 2" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">ديكورات</div><div class="project-name">ديكور داخلي فندقي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="decor" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: ديكور داخلي فندقي">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80" alt="ديكور داخلي فندقي" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">ديكورات</div><div class="project-name">ديكور داخلي فندقي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
- 
+
       <!-- حجر وخشب -->
-      <div class="project-card" data-cat="stone" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?w=600&q=80" alt="حجر 1" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">حجر وخشب</div><div class="project-name">واجهة حجر طبيعي فاخر</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="stone" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: واجهة حجر طبيعي فاخر">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?w=600&q=80" alt="واجهة حجر طبيعي فاخر" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">حجر وخشب</div><div class="project-name">واجهة حجر طبيعي فاخر</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
-      <div class="project-card" data-cat="stone" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="حجر 2" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">حجر وخشب</div><div class="project-name">أرضية خشب طبيعي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="stone" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: أرضية خشب طبيعي">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="أرضية خشب طبيعي" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">حجر وخشب</div><div class="project-name">أرضية خشب طبيعي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
- 
+
       <!-- طاولات ريزن -->
-      <div class="project-card" data-cat="resintables" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="طاولة ريزن 1" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">طاولات ريزن</div><div class="project-name">طاولة ريزن نهر أزرق</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="resintables" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: طاولة ريزن نهر أزرق">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="طاولة ريزن نهر أزرق" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">طاولات ريزن</div><div class="project-name">طاولة ريزن نهر أزرق</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
-      <div class="project-card" data-cat="resintables" onclick="openLightbox(this)">
-        <div class="project-bg"><img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=600&q=80" alt="طاولة ريزن 2" loading="lazy"></div>
-        <div class="project-overlay"><div class="project-cat">طاولات ريزن</div><div class="project-name">طاولة ريزن وخشب الجوز</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+      <div class="project-card" data-cat="resintables" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: طاولة ريزن وخشب الجوز">
+        <div class="project-bg"><img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=600&q=80" alt="طاولة ريزن وخشب الجوز" loading="lazy"></div>
+        <div class="project-overlay" aria-hidden="true"><div class="project-cat">طاولات ريزن</div><div class="project-name">طاولة ريزن وخشب الجوز</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
       </div>
- 
+
     </div>
-    <div id="empty-state" style="display:none;text-align:center;padding:56px 24px;">
-      <div style="font-size:54px;margin-bottom:14px;">🔍</div>
+    <div id="empty-state" style="display:none;text-align:center;padding:56px 24px;" role="status">
+      <div style="font-size:54px;margin-bottom:14px;" aria-hidden="true">🔍</div>
       <p style="font-size:17px;color:var(--gray);">لا توجد مشاريع في هذا القسم حالياً</p>
     </div>
   </section>
- 
+
   <!-- LIGHTBOX -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+  <div id="lightbox" class="lightbox" onclick="closeLightbox(event)" role="dialog" aria-modal="true" aria-label="عرض الصورة">
     <div class="lightbox-inner">
-      <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
-      <button class="lightbox-nav prev" onclick="lightboxNav(-1,event)"><i class="fas fa-chevron-right"></i></button>
-      <button class="lightbox-nav next" onclick="lightboxNav(1,event)"><i class="fas fa-chevron-left"></i></button>
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="إغلاق عرض الصورة"><i class="fas fa-times" aria-hidden="true"></i></button>
+      <button class="lightbox-nav prev" onclick="lightboxNav(-1,event)" aria-label="الصورة السابقة"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+      <button class="lightbox-nav next" onclick="lightboxNav(1,event)" aria-label="الصورة التالية"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
       <img id="lightbox-img" src="" alt="">
-      <div id="lightbox-caption" class="lightbox-caption"></div>
-      <div id="lightbox-counter" class="lightbox-counter"></div>
+      <div id="lightbox-caption" class="lightbox-caption" aria-live="polite"></div>
+      <div id="lightbox-counter" class="lightbox-counter" aria-live="polite"></div>
     </div>
   </div>
- 
+
   <!-- CLIENTS -->
-  <section id="clients">
+  <section id="clients" aria-label="شركاء النجاح">
     <div class="section-header reveal">
       <span class="section-label">عملاؤنا</span>
       <h2 class="section-title">شركاء <span style="color:var(--orange)">نجاحنا</span></h2>
       <p class="section-desc">نفخر بثقة عملائنا من كبرى الشركات والمؤسسات في المملكة</p>
       <div class="section-divider"></div>
     </div>
-    <div class="clients-marquee-wrap reveal">
-      <div class="clients-marquee">
-        <div class="client-logo"><i class="fas fa-building"></i>شركة الراجحي</div>
-        <div class="client-logo"><i class="fas fa-hotel"></i>فنادق روتانا</div>
-        <div class="client-logo"><i class="fas fa-city"></i>إمارة الرياض</div>
-        <div class="client-logo"><i class="fas fa-hospital"></i>مستشفى الملك فهد</div>
-        <div class="client-logo"><i class="fas fa-school"></i>وزارة التعليم</div>
-        <div class="client-logo"><i class="fas fa-shopping-bag"></i>مول العرب</div>
-        <div class="client-logo"><i class="fas fa-industry"></i>أرامكو السعودية</div>
-        <div class="client-logo"><i class="fas fa-university"></i>جامعة الملك سعود</div>
-        <div class="client-logo"><i class="fas fa-building"></i>شركة الراجحي</div>
-        <div class="client-logo"><i class="fas fa-hotel"></i>فنادق روتانا</div>
-        <div class="client-logo"><i class="fas fa-city"></i>إمارة الرياض</div>
-        <div class="client-logo"><i class="fas fa-hospital"></i>مستشفى الملك فهد</div>
-        <div class="client-logo"><i class="fas fa-school"></i>وزارة التعليم</div>
-        <div class="client-logo"><i class="fas fa-shopping-bag"></i>مول العرب</div>
-        <div class="client-logo"><i class="fas fa-industry"></i>أرامكو السعودية</div>
-        <div class="client-logo"><i class="fas fa-university"></i>جامعة الملك سعود</div>
+    <div class="clients-marquee-wrap reveal" aria-label="قائمة العملاء">
+      <div class="clients-marquee" aria-hidden="true">
+        <div class="client-logo"><i class="fas fa-building" aria-hidden="true"></i>شركة الراجحي</div>
+        <div class="client-logo"><i class="fas fa-hotel" aria-hidden="true"></i>فنادق روتانا</div>
+        <div class="client-logo"><i class="fas fa-city" aria-hidden="true"></i>إمارة الرياض</div>
+        <div class="client-logo"><i class="fas fa-hospital" aria-hidden="true"></i>مستشفى الملك فهد</div>
+        <div class="client-logo"><i class="fas fa-school" aria-hidden="true"></i>وزارة التعليم</div>
+        <div class="client-logo"><i class="fas fa-shopping-bag" aria-hidden="true"></i>مول العرب</div>
+        <div class="client-logo"><i class="fas fa-industry" aria-hidden="true"></i>أرامكو السعودية</div>
+        <div class="client-logo"><i class="fas fa-university" aria-hidden="true"></i>جامعة الملك سعود</div>
+        <div class="client-logo"><i class="fas fa-building" aria-hidden="true"></i>شركة الراجحي</div>
+        <div class="client-logo"><i class="fas fa-hotel" aria-hidden="true"></i>فنادق روتانا</div>
+        <div class="client-logo"><i class="fas fa-city" aria-hidden="true"></i>إمارة الرياض</div>
+        <div class="client-logo"><i class="fas fa-hospital" aria-hidden="true"></i>مستشفى الملك فهد</div>
+        <div class="client-logo"><i class="fas fa-school" aria-hidden="true"></i>وزارة التعليم</div>
+        <div class="client-logo"><i class="fas fa-shopping-bag" aria-hidden="true"></i>مول العرب</div>
+        <div class="client-logo"><i class="fas fa-industry" aria-hidden="true"></i>أرامكو السعودية</div>
+        <div class="client-logo"><i class="fas fa-university" aria-hidden="true"></i>جامعة الملك سعود</div>
       </div>
     </div>
   </section>
- 
+
   <!-- MAP -->
-  <section id="map-section">
+  <section id="map-section" aria-label="موقعنا">
     <div class="section-header reveal">
       <span class="section-label">موقعنا</span>
       <h2 class="section-title">نحن في <span>الرياض</span></h2>
@@ -560,12 +560,12 @@
       <div class="section-divider"></div>
     </div>
     <div class="map-wrapper reveal container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.9437937786296!2d46.6752957!3d24.7135517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1699999999999!5m2!1sen!2s" loading="lazy" title="خريطة موقع 4C"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.9437937786296!2d46.6752957!3d24.7135517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1699999999999!5m2!1sen!2s" loading="lazy" title="خريطة موقع شركة 4C Decoration في الرياض"></iframe>
     </div>
   </section>
- 
+
   <!-- CONTACT -->
-  <section id="contact">
+  <section id="contact" aria-label="تواصل معنا">
     <div class="contact-grid container">
       <div class="contact-info">
         <div class="section-header">
@@ -575,23 +575,23 @@
         </div>
         <div class="contact-items">
           <div class="contact-item reveal from-right">
-            <div class="contact-icon orange"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-icon orange" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
             <div class="contact-item-text"><h4>العنوان</h4><p>المملكة العربية السعودية، الرياض - حي النهضة<br>شارع عبد الرحمن الناصر، مبنى رقم 7737</p></div>
           </div>
           <div class="contact-item reveal from-right">
-            <div class="contact-icon blue"><i class="fas fa-phone"></i></div>
-            <div class="contact-item-text"><h4>الهاتف</h4><p>+966 56 358 9858</p></div>
+            <div class="contact-icon blue" aria-hidden="true"><i class="fas fa-phone"></i></div>
+            <div class="contact-item-text"><h4>الهاتف</h4><p><a href="tel:+966563589858" aria-label="اتصل على 966563589858+">+966 56 358 9858</a></p></div>
           </div>
           <div class="contact-item reveal from-right">
-            <div class="contact-icon orange"><i class="fab fa-whatsapp"></i></div>
-            <div class="contact-item-text"><h4>واتساب</h4><p>+966 59 061 4788</p></div>
+            <div class="contact-icon orange" aria-hidden="true"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-item-text"><h4>واتساب</h4><p><a href="https://wa.me/966590614788" aria-label="تواصل عبر واتساب على 966590614788+">+966 59 061 4788</a></p></div>
           </div>
           <div class="contact-item reveal from-right">
-            <div class="contact-icon blue"><i class="fas fa-envelope"></i></div>
-            <div class="contact-item-text"><h4>البريد الإلكتروني</h4><p>info@4cdecoration.com</p></div>
+            <div class="contact-icon blue" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+            <div class="contact-item-text"><h4>البريد الإلكتروني</h4><p><a href="mailto:info@4cdecoration.com">info@4cdecoration.com</a></p></div>
           </div>
           <div class="contact-item reveal from-right">
-            <div class="contact-icon orange"><i class="fas fa-clock"></i></div>
+            <div class="contact-icon orange" aria-hidden="true"><i class="fas fa-clock"></i></div>
             <div class="contact-item-text"><h4>ساعات العمل</h4><p>الأحد – الخميس: ٨ص – ٦م</p></div>
           </div>
         </div>
@@ -599,13 +599,22 @@
       <div class="contact-form-wrap reveal from-left">
         <h3 class="form-title">أرسل لنا رسالة</h3>
         <div class="form-row">
-          <div class="form-group"><label>الاسم الكامل</label><input type="text" placeholder="اسمك الكامل"></div>
-          <div class="form-group"><label>رقم الهاتف</label><input type="tel" placeholder="+966 5X XXX XXXX"></div>
+          <div class="form-group">
+            <label for="contact-name">الاسم الكامل</label>
+            <input id="contact-name" type="text" placeholder="اسمك الكامل" aria-required="true">
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">رقم الهاتف</label>
+            <input id="contact-phone" type="tel" placeholder="+966 5X XXX XXXX" aria-required="true">
+          </div>
         </div>
-        <div class="form-group"><label>البريد الإلكتروني</label><input type="email" placeholder="example@email.com"></div>
         <div class="form-group">
-          <label>نوع الخدمة</label>
-          <select>
+          <label for="contact-email">البريد الإلكتروني</label>
+          <input id="contact-email" type="email" placeholder="example@email.com">
+        </div>
+        <div class="form-group">
+          <label for="contact-service">نوع الخدمة</label>
+          <select id="contact-service" aria-required="true">
             <option value="">اختر الخدمة المطلوبة</option>
             <option>تيرازو إيبوكسي وأسمنتي</option>
             <option>ميكروسمنت وميكروتويينج</option>
@@ -622,31 +631,34 @@
             <option>أخرى</option>
           </select>
         </div>
-        <div class="form-group"><label>تفاصيل الطلب</label><textarea placeholder="اكتب تفاصيل مشروعك أو استفساراتك هنا..."></textarea></div>
-        <button class="form-submit" onclick="submitForm()"><i class="fas fa-paper-plane"></i> إرسال الرسالة</button>
+        <div class="form-group">
+          <label for="contact-message">تفاصيل الطلب</label>
+          <textarea id="contact-message" placeholder="اكتب تفاصيل مشروعك أو استفساراتك هنا..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()" aria-label="إرسال الرسالة"><i class="fas fa-paper-plane" aria-hidden="true"></i> إرسال الرسالة</button>
       </div>
     </div>
   </section>
- 
+
   <!-- FOOTER -->
-  <footer id="footer">
+  <footer id="footer" aria-label="تذييل الصفحة">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#home" style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
-          <div class="logo-emblem">4C</div>
+        <a href="#home" style="display:flex;align-items:center;gap:10px;margin-bottom:12px;" aria-label="الصفحة الرئيسية - 4C Decoration">
+          <div class="logo-emblem" aria-hidden="true">4C</div>
           <div>
             <span style="font-size:16px;font-weight:900;color:white;display:block;">4C Decoration</span>
             <span style="font-size:10px;color:var(--orange-light);">تشطيبات &amp; ديكورات احترافية</span>
           </div>
         </a>
         <p>شركة سعودية رائدة في مجال التشطيبات والأعمال الديكورية. نحول الفراغات إلى تحف معمارية بأعلى معايير الجودة والحرفية.</p>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/4cdecoration" class="social-btn" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.facebook.com/share/16iZQPdhg2/" class="social-btn" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://www.tiktok.com/@4c.decoration" class="social-btn" target="_blank"><i class="fab fa-tiktok"></i></a>
-          <a href="https://youtube.com/@4cdecoration-e7k" class="social-btn" target="_blank"><i class="fab fa-youtube"></i></a>
-          <a href="https://www.linkedin.com/in/4c-decoration-27a09b40a" class="social-btn" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-social" aria-label="وسائل التواصل الاجتماعي">
+          <a href="https://www.instagram.com/4cdecoration" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="إنستغرام"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" class="social-btn" aria-label="تويتر"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/share/16iZQPdhg2/" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+          <a href="https://www.tiktok.com/@4c.decoration" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="تيك توك"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+          <a href="https://youtube.com/@4cdecoration-e7k" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="يوتيوب"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/4c-decoration-27a09b40a" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="لينكد إن"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
         </div>
       </div>
       <div class="footer-col">
@@ -675,9 +687,9 @@
       <div class="footer-col">
         <h4>تواصل معنا</h4>
         <ul>
-          <li><a href="tel:+966563589858"><i class="fas fa-phone" style="color:var(--orange);margin-left:7px;"></i>+966 56 358 9858</a></li>
-          <li><a href="mailto:info@4cdecoration.com"><i class="fas fa-envelope" style="color:var(--orange);margin-left:7px;"></i>info@4cdecoration.com</a></li>
-          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:var(--orange);margin-left:7px;"></i>الرياض، المملكة العربية السعودية</a></li>
+          <li><a href="tel:+966563589858" aria-label="اتصل على 966563589858+"><i class="fas fa-phone" style="color:var(--orange);margin-left:7px;" aria-hidden="true"></i>+966 56 358 9858</a></li>
+          <li><a href="mailto:info@4cdecoration.com"><i class="fas fa-envelope" style="color:var(--orange);margin-left:7px;" aria-hidden="true"></i>info@4cdecoration.com</a></li>
+          <li><a href="#map-section" aria-label="اعرض موقعنا على الخريطة"><i class="fas fa-map-marker-alt" style="color:var(--orange);margin-left:7px;" aria-hidden="true"></i>الرياض، المملكة العربية السعودية</a></li>
         </ul>
       </div>
     </div>
@@ -686,14 +698,13 @@
       <div>صُمم بـ ❤️ في المملكة العربية السعودية</div>
     </div>
   </footer>
- 
+
 </div>
- 
-<button id="back-to-top" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button>
-<a id="whatsapp-btn" href="https://wa.me/966563589858?text=مرحبا%20اريد%20الاستفسار%20عن%20الخدمة" target="_blank" rel="noopener noreferrer">
-  <i class="fab fa-whatsapp"></i>
+
+<button id="back-to-top" onclick="scrollToTop()" aria-label="العودة إلى أعلى الصفحة"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+<a id="whatsapp-btn" href="https://wa.me/966563589858?text=مرحبا%20اريد%20الاستفسار%20عن%20الخدمة" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر واتساب">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
 </a>
- 
 
 <script src="./index.js"></script>
 </body>
