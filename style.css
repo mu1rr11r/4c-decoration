@@ -371,16 +371,15 @@
     .mobile-products-bar .prod-tab.active i { color: var(--orange); }
  
     /* ============================================================
-       MOBILE OVERLAY — فقط خلف السايدبار مش على الشاشة كلها
+       MOBILE OVERLAY
     ============================================================ */
     #mobile-overlay {
       display: none;
       position: fixed;
       top: 0; left: 0; bottom: 0;
-      /* يغطي فقط الجزء اللي مش السايدبار */
       right: 0;
       background: rgba(0,0,0,0.5);
-      z-index: 999; /* أقل من السايدبار */
+      z-index: 999;
       backdrop-filter: blur(2px);
       -webkit-backdrop-filter: blur(2px);
     }
@@ -670,9 +669,21 @@
         transform: translateX(100%);
         transition: transform var(--transition), width var(--transition);
         top: 0;
-        z-index: 1003; /* فوق الـ overlay */
+        z-index: 1003;
       }
       #sidebar.collapsed { width: 280px; transform: translateX(100%); }
+
+      /* تأكد إن الـ sidebar مش بيتأثر بالـ scroll على الموبايل */
+      #sidebar.hidden {
+        transform: translateX(100%) !important;
+        opacity: 1 !important;
+        pointer-events: none;
+      }
+      #sidebar.mobile-open.hidden {
+        transform: translateX(0) !important;
+        opacity: 1 !important;
+        pointer-events: all;
+      }
  
       #main-wrap {
         margin-right: 0 !important;
@@ -683,12 +694,17 @@
       /* Hide desktop products bar on mobile */
       #products-bar { display: none; }
  
-      /* Show mobile top bar */
-      #mobile-top-bar { display: flex; }
+      /* Show mobile top bar — ثابت دايمًا */
+      #mobile-top-bar {
+        display: flex;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
 
-      /* الـ overlay في الموبايل — يغطي الصفحة بس مش السايدبار */
+      /* الـ overlay في الموبايل */
       #mobile-overlay {
-        z-index: 1002; /* بين المحتوى والسايدبار */
+        z-index: 1002;
       }
  
       .sidebar-toggle { display: none; }
