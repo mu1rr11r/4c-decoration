@@ -157,3 +157,32 @@
       setTimeout(() => { btn.innerHTML = '<i class="fas fa-paper-plane"></i> إرسال الرسالة'; btn.style.background = ''; }, 3000);
     }, 1800);
   }
+  const form = document.getElementById("contactForm");
+const successMessage = document.getElementById("successMessage");
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  const response = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+  });
+
+  const result = await response.json();
+
+  if (result.success) {
+
+    successMessage.style.display = "block";
+
+    form.reset();
+
+    setTimeout(() => {
+      successMessage.style.display = "none";
+    }, 3000);
+
+  } else {
+    alert("حدث خطأ أثناء الإرسال");
+  }
+});
