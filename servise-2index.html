@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>معرض 5 صور أون لاين</title>
+  <style>
+    body {
+      background: #f8fafc;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-title {
+      text-align: center;
+      color: #0f172a;
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+
+    /* تقسيم الشبكة لـ 5 أعمدة بالتساوي */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+    }
+
+    .grid-item {
+      position: relative;
+      height: 250px;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .grid-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* طبقة تظهر عند تمرير الماوس */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .overlay span {
+      color: #fff;
+      font-size: 14px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+
+    .grid-item:hover .overlay {
+      opacity: 1;
+    }
+
+    /* نافذة تكبير الصورة (البوب أب) */
+    .image-preview {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      display: none;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 100000;
+      padding: 20px;
+    }
+
+    .preview-header {
+      width: 100%;
+      max-width: 1200px;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* زر الرجوع */
+    .back-btn {
+      background: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-2px);
+      background: #fca311;
+      color: #fff;
+    }
+
+    .image-preview img {
+      max-width: 90%;
+      max-height: calc(90vh - 80px);
+      object-fit: contain;
+      border-radius: 16px;
+      margin-top: 20px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+
+    /* التجاوب مع الشاشات الصغيرة والموبايل */
+    @media (max-width: 992px) {
+      .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+      .grid-item {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery-container">
+    <h2 class="gallery-title">معرض الصور</h2>
+    
+    <div class="image-grid">
+      <!-- الصورة 1 -->
+      <div class="grid-item" onclick="openPreview('https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1000')">
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600" alt="صورة 1">
+        <div class="overlay"><span>تكبير الصورة 🔍</span></div>
+      </div>
+      
+      <!-- الصورة 2 -->
+      <div class="grid-item" onclick="openPreview('https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1000')">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600" alt="صورة 2">
+        <div class="overlay"><span>تكبير الصورة 🔍</span></div>
+      </div>
+      
+      <!-- الصورة 3 -->
+      <div class="grid-item" onclick="openPreview('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1000')">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600" alt="صورة 3">
+        <div class="overlay"><span>تكبير الصورة 🔍</span></div>
+      </div>
+      
+      <!-- الصورة 4 -->
+      <div class="grid-item" onclick="openPreview('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1000')">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=600" alt="صورة 4">
+        <div class="overlay"><span>تكبير الصورة 🔍</span></div>
+      </div>
+      
+      <!-- الصورة 5 -->
+      <div class="grid-item" onclick="openPreview('https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1000')">
+        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600" alt="صورة 5">
+        <div class="overlay"><span>تكبير الصورة 🔍</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- نافذة التكبير بالخلفية -->
+  <div id="imagePreview" class="image-preview">
+    <div class="preview-header">
+      <button class="back-btn" onclick="closePreview()">← رجوع</button>
+    </div>
+    <img id="previewImg" src="" alt="صورة مكبرة">
+  </div>
+
+  <script>
+    // دالة فتح الصورة بالحجم الطبيعي
+    function openPreview(imgSrc) {
+      document.getElementById('previewImg').src = imgSrc;
+      document.getElementById('imagePreview').style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // إيقاف السكرول بالخلفية
+    }
+
+    // دالة إغلاق الصورة والرجوع
+    function closePreview() {
+      document.getElementById('imagePreview').style.display = 'none';
+      document.body.style.overflow = 'auto'; // إعادة تفعيل السكرول
+    }
+
+    // إغلاق المعاينة عند الضغط على المساحة السوداء بالخارج
+    window.onclick = function(e) {
+      const previewModal = document.getElementById('imagePreview');
+      if (e.target === previewModal) {
+        closePreview();
+      }
+    };
+  </script>
+
+</body>
+</html>
