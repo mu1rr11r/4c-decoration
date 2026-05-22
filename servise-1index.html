@@ -1,0 +1,258 @@
+<section class="services-grid">
+
+  <!-- Product 1 -->
+  <div class="service-card" onclick="openGallery('flooring')">
+    <div class="service-img">
+      <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1000" alt="">
+    </div>
+
+    <div class="service-body">
+      <div class="service-number">01</div>
+
+      <h3 class="service-title">
+        تيرازو أرضيات ودرج
+      </h3>
+
+      <p class="service-sub">
+        أرضيات - درج
+      </p>
+
+      <p class="service-desc">
+        تنفيذ وتصميم أرضيات ودرج تيرازو
+        إيبوكسي وأسمنتي بتشطيب فاخر
+        ولمسة عصرية.
+      </p>
+
+      <div class="service-footer">
+        <div class="service-line"></div>
+        <span class="service-cta">
+          عرض المشاريع
+          <i class="fas fa-arrow-left"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="service-card" onclick="openGallery('counter')">
+    <div class="service-img">
+      <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1000" alt="">
+    </div>
+
+    <div class="service-body">
+      <div class="service-number">02</div>
+
+      <h3 class="service-title">
+        تيرازو مغاسل وكاونترات
+      </h3>
+
+      <p class="service-sub">
+        مغاسل - كاونترات
+      </p>
+
+      <p class="service-desc">
+        تصميم مغاسل وكاونترات تيرازو
+        بتشطيبات إيبوكسي وأسمنتية
+        فاخرة للمنازل والمشاريع.
+      </p>
+
+      <div class="service-footer">
+        <div class="service-line"></div>
+        <span class="service-cta">
+          عرض المشاريع
+          <i class="fas fa-arrow-left"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Gallery Modal -->
+<div id="galleryModal" class="gallery-modal">
+  <span class="close-btn" onclick="closeGallery()">
+    &times;
+  </span>
+
+  <div id="galleryContent" class="gallery-content"></div>
+</div>
+
+<style>
+body{
+  background:#eef1f5;
+  font-family: Arial, sans-serif;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+  padding:40px;
+}
+
+.service-card{
+  background:#fff;
+  border-radius:30px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:.3s;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.service-card:hover{
+  transform:translateY(-8px);
+}
+
+.service-img img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.service-body{
+  padding:35px;
+  position:relative;
+  text-align:right;
+}
+
+.service-number{
+  position:absolute;
+  top:20px;
+  left:25px;
+  font-size:55px;
+  font-weight:bold;
+  color:#eee;
+}
+
+.service-title{
+  font-size:32px;
+  color:#0f172a;
+  margin-bottom:10px;
+}
+
+.service-sub{
+  color:#d4a017;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.service-desc{
+  color:#6b7280;
+  line-height:1.8;
+}
+
+.service-footer{
+  margin-top:20px;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:10px;
+}
+
+.service-line{
+  width:70px;
+  height:4px;
+  border-radius:20px;
+  background:linear-gradient(to right,#003566,#fca311);
+}
+
+/* Modal */
+
+.gallery-modal{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+}
+
+.gallery-content{
+  width:85%;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.gallery-content img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.close-btn{
+  position:absolute;
+  top:20px;
+  right:40px;
+  color:#fff;
+  font-size:50px;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+  .services-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-content{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+
+<script>
+const galleries = {
+
+  flooring: [
+    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1000',
+    'https://images.unsplash.com/photo-1494526585095-c41746248156?w=1000',
+    'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1000'
+  ],
+
+  counter: [
+    'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1000',
+    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1000',
+    'https://images.unsplash.com/photo-1494526585095-c41746248156?w=1000'
+  ]
+};
+
+function openGallery(type){
+
+  const modal =
+    document.getElementById('galleryModal');
+
+  const content =
+    document.getElementById('galleryContent');
+
+  content.innerHTML = '';
+
+  galleries[type].forEach(img => {
+
+    content.innerHTML += `
+      <img src="${img}" alt="">
+    `;
+  });
+
+  modal.style.display = 'flex';
+}
+
+function closeGallery(){
+  document.getElementById('galleryModal')
+  .style.display = 'none';
+}
+
+/* close outside click */
+window.onclick = function(e){
+  const modal =
+    document.getElementById('galleryModal');
+
+  if(e.target === modal){
+    closeGallery();
+  }
+}
+</script>
