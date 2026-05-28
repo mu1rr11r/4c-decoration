@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أعمالنا - 4C Decoration</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="index.html" class="nav-back">← العودة للرئيسية</a>
+  </nav>
+
+  <main>
+    <!-- PROJECTS -->
+    <section id="projects" aria-label="أعمالنا">
+      <div class="section-header reveal container">
+        <h2 class="section-title">أعمالنا </h2>
+        <p class="section-desc">نماذج من أعمالنا المتنوعة في المملكة العربية السعودية</p>
+        <div class="section-divider"></div>
+      </div>
+      <div class="projects-filter reveal" role="group" aria-label="تصفية المشاريع">
+        <button class="filter-btn active" onclick="filterProjects('all',this)" aria-pressed="true">الكل</button>
+        <button class="filter-btn" onclick="filterProjects('terazzo',this)" aria-pressed="false">تيرازو</button>
+        <button class="filter-btn" onclick="filterProjects('microcement',this)" aria-pressed="false">ميكروسمنت</button>
+        <button class="filter-btn" onclick="filterProjects('resinbound',this)" aria-pressed="false">ريزن بوند</button>
+        <button class="filter-btn" onclick="filterProjects('resinfloor',this)" aria-pressed="false">ريزن فلور</button>
+        <button class="filter-btn" onclick="filterProjects('epoxy',this)" aria-pressed="false">إيبوكسي</button>
+        <button class="filter-btn" onclick="filterProjects('courts',this)" aria-pressed="false">ملاعب</button>
+        <button class="filter-btn" onclick="filterProjects('concrete',this)" aria-pressed="false">خرسانة مطبوعة</button>
+        <button class="filter-btn" onclick="filterProjects('pools',this)" aria-pressed="false">مسابح</button>
+        <button class="filter-btn" onclick="filterProjects('gardens',this)" aria-pressed="false">حدائق</button>
+        <button class="filter-btn" onclick="filterProjects('decor',this)" aria-pressed="false">ديكورات</button>
+        <button class="filter-btn" onclick="filterProjects('stone',this)" aria-pressed="false">حجر وخشب</button>
+        <button class="filter-btn" onclick="filterProjects('resintables',this)" aria-pressed="false">طاولات ريزن</button>
+      </div>
+
+      <div class="projects-masonry container" id="projects-grid" role="list">
+
+        <!-- تيرازو -->
+        <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: أرضية تيرازو مرمرية">
+          <div class="project-bg"><img src="./img/تيرازو/تيرازو1Image 2026-05-07 at 7.34.49 PM.jpeg" alt="أرضية تيرازو مرمرية" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80'" loading="lazy"></div>
+          <div class="project-overlay" aria-hidden="true"><div class="project-cat">تيرازو</div><div class="project-name">أرضية تيرازو مرمرية</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+        </div>
+        <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: تيرازو كلاسيك فاخر">
+          <div class="project-bg"><img src="./img/تيرازو/تيرازو2Image 2026-05-07 at 7.35.13 PM.jpeg" alt="تيرازو كلاسيك فاخر" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'" loading="lazy"></div>
+          <div class="project-overlay" aria-hidden="true"><div class="project-cat">تيرازو</div><div class="project-name">تيرازو كلاسيك فاخر</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+        </div>
+        <div class="project-card" data-cat="terazzo" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: تيرازو بتصميم هندسي">
+          <div class="project-bg"><img src="./img/تيرازو/تيرازو3Image 2026-05-07 at 7.35.14 PM.jpeg" alt="تيرازو بتصميم هندسي" onerror="this.src='https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80'" loading="lazy"></div>
+          <div class="project-overlay" aria-hidden="true"><div class="project-cat">تيرازو</div><div class="project-name">تيرازو بتصميم هندسي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+        </div>
+
+        <!-- ميكروسمنت -->
+        <div class="project-card" data-cat="microcement" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: جدار ميكروسمنت رمادي">
+          <div class="project-bg"><img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=600&q=80" alt="جدار ميكروسمنت رمادي" loading="lazy"></div>
+          <div class="project-overlay" aria-hidden="true"><div class="project-cat">ميكروسمنت</div><div class="project-name">جدار ميكروسمنت رمادي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+        </div>
+        <div class="project-card" data-cat="microcement" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: أرضية ميكروسمنت بيج">
+          <div class="project-bg"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80" alt="أرضية ميكروسمنت بيج" loading="lazy"></div>
+          <div class="project-overlay" aria-hidden="true"><div class="project-cat">ميكروسمنت</div><div class="project-name">أرضية ميكروسمنت بيج</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+        </div>
+
+        <!-- ريزن بوند -->
+        <div class="project-card" data-cat="resinbound" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: ريزن باوند متعدد الألوان">
+          <div class="project-bg"><img src="./img/أرضيات ريزن/أرضيات ريزن1Image 2026-05-07 at 7.03.01 PM.jpeg" alt="ريزن باوند متعدد الألوان" onerror="this.src='https://images.unsplash.com/photo-1508615070457-7baeba4003ab?w=600&q=80'" loading="lazy"></div>
+          <div class="project-overlay" aria-hidden="true"><div class="project-cat">ريزن بوند</div><div class="project-name">ريزن باوند متعدد الألوان</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+        </div>
+        <div class="project-card" data-cat="resinbound" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: ريزن باوند ذهبي">
+          <div class="project-bg"><img src="./img/أرضيات ريزن/أرضيات ريزن2Image 2026-05-07 at 7.03.39 PM.jpeg" alt="ريزن باوند ذهبي" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80'" loading="lazy"></div>
+          <div class="project-overlay" aria-hidden="true"><div class="project-cat">ريزن بوند</div><div class="project-name">ريزن باوند ذهبي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+        </div>
+
+        <!-- ريزن فلور -->
+        <div class="project-card" data-cat="resinfloor" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: ريزن فلور ثلاثي الأبعاد">
+          <div class="project-bg"><img src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?w=600&q=80" alt="ريزن فلور ثلاثي الأبعاد" loading="lazy"></div>
+          <div class="project-overlay" aria-hidden="true"><div class="project-cat">ريزن فلور</div><div class="project-name">ريزن فلور ثلاثي الأبعاد</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+        </div>
+        <div class="project-card" data-cat="resinfloor" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: ريزن فلور بتأثير رخام">
+          <div class="project-bg"><img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=600&q=80" alt="ريزن فلور بتأثير رخام" loading="lazy"></div>
+          <div class="project-overlay" aria-hidden="true"><div class="project-cat">ريزن فلور</div><div class="project-name">ريزن فلور بتأثير رخام</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+        </div>
+
+        <!-- إيبوكسي -->
+        <div class="project-card" data-cat="epoxy" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: إيبوكسي صناعي متين">
+          <div class="project-bg"><img src="./img/إيبوكسي/إيبوكسي1Image 2026-05-07 at 8.11.21 PM.jpeg" alt="إيبوكسي صناعي متين" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80'" loading="lazy"></div>
+          <div class="project-overlay" aria-hidden="true"><div class="project-cat">إيبوكسي</div><div class="project-name">إيبوكسي صناعي متين</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+        </div>
+        <div class="project-card" data-cat="epoxy" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: إيبوكسي لامع 3D">
+          <div class="project-bg"><img src="./img/إيبوكسي/إيبوكسي2Image 2026-05-07 at 8.11.21 PM.jpeg" alt="إيبوكسي لامع 3D" onerror="this.src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&q=80'" loading="lazy"></div>
+          <div class="project-overlay" aria-hidden="true"><div class="project-cat">إيبوكسي</div><div class="project-name">إيبوكسي لامع 3D</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+        </div>
+
+        <!-- ملاعب -->
+        <div class="project-card" data-cat="courts" onclick="openLightbox(this)" role="listitem" tabindex="0" aria-label="فتح صورة: ملعب كرة قدم مطاطي">
+          <div class="project-bg"><img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&q=80" alt="ملعب كرة قدم مطاطي" loading="lazy"></div>
+          <div class="project-overlay" aria-hidden="true"><div class="project-cat">ملاعب</div><div class="project-name">ملعب كرة قدم مطاطي</div><div class="project-zoom"><i class="fas fa-expand"></i></div></div>
+        </div>
+    <script src="./index.js"></script>
