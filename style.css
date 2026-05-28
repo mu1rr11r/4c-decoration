@@ -1308,3 +1308,17 @@ body.sidebar-collapsed #sidebar   { width: var(--sidebar-w-collapsed); }
   text-align:center;
   font-weight:bold;
 }
+
+.products-bar-inner {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+}
+
+.prod-tab {
+  text-align: center;
+  padding: 15px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
