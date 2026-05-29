@@ -1,5 +1,5 @@
 /* ============================================================
-   4C DECORATION — index.js (النسخة الكاملة مع فلترة الخدمات)
+   4C CONSTRUCTION — index.js
 ============================================================ */
 
 /* ============================================================
@@ -14,9 +14,9 @@ function toggleSidebar() {
    MOBILE SIDEBAR
 ============================================================ */
 function toggleMobileSidebar() {
-  const sidebar = document.getElementById('sidebar');
-  const overlay = document.getElementById('mobile-overlay');
-  const ham     = document.getElementById('hamburger');
+  var sidebar = document.getElementById('sidebar');
+  var overlay = document.getElementById('mobile-overlay');
+  var ham     = document.getElementById('hamburger');
   sidebar.classList.toggle('mobile-open');
   overlay.classList.toggle('open');
   ham.classList.toggle('open');
@@ -36,39 +36,28 @@ function scrollToTop() {
 }
 
 function scrollToSection(sectionId) {
-  const section = document.getElementById(sectionId);
+  var section = document.getElementById(sectionId);
   if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 /* ============================================================
-   SERVICES FILTER — الفلترة بالتاب
+   SERVICES FILTER
 ============================================================ */
-const catIndexMap = {
-  terazzo:    0,
-  microcement:1,
-  resinbound: 2,
-  resinfloor: 3,
-  epoxy:      4,
-  courts:     5,
-  concrete:   6,
-  pools:      7,
-  gardens:    8,
-  decor:      9,
-  stone:      10,
-  resintables:11
+var catIndexMap = {
+  terazzo:0, microcement:1, resinbound:2, resinfloor:3,
+  epoxy:4, courts:5, concrete:6, pools:7,
+  gardens:8, decor:9, stone:10, resintables:11
 };
 
 function filterServices(cat) {
-  const allCards = document.querySelectorAll('.service-card');
+  var allCards = document.querySelectorAll('.service-card');
 
-  /* تحديث حالة التابات (active) في البارين */
-  document.querySelectorAll('.prod-tab').forEach(tab => {
+  document.querySelectorAll('.prod-tab').forEach(function(tab) {
     tab.classList.toggle('active', tab.dataset.cat === cat);
   });
 
-  /* لو cat فاضي → اظهر كل الكاردز */
   if (!cat) {
-    allCards.forEach(c => {
+    allCards.forEach(function(c) {
       c.style.display  = '';
       c.style.opacity  = '1';
       c.style.transform = '';
@@ -76,9 +65,9 @@ function filterServices(cat) {
     return;
   }
 
-  const targetIdx = catIndexMap[cat];
+  var targetIdx = catIndexMap[cat];
 
-  allCards.forEach((c, i) => {
+  allCards.forEach(function(c, i) {
     if (i === targetIdx) {
       c.style.display   = '';
       c.style.opacity   = '1';
@@ -88,77 +77,109 @@ function filterServices(cat) {
     }
   });
 
-  /* انتقل لقسم الخدمات بعد الفلترة */
-  setTimeout(() => scrollToSection('services'), 80);
+  setTimeout(function() { scrollToSection('services'); }, 80);
+}
+
+/* ============================================================
+   SIDEBAR VISIBILITY — فقط في الهوم
+============================================================ */
+function updateSidebarVisibility() {
+  var homeSection = document.getElementById('home');
+  var sidebar     = document.getElementById('sidebar');
+  var scrollY     = window.scrollY;
+  var homeBottom  = homeSection ? homeSection.offsetTop + homeSection.offsetHeight * 0.5 : 600;
+
+  var isMobile = window.innerWidth <= 900;
+
+  if (isMobile) {
+    sidebar.classList.remove('visible');
+    document.body.classList.remove('no-sidebar');
+    document.body.classList.remove('sidebar-collapsed');
+    return;
+  }
+
+  if (scrollY < homeBottom) {
+    sidebar.classList.add('visible');
+    document.body.classList.remove('no-sidebar');
+  } else {
+    sidebar.classList.remove('visible');
+    document.body.classList.add('no-sidebar');
+  }
 }
 
 /* ============================================================
    ACTIVE NAV + SCROLL BEHAVIOR
 ============================================================ */
-const sections = document.querySelectorAll('section[id]');
-const navItems = document.querySelectorAll('.nav-item');
-let lastScrollY = window.scrollY;
+var sections = document.querySelectorAll('section[id]');
+var navItems = document.querySelectorAll('.nav-item');
 
-window.addEventListener('scroll', () => {
-  const currentScrollY = window.scrollY;
-  const sidebar = document.getElementById('sidebar');
+window.addEventListener('scroll', function() {
+  var currentScrollY = window.scrollY;
 
-  if (currentScrollY <= 150) {
-    document.body.classList.remove('sidebar-hidden');
-    sidebar.classList.remove('hidden');
-  } else if (currentScrollY > lastScrollY) {
-    document.body.classList.add('sidebar-hidden');
-    sidebar.classList.add('hidden');
-  }
+  updateSidebarVisibility();
 
-  let cur = '';
-  sections.forEach(s => {
+  var cur = '';
+  sections.forEach(function(s) {
     if (currentScrollY >= s.offsetTop - 120) cur = s.id;
   });
-  navItems.forEach(a => {
+  navItems.forEach(function(a) {
     a.classList.remove('active');
     if (a.getAttribute('href') === '#' + cur) a.classList.add('active');
   });
 
-  const visible = currentScrollY > 400;
+  var visible = currentScrollY > 400;
   document.getElementById('back-to-top').classList.toggle('visible', visible);
   document.getElementById('whatsapp-btn').classList.toggle('visible', visible);
+});
 
-  lastScrollY = currentScrollY;
+window.addEventListener('DOMContentLoaded', function() {
+  updateSidebarVisibility();
+});
+
+window.addEventListener('resize', function() {
+  updateSidebarVisibility();
 });
 
 /* ============================================================
    REVEAL ANIMATION
 ============================================================ */
-const ro = new IntersectionObserver(entries => {
-  entries.forEach(e => {
+var ro = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
     if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), 80);
+      setTimeout(function() { e.target.classList.add('visible'); }, 80);
       ro.unobserve(e.target);
     }
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+document.querySelectorAll('.reveal').forEach(function(el) { ro.observe(el); });
 
 /* ============================================================
    LIGHTBOX
 ============================================================ */
-let lbImages = [], lbIdx = 0;
+var lbImages = [], lbIdx = 0;
 
 function openLightbox(card) {
-  const visible = [...document.querySelectorAll('.project-card')]
-    .filter(c => c.style.display !== 'none');
+  var visible = [];
+  document.querySelectorAll('.project-card').forEach(function(c) {
+    if (c.style.display !== 'none') visible.push(c);
+  });
 
-  lbImages = visible
-    .map(c => ({
-      src:     c.querySelector('img')?.src || '',
-      caption: c.querySelector('.project-name')?.textContent || ''
-    }))
-    .filter(i => i.src);
+  lbImages = [];
+  visible.forEach(function(c) {
+    var img = c.querySelector('img');
+    var name = c.querySelector('.project-name');
+    if (img) {
+      lbImages.push({
+        src: img.src || '',
+        caption: name ? name.textContent : ''
+      });
+    }
+  });
 
-  const clicked = card.querySelector('img')?.src;
-  lbIdx = lbImages.findIndex(i => i.src === clicked);
+  var clickedImg = card.querySelector('img');
+  var clickedSrc = clickedImg ? clickedImg.src : '';
+  lbIdx = lbImages.findIndex(function(i) { return i.src === clickedSrc; });
   if (lbIdx < 0) lbIdx = 0;
 
   renderLb();
@@ -167,19 +188,19 @@ function openLightbox(card) {
 }
 
 function renderLb() {
-  const item = lbImages[lbIdx];
+  var item = lbImages[lbIdx];
   if (!item) return;
 
-  const img = document.getElementById('lightbox-img');
+  var img = document.getElementById('lightbox-img');
   img.style.opacity = '0';
-  setTimeout(() => {
+  setTimeout(function() {
     img.src = item.src;
-    img.onload = () => { img.style.opacity = '1'; };
+    img.onload = function() { img.style.opacity = '1'; };
     if (img.complete) img.style.opacity = '1';
   }, 100);
 
-  document.getElementById('lightbox-caption').textContent  = item.caption;
-  document.getElementById('lightbox-counter').textContent  = `${lbIdx + 1} / ${lbImages.length}`;
+  document.getElementById('lightbox-caption').textContent = item.caption;
+  document.getElementById('lightbox-counter').textContent = (lbIdx + 1) + ' / ' + lbImages.length;
 }
 
 function closeLightbox(e) {
@@ -194,8 +215,8 @@ function lightboxNav(dir, e) {
   renderLb();
 }
 
-document.addEventListener('keydown', e => {
-  const lb = document.getElementById('lightbox');
+document.addEventListener('keydown', function(e) {
+  var lb = document.getElementById('lightbox');
   if (!lb.classList.contains('active')) return;
   if (e.key === 'Escape')      closeLightbox();
   if (e.key === 'ArrowRight')  lightboxNav(-1, null);
@@ -205,23 +226,23 @@ document.addEventListener('keydown', e => {
 /* ============================================================
    CONTACT FORM
 ============================================================ */
-const form           = document.getElementById('contactForm');
-const successMessage = document.getElementById('successMessage');
+var form = document.getElementById('contactForm');
+var successMessage = document.getElementById('successMessage');
 
-form.addEventListener('submit', async function (e) {
+form.addEventListener('submit', async function(e) {
   e.preventDefault();
 
-  const response = await fetch('https://api.web3forms.com/submit', {
+  var response = await fetch('https://api.web3forms.com/submit', {
     method: 'POST',
-    body:   new FormData(form)
+    body: new FormData(form)
   });
 
-  const result = await response.json();
+  var result = await response.json();
 
   if (result.success) {
     successMessage.style.display = 'block';
     form.reset();
-    setTimeout(() => { successMessage.style.display = 'none'; }, 3000);
+    setTimeout(function() { successMessage.style.display = 'none'; }, 3000);
   } else {
     alert('حدث خطأ أثناء الإرسال');
   }
