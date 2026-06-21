@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+Disallow: /img/
+Disallow: /*.js
+Disallow: /*.css
+
+Sitemap: https://4cdecoration.com/sitemap.xml
+
+# تأخير الزحف
+Crawl-delay: 1
+
+# السماح لمحركات البحث الرئيسية
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# منع محركات البحث غير الموثوقة
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
