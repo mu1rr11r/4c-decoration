@@ -1,10 +1,10 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 Disallow: /img/
 Disallow: /*.js
 Disallow: /*.css
 
-Sitemap: https://4cdecoration.com/sitemap.xml
+Sitemap: https://4c-construction.com/sitemap.xml
 
 # تأخير الزحف
 Crawl-delay: 1
