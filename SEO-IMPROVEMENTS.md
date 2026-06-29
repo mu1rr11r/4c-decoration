@@ -32,33 +32,33 @@
 
 #### ملفات الخدمات (12 صفحة خدمة)
 
-**servise-1index.html** - خدمات التيرازو
+**terrazzo-epoxy-cementitious.html** - خدمات التيرازو
 - ✅ إضافة DOCTYPE و HTML tags
 - ✅ Meta tags محسّنة
 - ✅ Schema.org Service
 - ✅ إضافة إغلاق HTML
 
-**servise-2index.html** - خدمات الميكروسمنت
+**microcement-microtopping.html** - خدمات الميكروسمنت
 - ✅ تحديث meta tags
 - ✅ إضافة schema.org Service
 - ✅ Canonical URL
 
-**servise-3index.html** - خدمات ريزن باوند
+**resin-bound-flooring.html** - خدمات ريزن باوند
 - ✅ تحديث meta tags
 - ✅ Schema.org Service
 - ✅ SEO محسّن
 
-**servise-4index.html** - خدمات ريزن فلور
+**resin-flooring.html** - خدمات ريزن فلور
 - ✅ Meta tags محسّنة
 - ✅ Schema.org Service
 - ✅ Canonical URL
 
-**servise-5index.html** - خدمات الإيبوكسي
+**garage-warehouse-epoxy-flooring.html** - خدمات الإيبوكسي
 - ✅ Meta tags محسّنة
 - ✅ Schema.org Service
 - ✅ Keywords محسّنة
 
-**servise-6index.html** - خدمات الملاعب
+**rubber-sports-flooring.html** - خدمات الملاعب
 - ✅ Meta tags محسّنة
 - ✅ Schema.org Service
 
