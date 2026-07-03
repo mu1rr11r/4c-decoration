@@ -62,28 +62,28 @@
 - ✅ Meta tags محسّنة
 - ✅ Schema.org Service
 
-**servise-7index.html** - خدمات الخرسانة المطبوعة
+**stamped-concrete-exposed-aggregate.html** - خدمات الخرسانة المطبوعة
 - ✅ Meta tags محسّنة
 - ✅ Schema.org Service
 
-**servise-8index.html** - خدمات المسابح
+**sandy-pool-finish.html** - خدمات المسابح
 - ✅ Meta tags محسّنة
 - ✅ Schema.org Service
 
-**servise-9index.html** - خدمات الحدائق والديكورات
+**landscaping-outdoor-decor.html** - خدمات الحدائق والديكورات
 - ✅ Meta tags محسّنة
 - ✅ Schema.org Service
 
-**servise-10index.html** - خدمات الديكورات
+**interior-finishes-interior-design-facades.html** - خدمات الديكورات
 - ✅ إضافة DOCTYPE و HTML tags
 - ✅ Meta tags محسّنة
 - ✅ Schema.org Service
 
-**servise-11index.html** - خدمات الحجر والخشب
+**natural-stone-natural-wood.html** - خدمات الحجر والخشب
 - ✅ Meta tags محسّنة
 - ✅ Schema.org Service
 
-**servise-12index.html** - طاولات ريزن
+**epoxy-resin-wood-tables.html** - طاولات ريزن
 - ✅ Meta tags محسّنة
 - ✅ Schema.org Service
 
