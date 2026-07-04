@@ -879,6 +879,37 @@ body.no-sidebar #sidebar   { opacity: 0; transform: translateX(100%); pointer-ev
 }
 
 /* ============================================================
+   BACK BUTTON (Standard for all internal pages)
+============================================================ */
+.back-btn {
+  position: fixed;
+  left: var(--sp-3);
+  top: var(--sp-3);
+  background: var(--blue);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 100;
+  transition: all var(--transition);
+  box-shadow: 0 4px 15px rgba(0, 84, 166, 0.28);
+  font-family: inherit;
+}
+
+.back-btn:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 84, 166, 0.38);
+}
+
+/* ============================================================
    RESPONSIVE — MOBILE (≤ 900px)
 ============================================================ */
 @media (max-width: 900px) {
